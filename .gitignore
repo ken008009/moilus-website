@@ -6,3 +6,5 @@ release
 official
 *.local
 .env*
+
+official.zip
