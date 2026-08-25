@@ -13,7 +13,24 @@ const navItems = [
   { href: '/whitepaper', label: 'Whitepaper' },
 ];
 
+const APP_BASE = '/official';
 const usesFileRouter = window.location.protocol === 'file:';
+
+function toPublicHref(href) {
+  if (usesFileRouter || href.startsWith('http') || href.startsWith('#') || href.startsWith('mailto:')) {
+    return href;
+  }
+  if (href === APP_BASE || href.startsWith(`${APP_BASE}/`)) return href.replace(/\/+$/, '') || APP_BASE;
+  if (href === '/') return APP_BASE;
+  return `${APP_BASE}${href}`;
+}
+
+function fromPublicPath(pathname) {
+  const normalized = pathname.replace(/\/+$/, '') || '/';
+  if (normalized === APP_BASE) return '/';
+  if (normalized.startsWith(`${APP_BASE}/`)) return normalized.slice(APP_BASE.length) || '/';
+  return normalized;
+}
 const logoSrc = `${import.meta.env.BASE_URL}logo-ms.svg`;
 const homeHeroVideoSrc = `${import.meta.env.BASE_URL}media/bg-ms.mp4`;
 const whitepaperPdfSrc = `${import.meta.env.BASE_URL}downloads/Mobius-Strip-Whitepaper-English.pdf`;
@@ -27,7 +44,7 @@ const imagery = {
   gameFi: `${import.meta.env.BASE_URL}images/texas-holdem.webp`,
   chat: `${import.meta.env.BASE_URL}images/ms-chat-lifestyle.webp`,
   dao: `${import.meta.env.BASE_URL}images/ms-dao-governance.webp`,
-  growthCycle: `${import.meta.env.BASE_URL}images/market-growth-cycle.png`,
+  growthCycle: `${import.meta.env.BASE_URL}images/market-growth-cycle.jpg`,
 };
 
 const productChapters = [
@@ -110,7 +127,7 @@ const protocolBands = [
 
 function usePathname() {
   const getCurrentPath = () => {
-    if (!usesFileRouter) return window.location.pathname;
+    if (!usesFileRouter) return fromPublicPath(window.location.pathname);
     const hashPath = window.location.hash.replace(/^#/, '');
     return hashPath.startsWith('/') ? hashPath : '/';
   };
@@ -124,17 +141,27 @@ function usePathname() {
     return () => window.removeEventListener(eventName, handleLocationChange);
   }, []);
 
+  useEffect(() => {
+    if (usesFileRouter) return;
+    const publicHref = toPublicHref(getCurrentPath());
+    const current = window.location.pathname.replace(/\/+$/, '') || '/';
+    if (current !== publicHref) {
+      window.history.replaceState({}, '', publicHref);
+    }
+  }, []);
+
   const navigate = (href) => {
+    const appPath = fromPublicPath(href.startsWith(APP_BASE) ? href : toPublicHref(href));
     if (usesFileRouter) {
-      if (href === getCurrentPath()) return;
-      window.location.hash = href;
-      setPath(href);
+      if (appPath === getCurrentPath()) return;
+      window.location.hash = appPath;
+      setPath(appPath);
       return;
     }
 
-    if (href === getCurrentPath()) return;
-    window.history.pushState({}, '', href);
-    setPath(href);
+    if (appPath === getCurrentPath()) return;
+    window.history.pushState({}, '', toPublicHref(appPath));
+    setPath(appPath);
   };
 
   return [path, navigate];
@@ -143,7 +170,7 @@ function usePathname() {
 function AppLink({ href, navigate, className = '', children, onClick, ...rest }) {
   return (
     <a
-      href={usesFileRouter ? `#${href}` : href}
+      href={usesFileRouter ? `#${href}` : toPublicHref(href)}
       className={className}
       onClick={(event) => {
         onClick?.(event);
