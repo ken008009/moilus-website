@@ -1,46 +1,11 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "buildCommand": "pnpm run build",
-  "outputDirectory": "official",
+  "outputDirectory": "dist",
   "framework": "vite",
-  "redirects": [
-    {
-      "source": "/",
-      "destination": "/official",
-      "permanent": false
-    }
-  ],
   "rewrites": [
     {
-      "source": "/official",
-      "destination": "/index.html"
-    },
-    {
-      "source": "/official/",
-      "destination": "/index.html"
-    },
-    {
-      "source": "/official/downloads/:path*",
-      "destination": "/downloads/:path*"
-    },
-    {
-      "source": "/official/images/:path*",
-      "destination": "/images/:path*"
-    },
-    {
-      "source": "/official/media/:path*",
-      "destination": "/media/:path*"
-    },
-    {
-      "source": "/official/logo-ms.svg",
-      "destination": "/logo-ms.svg"
-    },
-    {
-      "source": "/official/favicon.ico",
-      "destination": "/favicon.ico"
-    },
-    {
-      "source": "/official/:path*",
+      "source": "/(.*)",
       "destination": "/index.html"
     }
   ]

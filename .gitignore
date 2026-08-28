@@ -3,8 +3,5 @@ node_modules
 .DS_Store
 dist
 release
-official
 *.local
 .env*
-
-official.zip

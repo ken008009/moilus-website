@@ -1,36 +1,15 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
-function redirectRootToOfficial() {
-  const redirect = (req, res, next) => {
-    if (req.url === '/' || req.url === '/index.html') {
-      res.writeHead(302, { Location: '/official/' });
-      res.end();
-      return;
-    }
-    next();
-  };
-
-  return {
-    name: 'redirect-root-to-official',
-    configureServer(server) {
-      server.middlewares.use(redirect);
-    },
-    configurePreviewServer(server) {
-      server.middlewares.use(redirect);
-    },
-  };
-}
-
 function inlineReleaseAssets() {
-  let basePath = '/official/';
+  let basePath = '/';
 
   return {
     name: 'inline-release-assets',
     apply: 'build',
     enforce: 'post',
     configResolved(config) {
-      basePath = config.base || '/official/';
+      basePath = config.base || '/';
     },
     generateBundle(_options, bundle) {
       const htmlAsset = Object.values(bundle).find(
@@ -69,10 +48,11 @@ function inlineReleaseAssets() {
 }
 
 export default defineConfig({
-  base: '/official/',
-  plugins: [redirectRootToOfficial(), react(), inlineReleaseAssets()],
+  base: '/',
+  plugins: [react(), inlineReleaseAssets()],
   build: {
-    outDir: 'official',
+    outDir: 'dist',
+    emptyOutDir: true,
     assetsInlineLimit: 100000000,
   },
 });

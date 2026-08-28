@@ -1,23 +1,15 @@
 # Mobius Strip Website
 
-Official site, served at `/official` on the product domain.
-
-| Path | App |
-| --- | --- |
-| `/` | User client |
-| `/adminsystem` | Admin |
-| `/official` | This website |
+Official site, served at the domain root.
 
 ```bash
 pnpm dev
 ```
 
-Then visit `http://127.0.0.1:5173/official/`.
+Then visit `http://127.0.0.1:5173/`.
 
 ```bash
 pnpm build
 ```
 
-Output goes to `official/`. Copy that folder to the server as `/var/www/official/`.
-
-On the main domain, route `/official` to this site **before** the user-client catch-all.
+Output goes to `dist/`. Deploy that directory to the web root (`/`).
