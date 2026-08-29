@@ -1,0 +1,2361 @@
+{
+  "ar": {
+    "nav": {
+      "home": "الصفحة الرئيسية",
+      "ecosystem": "النظام البيئي",
+      "protocol": "البروتوكول",
+      "token": "الرمز المميز",
+      "whitepaper": "ورقة بيضاء",
+      "staking": "التوقيع المساحي",
+      "community": "المجتمع"
+    },
+    "common": {
+      "scrollCue": "قم بالتمرير للدخول إلى السلسلة",
+      "continueLoop": "تابع الحلقة",
+      "marquee": [
+        "سلسلة عامة",
+        "الحوكمة على السلسلة",
+        "المدفوعات العالمية",
+        "تكساس هولديم",
+        "MS داو",
+        "الدردشة المشفرة"
+      ],
+      "footerTagline": "سطح واحد. لا حدود.",
+      "footerRisk": "Mobius Strip هو نظام بيئي تجريبي للأصول الرقمية. لا يوجد في هذا الموقع ما يمثل نصيحة مالية أو ضمانًا للعائدات.",
+      "notFoundEyebrow": "خارج السطح",
+      "notFoundTitle": "هذا المسار لا يستمر.",
+      "returnHome": "العودة إلى المنزل"
+    },
+    "home": {
+      "hero": {
+        "eyebrow": "الاقتصاد المستمر على السلسلة",
+        "title": [
+          "سطح واحد.",
+          "لا حدود."
+        ],
+        "copy": "يربط Mobius Strip البنية التحتية والحوكمة والمدفوعات وGameFi والاتصالات في نظام بيئي واحد مفتوح ذاتي التداول.",
+        "primary": "اكتشف النظام البيئي",
+        "secondary": "انظر كيف يتم ذلك"
+      },
+      "overview": {
+        "eyebrow": "يبقى كل شيء متصلاً",
+        "title": "اقتصاد مصمم كسطح واحد متواصل.",
+        "copy": "كل منتج من منتجات Mobius له دوره الخاص، ولكن لا أحد يعيش في عزلة. تتحرك الحوكمة والملكية واللعب والتنسيق من خلال نفس النظام.",
+        "cards": [
+          [
+            "خمسة منتجات، ولاية واحدة",
+            "النظام البيئي الكامل"
+          ],
+          [
+            "قواعد التفاعل",
+            "ميكانيكا البروتوكول"
+          ],
+          [
+            "تخصيص شفاف",
+            "مليار MS"
+          ]
+        ]
+      },
+      "statement": [
+        "تدخل القيمة من خلال شبكة مفتوحة، وتتحرك من خلال العيش",
+        "الاقتصاد والإرجاع بمرافق جديدة."
+      ],
+      "journey": {
+        "eyebrow": "مصمم لمواصلة الحركة",
+        "title": [
+          "مسار واحد.",
+          "ثلاث طبقات."
+        ],
+        "copy": "قم بالتمرير عبر النظام من البنية التحتية إلى الاستخدام البشري. يبقى العنوان بينما يستمر السطح في التحرك.",
+        "link": "أدخل النظام البيئي",
+        "chapters": [
+          [
+            "سلسلة عامة",
+            "طبقة تسوية قائمة على BSC مصممة لإبقاء كل منتج على سطح واحد مفتوح يمكن ملاحظته."
+          ],
+          [
+            "الحوكمة والتنسيق",
+            "المقترحات والتفويض والتصويت الشفاف تم تصميمها لتكون جزءًا أصليًا من النظام."
+          ],
+          [
+            "المحفظة والمدفوعات العالمية",
+            "واجهة واحدة للملكية والنقل والمشاركة عبر اقتصاد Mobius الأوسع."
+          ]
+        ]
+      },
+      "action": {
+        "title": "النظام أكبر من مجرد رمز مميز.",
+        "copy": "اتبع حلقة المنتج الكاملة، ثم افحص الآليات التي تحافظ على حركة الدورة الدموية.",
+        "primary": "اكتشف كل طبقة",
+        "secondary": "عرض نموذج الرمز المميز"
+      }
+    },
+    "ecosystem": {
+      "hero": {
+        "eyebrow": "خمسة منتجات. دولة مشتركة واحدة.",
+        "title": "شبكة تتحول إلى اقتصاد.",
+        "copy": "يقوم Mobius بتوصيل القضبان والحوكمة والواجهات والخبرات والمحادثات المطلوبة لكي يشعر النظام البيئي الموجود على السلسلة بالكمال.",
+        "primary": "فهم البروتوكول",
+        "secondary": "عرض اقتصاديات MS"
+      },
+      "productsHeading": {
+        "eyebrow": "من القضبان إلى الاستخدام الحقيقي",
+        "title": "توسيع النظام.",
+        "copy": "كل شريحة رأسية هي منتج Mobius مميز. انقر أو اضغط على طبقة لفتحها ومعرفة كيفية اتصالها."
+      },
+      "products": [
+        [
+          "سلسلة MS",
+          "البنية التحتية العامة",
+          "الطبقة الأساسية تربط التوقيع المساحي والحوكمة والمدفوعات والعقود التفاعلية من خلال حالة مشتركة واحدة."
+        ],
+        [
+          "MS داو",
+          "منصة الحوكمة",
+          "منصة حوكمة على السلسلة للمقترحات والتفويض واتخاذ القرارات الجماعية الشفافة."
+        ],
+        [
+          "MS المحفظة",
+          "الملكية والمدفوعات",
+          "الحضانة الذاتية وحركة القيمة العالمية، مع النظام البيئي الأوسع على بعد لفتة واحدة فقط."
+        ],
+        [
+          "MS GameFi",
+          "تكساس هولديم",
+          "طبقة Texas Hold’em المباشرة التي تحول الملكية الرقمية إلى لعب وتقدم ومجتمع."
+        ],
+        [
+          "MS الدردشة",
+          "مراسلة الوضع الداكن",
+          "برنامج مراسلة مشفر يغلق الحلقة بين الهوية والتنسيق والعمل على السلسلة."
+        ]
+      ],
+      "journeyHeading": {
+        "eyebrow": "الرحلة المستمرة",
+        "title": "المركبات المساعدة عند توصيل المنتجات.",
+        "copy": "تتغير الواجهة. الملكية الأساسية لا. تتكدس هذه الفصول في رحلة مشارك واحد."
+      },
+      "journey": [
+        [
+          "أدخل",
+          "قم بالوصول إلى Mobius من خلال المحفظة وانقل القيمة إلى الشبكة المشتركة."
+        ],
+        [
+          "شارك",
+          "الإدارة والمشاركة واللعب والتنسيق دون مغادرة سطح النظام البيئي."
+        ],
+        [
+          "تعميم",
+          "تعود السيولة والمرافق إلى الشبكة بدلاً من أن تنتهي عند حدود المنتج."
+        ]
+      ],
+      "action": {
+        "title": "لا تكون الأداة المساعدة دائمة إلا عندما تكون القواعد مرئية.",
+        "copy": "راجع العتبات ومنطق الإصدار ووضع التداول الموصوف بواسطة بروتوكول Mobius.",
+        "primary": "آليات البروتوكول المفتوحة",
+        "secondary": "فحص التخصيص"
+      }
+    },
+    "protocol": {
+      "hero": {
+        "eyebrow": "نظام يستجيب",
+        "title": "الحماية سلوك وليست وعداً.",
+        "copy": "يصف Mobius سلسلة من الاستجابات على السلسلة المصممة لإبطاء البيع المركز وتعزيز السيولة واستئناف التداول.",
+        "primary": "انظر العتبات",
+        "secondary": "عرض نموذج الرمز المميز"
+      },
+      "bandsHeading": {
+        "eyebrow": "منطق الاستجابة المنشورة",
+        "title": "دورة سوق واحدة. ثلاثة نطاقات استجابة.",
+        "copy": "يوضح مخطط الدورة المرفق النمو والتصحيح والانتعاش المتكرر. تصف نطاقات الاستجابة بجانبها الآليات المقصودة، وليست نتائج السوق المضمونة."
+      },
+      "cycleCaption": "دورة نمو السوق / صورة البروتوكول المرفقة",
+      "bands": [
+        [
+          "15% انخفاض تراكمي",
+          "نطاق التثبيت الأول",
+          "يطبق البروتوكول المصدر 35% من انزلاق المعاملات، ويوجهه لإعادة شراء MS وإرساله إلى عنوان النسخ.",
+          "−15%",
+          "استجابة بنسبة 35%"
+        ],
+        [
+          "انخفاض تراكمي بنسبة 30%",
+          "نطاق التثبيت العميق",
+          "ترتفع معلمة الانزلاق إلى 50%، مع الحفاظ على نفس مسار إعادة الشراء والنسخ الموصوف في مجموعة البروتوكول.",
+          "−30%",
+          "استجابة بنسبة 50%"
+        ],
+        [
+          "50% انخفاض تراكمي",
+          "وضع التداول",
+          "تتوقف جداول إصدار الأرباح الحالية مؤقتًا بينما تستمر الحسابات الجديدة ومكافآت الطبقة الديناميكية. يتم استئناف التشغيل العادي بعد فترة نقاهة مدتها 48 ساعة.",
+          "−50%",
+          "48 ساعة استرداد"
+        ]
+      ],
+      "circulation": {
+        "eyebrow": "وضع التداول",
+        "title": "وقفة. يحمي. استرداد. سيرة ذاتية.",
+        "copy": "عند الانخفاض التراكمي بنسبة 50%، يقوم النموذج المصدر بإيقاف جداول الإصدار الحالية مؤقتًا. تظل الحسابات الجديدة والمكافآت التفاضلية الديناميكية نشطة. وبمجرد أن يستمر انتعاش الأسعار لمدة 48 ساعة، يتم استئناف العمليات العادية.",
+        "label": "التعويض موضح في المصدر",
+        "detail": "من الحصة المتوقفة مؤقتًا أثناء وضع التداول، مع مراعاة شروط العقد المنفذة."
+      },
+      "stakingHeading": {
+        "eyebrow": "نموذج التوقيع المساحي",
+        "title": "مسح المدخلات. الإصدار المقرر.",
+        "copy": "يقدم السطح المرفق نموذجًا للتخزين مع المعلمات المنشورة التالية. يجب التحقق من أي تنفيذ مباشر على السلسلة قبل المشاركة."
+      },
+      "parameters": [
+        [
+          "الحد الأدنى للطلب",
+          "200 دولار أمريكي",
+          "حد الإدخال المذكور في النموذج المصدر."
+        ],
+        [
+          "الهدف الإجمالي المنشور",
+          "300%",
+          "معلمة نموذج، وليست عائدًا مضمونًا."
+        ],
+        [
+          "فترة الإصدار الخطية",
+          "365 يومًا",
+          "جدول الإصدار مذكور في المجموعة المرفقة."
+        ]
+      ],
+      "risk": "تنطوي الأصول الرقمية وبروتوكولات التمويل اللامركزي على مخاطر كبيرة. يمكن لآليات الحماية أن تؤثر على الحوافز، لكنها لا تستطيع القضاء على مخاطر السيولة أو العقود الذكية أو السوق أو الخسارة.",
+      "action": {
+        "title": "الميكانيكا مهمة. التحقق مهم أكثر.",
+        "copy": "تابع عملية التوريد والتخصيص والطرح المرحلي للمنتج خلف MS.",
+        "primary": "اكتشف اقتصاديات الرمز المميز",
+        "secondary": "العودة إلى المنتجات"
+      }
+    },
+    "token": {
+      "hero": {
+        "eyebrow": "النموذج الاقتصادي MS",
+        "title": "توريد ثابت مع مهمة للقيام بها.",
+        "copy": "يقسم النموذج المتوفر مليار MS بين نظام التسوية المساحية والسيولة العامة للنظام البيئي الأوسع.",
+        "primary": "فحص التخصيص",
+        "secondary": "انظر فائدة المنتج"
+      },
+      "allocationAria": "تخصيص الرمز المميز: 30 بالمائة من احتياطي التسوية و70 بالمائة من سيولة النظام البيئي",
+      "total": "إجمالي MS",
+      "eyebrow": "مسبحان متصلان",
+      "title": "يدخل كل رمز مميز إلى النموذج بدور محدد.",
+      "allocations": [
+        [
+          "300M MS",
+          "مخصص في النموذج المصدر لدعم نظام تسوية النظام البيئي المساحي."
+        ],
+        [
+          "700M MS",
+          "مخصص للسيولة العامة واقتصاد GameFi القائم على البطاقة."
+        ]
+      ],
+      "roadmapEyebrow": "إطلاق مرحلي",
+      "roadmapTitle": "قم ببناء الأساس، وفتح السوق، وتوسيع المرافق.",
+      "roadmap": [
+        [
+          "المؤسسة",
+          "إطلاق التوقيع المساحي",
+          "إنشاء نموذج المشاركة والطبقة الأولى لتداول النظام البيئي."
+        ],
+        [
+          "التداول",
+          "إطلاق سوق MS",
+          "تمكين التداول المفتوح وسيولة السوق واكتشاف الأسعار العامة."
+        ],
+        [
+          "التوسع",
+          "إطلاق بطاقة GameFi",
+          "أدخل تقنية blockchain القائمة على البطاقة في النظام البيئي لتوسيع المنفعة والمجتمع."
+        ]
+      ],
+      "action": {
+        "title": "العرض يحدد الندرة. المنفعة تحدد الملاءمة.",
+        "copy": "تعرف على كيفية تحويل المنتجات لإمدادات MS الثابتة إلى حركة عبر نظام بيئي واحد متصل.",
+        "primary": "اتبع حلقة الأداة المساعدة",
+        "secondary": "مراجعة الضمانات"
+      }
+    },
+    "whitepaper": {
+      "hero": {
+        "eyebrow": "الوثيقة التقنية، مايو 2026",
+        "title": "إقرأ النظام كاملاً.",
+        "copy": "نظرة عامة مكونة من 18 صفحة حول بنية Mobius Strip والتطبيقات والاقتصاد وخريطة الطريق والمخاطر التي تم الكشف عنها.",
+        "button": "عرض الملف المتاح",
+        "edition": "الطبعة الإنجليزية",
+        "pages": "18 صفحة",
+        "coverAlt": "غلاف ورقة عمل Mobius Strip باللغة الإنجليزية"
+      },
+      "downloadHeading": {
+        "eyebrow": "الطبعة المتوفرة",
+        "title": "أبقِ المستند المصدر قريبًا.",
+        "copy": "قم بتنزيل النسخة الإنجليزية المرفقة أو افتحها في علامة تبويب متصفح جديدة للرجوع إليها بسرعة."
+      },
+      "fileTitle": "ورقة عمل Mobius Strip",
+      "fileMeta": "الإنجليزية PDF / مايو 2026 / 18 صفحة / 589 كيلوبايت",
+      "open": "افتح ملف PDF",
+      "download": "تحميل ملف PDF",
+      "index": {
+        "eyebrow": "داخل الورقة",
+        "title": "النظام الكامل في وثيقة واحدة.",
+        "copy": "تعرض الورقة المشروع كما اقترحته الجهة المصدرة له. التعامل مع المطالبات الفنية والسوقية والتنظيمية باعتبارها مواد للتحقق منها بشكل مستقل."
+      },
+      "topics": [
+        [
+          "الهندسة المعمارية",
+          "تصميم السلسلة، الإجماع، العقد الرئيسية وبروتوكول الخصوصية ثلاثي الطبقات المقترح."
+        ],
+        [
+          "التطبيقات",
+          "MS Swap ولعبة الورق والدفع والدردشة وDAO عبر سطح منتج واحد متصل."
+        ],
+        [
+          "الاقتصاد",
+          "العرض الثابت والتخصيص ورسوم النظام البيئي ونموذج الحرق المنشور."
+        ],
+        [
+          "الأمان",
+          "اعتبارات التشفير والعقود والشبكات وأمن الأصول."
+        ],
+        [
+          "خارطة الطريق",
+          "Testnet والشبكة الرئيسية وتوسيع النظام البيئي والطرح العالمي المخطط له."
+        ],
+        [
+          "المخاطر والامتثال",
+          "المخاطر الفنية والسوقية والتنظيمية والاقتصادية التي تصفها الجهة المصدرة."
+        ]
+      ],
+      "action": {
+        "title": "من المستند إلى نموذج العمل.",
+        "copy": "تابع من خلال آليات البروتوكول أو تعرف على مكان تناسب كل منتج داخل النظام البيئي.",
+        "primary": "راجع البروتوكول",
+        "secondary": "اكتشف النظام البيئي"
+      }
+    }
+  },
+  "ja": {
+    "nav": {
+      "home": "ホーム",
+      "ecosystem": "エコシステム",
+      "protocol": "プロトコル",
+      "token": "トークン",
+      "whitepaper": "ホワイトペーパー",
+      "staking": "ステーキング",
+      "community": "コミュニティ"
+    },
+    "common": {
+      "scrollCue": "スクロールして連続体に入ります",
+      "continueLoop": "ループを継続する",
+      "marquee": [
+        "パブリック チェーン",
+        "オンチェーン ガバナンス",
+        "グローバル支払い",
+        "テキサス ホールデム",
+        "MS ダオ",
+        "暗号化されたチャット"
+      ],
+      "footerTagline": "1 つの表面。境界線はありません。",
+      "footerRisk": "Mobius Strip は、実験的なデジタル資産エコシステムです。このサイトのいかなる内容も財務上のアドバイスや返品の保証ではありません。",
+      "notFoundEyebrow": "地表の外側",
+      "notFoundTitle": "このパスは続きません。",
+      "returnHome": "家に帰ります"
+    },
+    "home": {
+      "hero": {
+        "eyebrow": "継続的なオンチェーン経済",
+        "title": [
+          "1 つの表面。",
+          "境界はありません。"
+        ],
+        "copy": "Mobius Strip は、インフラストラクチャ、ガバナンス、支払い、GameFi、通信を 1 つのオープンな自己循環エコシステムで接続します。",
+        "primary": "エコシステムを探索する",
+        "secondary": "それがどのように保持されるかを見てください"
+      },
+      "overview": {
+        "eyebrow": "すべてが接続されたまま",
+        "title": "中断のない 1 つの表面として設計された経済性。",
+        "copy": "すべてのMobius 製品には独自の役割がありますが、単独で存在するものはありません。ガバナンス、所有権、遊び、調整は同じシステムを通じて行われます。",
+        "cards": [
+          [
+            "5 つの製品、1 つの州",
+            "完全なエコシステム"
+          ],
+          [
+            "反応するルール",
+            "プロトコルの仕組み"
+          ],
+          [
+            "透過的な割り当て",
+            "10億MS"
+          ]
+        ]
+      },
+      "statement": [
+        "価値はオープンネットワークを通じて入り、生活空間を移動します。",
+        "経済性があり、新しいユーティリティが付属しています。"
+      ],
+      "journey": {
+        "eyebrow": "動き続けるために作られています",
+        "title": [
+          "1 つのパス。",
+          "3 層。"
+        ],
+        "copy": "インフラストラクチャから人間の使用までシステムをスクロールします。表面が動き続ける間、タイトルは保持されます。",
+        "link": "エコシステムに参加する",
+        "chapters": [
+          [
+            "パブリック チェーン",
+            "BSC ベースの決済層は、各製品を 1 つの開いた観察可能な表面上に保持するように設計されています。"
+          ],
+          [
+            "ガバナンスと調整",
+            "提案、委任、透明性のある投票は、システムのネイティブ部分として設計されています。"
+          ],
+          [
+            "ウォレットとグローバル支払い",
+            "より広範なメビウス経済全体にわたる所有権、譲渡、参加のための単一のインターフェイス。"
+          ]
+        ]
+      },
+      "action": {
+        "title": "システムはトークンよりも大きいです。",
+        "copy": "製品ループ全体をたどり、循環を動かし続ける仕組みを調べます。",
+        "primary": "すべてのレイヤーを探索する",
+        "secondary": "トークン モデルの表示"
+      }
+    },
+    "ecosystem": {
+      "hero": {
+        "eyebrow": "5 つの製品。 1 つの共有状態。",
+        "title": "経済になるネットワーク。",
+        "copy": "Mobius は、オンチェーン エコシステムが完全であると感じるために必要なレール、ガバナンス、インターフェイス、エクスペリエンス、会話を接続します。",
+        "primary": "プロトコルを理解する",
+        "secondary": "MS の経済学を見る"
+      },
+      "productsHeading": {
+        "eyebrow": "レールから実際の使用まで",
+        "title": "システムを拡張します。",
+        "copy": "各垂直スライスは、別個の Mobius プロダクトです。レイヤーをクリックまたはタップして開き、どのように接続されているかを確認します。"
+      },
+      "products": [
+        [
+          "MS チェーン",
+          "公共インフラ",
+          "ベースレイヤーは、1 つの共有状態を通じてステーキング、ガバナンス、支払い、およびインタラクティブな契約を接続します。"
+        ],
+        [
+          "MS ダオ",
+          "ガバナンス プラットフォーム",
+          "提案、委任、透明性のある集団意思決定のためのオンチェーン ガバナンス プラットフォーム。"
+        ],
+        [
+          "MS ウォレット",
+          "所有権と支払い",
+          "自己管理と世界的な価値観の動き、たった 1 つのジェスチャーでより広範なエコシステムが実現します。"
+        ],
+        [
+          "MS ゲームファイ",
+          "テキサス ホールデム",
+          "デジタル所有権を遊び、進歩、コミュニティに変えるライブ テキサス ホールデム レイヤー。"
+        ],
+        [
+          "MS チャット",
+          "ダークモードメッセンジャー",
+          "アイデンティティ、調整、オンチェーンアクションの間のループを閉じる暗号化されたメッセンジャー。"
+        ]
+      ],
+      "journeyHeading": {
+        "eyebrow": "継続的な旅",
+        "title": "製品が接続されるとユーティリティが複合します。",
+        "copy": "インターフェースが変わります。基礎となる所有権はそうではありません。これらの章は、単一の参加者のジャーニーとして積み重ねられます。"
+      },
+      "journey": [
+        [
+          "入力してください",
+          "ウォレットを通じてMobiusにアクセスし、共有ネットワークに値を移動します。"
+        ],
+        [
+          "参加する",
+          "エコシステムの表面を離れることなく、統治、出資、再生、調整を行います。"
+        ],
+        [
+          "循環",
+          "流動性と効用は、製品の境界で終わるのではなく、ネットワークに戻ります。"
+        ]
+      ],
+      "action": {
+        "title": "ユーティリティは、ルールが表示されている場合にのみ永続的です。",
+        "copy": "Mobius プロトコルで説明されているしきい値、リリース ロジック、および循環モードを参照してください。",
+        "primary": "オープン プロトコルの仕組み",
+        "secondary": "割り当ての検査"
+      }
+    },
+    "protocol": {
+      "hero": {
+        "eyebrow": "応答するシステム",
+        "title": "保護は行動であり、約束ではありません。",
+        "copy": "Mobius は、集中販売を遅らせ、流動性を強化し、流通を再開するように設計された一連のオンチェーン対応について説明しています。",
+        "primary": "しきい値を参照",
+        "secondary": "トークン モデルの表示"
+      },
+      "bandsHeading": {
+        "eyebrow": "公開された応答ロジック",
+        "title": "1 つの市場サイクル。 3 つの応答帯域。",
+        "copy": "付属のサイクルチャートは、成長、修正、回復を繰り返します。その横にある応答バンドは、意図された仕組みを説明するものであり、保証された市場の結果を示すものではありません。"
+      },
+      "cycleCaption": "市場の成長サイクル / 提供されたプロトコルのビジュアル",
+      "bands": [
+        [
+          "15% 累積減少",
+          "最初の安定化バンド",
+          "ソース プロトコルは 35% のトランザクション スリッページを適用し、MS を再購入して書き込みアドレスに送信するように指示します。",
+          "−15%",
+          "35% の応答"
+        ],
+        [
+          "30% の累積減少",
+          "深い安定化バンド",
+          "スリッページ パラメーターは 50% に上昇し、プロトコル デッキに記載されているのと同じ再購入と書き込みのパスを維持します。",
+          "−30%",
+          "50% の応答"
+        ],
+        [
+          "累積減少率 50%",
+          "循環モード",
+          "既存の利益リリーススケジュールは一時停止されますが、新規アカウントと動的階層特典は継続されます。 48 時間の回復期間の後に、通常の操作が再開されます。",
+          "−50%",
+          "48 時間の回復"
+        ]
+      ],
+      "circulation": {
+        "eyebrow": "循環モード",
+        "title": "一時停止してください。守る。回復する。再開する。",
+        "copy": "累積減少が 50% に達すると、ソース モデルは既存のリリース スケジュールを一時停止します。新しいアカウントと動的な差額報酬は引き続きアクティブです。価格回復が 48 時間維持されると、通常の業務が再開されます。",
+        "label": "ソースに記載されている補償",
+        "detail": "流通モード中の一時停止クォータは、実装された契約条件に従います。"
+      },
+      "stakingHeading": {
+        "eyebrow": "ステーキングモデル",
+        "title": "入力をクリアします。発売予定。",
+        "copy": "提供されたデッキは、次の公開されたパラメーターを備えたステーキング モデルを示します。ライブ実装は参加前にオンチェーンで検証する必要があります。"
+      },
+      "parameters": [
+        [
+          "最小注文数",
+          "200 USDT",
+          "エントリのしきい値はソース モデルに記載されています。"
+        ],
+        [
+          "公開された集計ターゲット",
+          "300%",
+          "モデルパラメータであり、戻りが保証されているわけではありません。"
+        ],
+        [
+          "リニアリリース期間",
+          "365 日",
+          "リリーススケジュールは付属のデッキに記載されています。"
+        ]
+      ],
+      "risk": "デジタル資産と DeFi プロトコルには多大なリスクが伴います。保護の仕組みはインセンティブに影響を与える可能性がありますが、流動性、スマートコントラクト、市場または損失のリスクを排除することはできません。",
+      "action": {
+        "title": "メカニックは重要です。検証の方が重要です。",
+        "copy": "MS の背後で供給、割り当て、段階的な製品展開を継続します。",
+        "primary": "トークンエコノミクスを探る",
+        "secondary": "製品に戻る"
+      }
+    },
+    "token": {
+      "hero": {
+        "eyebrow": "MS 経済モデル",
+        "title": "やるべき仕事を伴う固定供給。",
+        "copy": "提供されたモデルは、10 億 MS をステーキング決済システムとより広範なエコシステムの公的流動性の間で分割します。",
+        "primary": "割り当ての検査",
+        "secondary": "製品ユーティリティを参照"
+      },
+      "allocationAria": "トークンの割り当て: 30 パーセントの決済準備金と 70 パーセントのエコシステム流動性",
+      "total": "合計MS",
+      "eyebrow": "2 つの接続されたプール",
+      "title": "すべてのトークンは、定義された役割とともにモデルに入力されます。",
+      "allocations": [
+        [
+          "300M MS",
+          "ステーキングエコシステム決済システムをサポートするためにソースモデルに割り当てられます。"
+        ],
+        [
+          "700M MS",
+          "公的流動性とカードベースの GameFi エコノミーに割り当てられます。"
+        ]
+      ],
+      "roadmapEyebrow": "段階的な立ち上げ",
+      "roadmapTitle": "基盤を構築し、市場を開き、ユーティリティを拡大します。",
+      "roadmap": [
+        [
+          "財団",
+          "ステーキングの起動",
+          "参加モデルと生態系循環の最初の層を確立します。"
+        ],
+        [
+          "循環",
+          "MS市場の立ち上げ",
+          "オープンな取引、市場の流動性、公開価格の発見を可能にします。"
+        ],
+        [
+          "拡張",
+          "Card GameFi の発売",
+          "カードベースのブロックチェーン プレイをエコシステムに導入して、ユーティリティとコミュニティを拡大します。"
+        ]
+      ],
+      "action": {
+        "title": "供給は希少性を定義します。ユーティリティは関連性を定義します。",
+        "copy": "製品が固定された MS 供給を 1 つの接続されたエコシステム全体の移動にどのように変えるかをご覧ください。",
+        "primary": "ユーティリティ ループに従います",
+        "secondary": "安全策を確認する"
+      }
+    },
+    "whitepaper": {
+      "hero": {
+        "eyebrow": "ホワイトペーパー、2026 年 5 月",
+        "title": "システム全体を読み取ります。",
+        "copy": "メビウスの帯のアーキテクチャ、アプリケーション、経済性、ロードマップ、開示されたリスクに関する 18 ページの概要。",
+        "button": "利用可能なファイルを表示",
+        "edition": "英語版",
+        "pages": "18 ページ",
+        "coverAlt": "メビウスの帯の英語版ホワイトペーパーの表紙"
+      },
+      "downloadHeading": {
+        "eyebrow": "利用可能なエディション",
+        "title": "ソース文書は近くに置いてください。",
+        "copy": "付属の英語版をダウンロードするか、新しいブラウザ タブで開いて簡単に参照してください。"
+      },
+      "fileTitle": "メビウスの輪のホワイトペーパー",
+      "fileMeta": "英語 PDF / 2026 年 5 月 / 18 ページ / 589 KB",
+      "open": "PDFを開く",
+      "download": "PDF をダウンロード",
+      "index": {
+        "eyebrow": "紙の内側",
+        "title": "完全なシステムを 1 つのドキュメントにまとめました。",
+        "copy": "この文書では、発行主体によって提案されたプロジェクトが示されています。技術的、市場的、および規制上の主張を、独立して検証するための材料として扱います。"
+      },
+      "topics": [
+        [
+          "アーキテクチャ",
+          "チェーン設計、コンセンサス、マスターノード、および提案されている 3 層プライバシー プロトコル。"
+        ],
+        [
+          "アプリケーション",
+          "MS スワップ、カード ゲーム、支払い、チャット、DAO を 1 つの接続された製品表面で実行できます。"
+        ],
+        [
+          "経済学",
+          "固定供給、割り当て、エコシステム料金、および公開された燃焼モデル。"
+        ],
+        [
+          "セキュリティ",
+          "暗号化、契約、ネットワーク、および資産セキュリティに関する考慮事項。"
+        ],
+        [
+          "ロードマップ",
+          "テストネット、メインネット、エコシステムの拡張、および計画されているグローバル展開。"
+        ],
+        [
+          "リスクとコンプライアンス",
+          "発行主体によって説明された技術的、市場的、規制的、経済的リスク。"
+        ]
+      ],
+      "action": {
+        "title": "ドキュメントから作業モデルへ。",
+        "copy": "プロトコルの仕組みを続けるか、各製品がエコシステム内のどこに収まるかを確認してください。",
+        "primary": "プロトコルを確認してください",
+        "secondary": "エコシステムを探索する"
+      }
+    }
+  },
+  "ko": {
+    "nav": {
+      "home": "홈",
+      "ecosystem": "생태계",
+      "protocol": "프로토콜",
+      "token": "토큰",
+      "whitepaper": "백서",
+      "staking": "스테이킹",
+      "community": "커뮤니티"
+    },
+    "common": {
+      "scrollCue": "연속체에 들어가려면 스크롤하세요.",
+      "continueLoop": "루프 계속하기",
+      "marquee": [
+        "퍼블릭 체인",
+        "온체인 거버넌스",
+        "글로벌 결제",
+        "텍사스 홀덤",
+        "MS 다오",
+        "암호화된 채팅"
+      ],
+      "footerTagline": "한 표면. 경계가 없습니다.",
+      "footerRisk": "Mobius Strip은 실험적인 디지털 자산 생태계입니다. 이 사이트의 어떤 내용도 재정적 조언이나 반품 보장이 아닙니다.",
+      "notFoundEyebrow": "표면 외부",
+      "notFoundTitle": "이 경로는 계속되지 않습니다.",
+      "returnHome": "집으로 돌아가세요"
+    },
+    "home": {
+      "hero": {
+        "eyebrow": "지속적인 온체인 경제",
+        "title": [
+          "한 표면.",
+          "경계가 없습니다."
+        ],
+        "copy": "Mobius Strip은 인프라, 거버넌스, 결제, GameFi 및 커뮤니케이션을 하나의 개방형 자체 순환 생태계로 연결합니다.",
+        "primary": "생태계 탐색",
+        "secondary": "어떻게 유지되는지 확인하세요"
+      },
+      "overview": {
+        "eyebrow": "모든 것이 연결되어 있습니다.",
+        "title": "중단되지 않는 하나의 표면으로 설계된 경제.",
+        "copy": "모든 Mobius 제품에는 고유한 역할이 있지만 그 어느 것도 고립되어 있지 않습니다. 거버넌스, 소유권, 플레이 및 조정은 동일한 시스템을 통해 이동합니다.",
+        "cards": [
+          [
+            "5개의 제품, 하나의 상태",
+            "전체 생태계"
+          ],
+          [
+            "반응하는 규칙",
+            "프로토콜 메커니즘"
+          ],
+          [
+            "투명한 할당",
+            "10억 MS"
+          ]
+        ]
+      },
+      "statement": [
+        "가치는 개방형 네트워크를 통해 들어오고 생활을 통해 이동합니다.",
+        "경제적이고 새로운 유틸리티로 돌아옵니다."
+      ],
+      "journey": {
+        "eyebrow": "계속 움직일 수 있도록 제작됨",
+        "title": [
+          "하나의 경로.",
+          "3개의 레이어."
+        ],
+        "copy": "인프라에서 사용자 사용까지 시스템을 스크롤합니다. 제목은 표면이 계속 움직이는 동안 유지됩니다.",
+        "link": "생태계에 들어가세요",
+        "chapters": [
+          [
+            "퍼블릭 체인",
+            "각 제품을 하나의 개방적이고 관찰 가능한 표면에 유지하도록 설계된 BSC 기반 결제 계층입니다."
+          ],
+          [
+            "거버넌스 및 조정",
+            "시스템의 기본 부분으로 설계된 제안, 위임 및 투명한 투표."
+          ],
+          [
+            "지갑 및 글로벌 결제",
+            "더 넓은 Mobius 경제 전반에 걸쳐 소유권, 이전 및 참여를 위한 단일 인터페이스입니다."
+          ]
+        ]
+      },
+      "action": {
+        "title": "시스템이 토큰보다 큽니다.",
+        "copy": "전체 제품 루프를 따른 다음 순환을 계속 유지하는 메커니즘을 조사하십시오.",
+        "primary": "모든 레이어 탐색",
+        "secondary": "토큰 모델 보기"
+      }
+    },
+    "ecosystem": {
+      "hero": {
+        "eyebrow": "다섯 가지 제품. 하나의 공유 상태.",
+        "title": "경제가 되는 네트워크.",
+        "copy": "Mobius는 온체인 생태계가 온전함을 느끼는 데 필요한 레일, 거버넌스, 인터페이스, 경험 및 대화를 연결합니다.",
+        "primary": "프로토콜 이해",
+        "secondary": "석사 경제학 보기"
+      },
+      "productsHeading": {
+        "eyebrow": "레일에서 실제 사용까지",
+        "title": "시스템을 확장하세요.",
+        "copy": "각 수직 슬라이스는 별개의 Mobius 제품입니다. 레이어를 클릭하거나 탭하여 열고 어떻게 연결되는지 확인하세요."
+      },
+      "products": [
+        [
+          "MS 체인",
+          "공용 인프라",
+          "기본 레이어는 하나의 공유 상태를 통해 스테이킹, 거버넌스, 결제 및 대화형 계약을 연결합니다."
+        ],
+        [
+          "MS 다오",
+          "거버넌스 플랫폼",
+          "제안, 위임 및 투명한 집단 의사결정을 위한 온체인 거버넌스 플랫폼입니다."
+        ],
+        [
+          "MS 지갑",
+          "소유권 및 지불",
+          "한 번의 제스처만으로 더 넓은 생태계를 갖춘 자기 관리 및 글로벌 가치 운동."
+        ],
+        [
+          "MS GameFi",
+          "텍사스 홀덤",
+          "디지털 소유권을 플레이, 진행 및 커뮤니티로 전환하는 라이브 텍사스 홀덤 레이어입니다."
+        ],
+        [
+          "MS 채팅",
+          "다크 모드 메신저",
+          "신원, 조정 및 온체인 작업 간의 루프를 닫는 암호화된 메신저입니다."
+        ]
+      ],
+      "journeyHeading": {
+        "eyebrow": "끊임없는 여행",
+        "title": "제품을 연결할 때 유틸리티 화합물.",
+        "copy": "인터페이스가 변경됩니다. 기본 소유권은 그렇지 않습니다. 이 장은 단일 참가자 여정으로 구성됩니다."
+      },
+      "journey": [
+        [
+          "들어가세요",
+          "지갑을 통해 Mobius에 접속하고 공유 네트워크로 가치를 이동하세요."
+        ],
+        [
+          "참여하다",
+          "생태계 표면을 떠나지 않고도 관리하고, 스테이크하고, 플레이하고, 조정할 수 있습니다."
+        ],
+        [
+          "순환하다",
+          "유동성과 유틸리티는 제품 경계에서 끝나지 않고 네트워크로 돌아옵니다."
+        ]
+      ],
+      "action": {
+        "title": "유틸리티는 규칙이 표시될 때만 지속됩니다.",
+        "copy": "Mobius 프로토콜에 설명된 임계값, 해제 논리 및 순환 모드를 참조하세요.",
+        "primary": "개방형 프로토콜 메커니즘",
+        "secondary": "할당 검사"
+      }
+    },
+    "protocol": {
+      "hero": {
+        "eyebrow": "응답하는 시스템",
+        "title": "보호는 약속이 아니라 행동입니다.",
+        "copy": "Mobius는 집중 판매를 늦추고 유동성을 강화하며 순환을 다시 시작하도록 설계된 일련의 온체인 응답을 설명합니다.",
+        "primary": "임계값 보기",
+        "secondary": "토큰 모델 보기"
+      },
+      "bandsHeading": {
+        "eyebrow": "게시된 응답 논리",
+        "title": "하나의 시장 주기. 세 개의 응답 밴드.",
+        "copy": "제공된 주기도표는 성장과 수정, 회복을 반복하는 모습을 보여줍니다. 옆의 응답 밴드는 보장된 시장 결과가 아닌 의도된 메커니즘을 설명합니다."
+      },
+      "cycleCaption": "시장 성장주기 / 제공 프로토콜 시각적",
+      "bands": [
+        [
+          "15% 누적 감소",
+          "첫 번째 안정화 밴드",
+          "소스 프로토콜은 35% 거래 슬리피지를 적용하여 MS를 환매하여 소각 주소로 보내도록 지시합니다.",
+          "−15%",
+          "35% 응답"
+        ],
+        [
+          "30% 누적 감소",
+          "깊은 안정화 밴드",
+          "슬리피지 매개변수는 프로토콜 데크에 설명된 것과 동일한 재구매 및 소각 경로를 유지하면서 50%까지 상승합니다.",
+          "−30%",
+          "50% 응답"
+        ],
+        [
+          "50% 누적 감소",
+          "순환 모드",
+          "새 계정과 동적 등급 보상이 계속되는 동안 기존 수익 창출 일정은 일시 중지됩니다. 48시간의 복구 기간 후에 정상 작동이 재개됩니다.",
+          "−50%",
+          "48h 복구"
+        ]
+      ],
+      "circulation": {
+        "eyebrow": "순환 모드",
+        "title": "일시 중지. 보호하다. 다시 덮다. 재개하다.",
+        "copy": "누적 감소율이 50%에 도달하면 소스 모델이 기존 출시 일정을 일시 중지합니다. 새로운 계정과 동적 차등 보상은 계속 활성화됩니다. 48시간 동안 가격 회복이 유지되면 정상 운영이 재개됩니다.",
+        "label": "출처에 명시된 보상",
+        "detail": "구현된 계약 조건에 따라 순환 모드에서 일시 중지된 할당량의 비율입니다."
+      },
+      "stakingHeading": {
+        "eyebrow": "스테이킹 모델",
+        "title": "입력을 지웁니다. 출시 예정.",
+        "copy": "제공된 데크는 다음과 같은 게시된 매개변수가 포함된 스테이킹 모델을 제공합니다. 모든 실시간 구현은 참여하기 전에 온체인에서 검증되어야 합니다."
+      },
+      "parameters": [
+        [
+          "최소 주문",
+          "200USDT",
+          "소스 모델에 명시된 진입 임계값입니다."
+        ],
+        [
+          "게시된 집계 목표",
+          "300%",
+          "모델 매개변수이며 반환이 보장되지 않습니다."
+        ],
+        [
+          "선형 출시 기간",
+          "365일",
+          "제공된 자료에 출시 일정이 명시되어 있습니다."
+        ]
+      ],
+      "risk": "디지털 자산 및 DeFi 프로토콜에는 상당한 위험이 따릅니다. 보호 메커니즘은 인센티브에 영향을 미칠 수 있지만 유동성, 스마트 계약, 시장 또는 손실 위험을 제거할 수는 없습니다.",
+      "action": {
+        "title": "역학이 중요합니다. 검증이 더 중요합니다.",
+        "copy": "MS 뒤에서 공급, 할당 및 단계적 제품 출시를 계속합니다.",
+        "primary": "토큰 경제 살펴보기",
+        "secondary": "제품으로 반품"
+      }
+    },
+    "token": {
+      "hero": {
+        "eyebrow": "MS 경제 모델",
+        "title": "할 일이 있는 고정 공급품입니다.",
+        "copy": "제공된 모델은 더 넓은 생태계를 위해 스테이킹 결제 시스템과 공공 유동성 간에 10억 MS를 나눕니다.",
+        "primary": "할당 검사",
+        "secondary": "제품 유틸리티 보기"
+      },
+      "allocationAria": "토큰 할당: 결제 준비금 30% 및 생태계 유동성 70%",
+      "total": "총 MS",
+      "eyebrow": "두 개의 연결된 풀",
+      "title": "모든 토큰은 정의된 역할로 모델에 들어갑니다.",
+      "allocations": [
+        [
+          "300MMS",
+          "스테이킹 생태계 결제 시스템을 지원하기 위해 소스 모델에 할당됩니다."
+        ],
+        [
+          "700MMS",
+          "공공 유동성과 카드 기반 GameFi 경제에 할당됩니다."
+        ]
+      ],
+      "roadmapEyebrow": "단계적 출시",
+      "roadmapTitle": "기반을 구축하고, 시장을 개방하고, 유틸리티를 확장합니다.",
+      "roadmap": [
+        [
+          "재단",
+          "스테이킹 출시",
+          "참여 모델과 생태계 순환의 첫 번째 레이어를 구축합니다."
+        ],
+        [
+          "순환",
+          "MS 시장 출시",
+          "공개 거래, 시장 유동성 및 공개 가격 발견을 활성화합니다."
+        ],
+        [
+          "확장",
+          "카드 GameFi 출시",
+          "카드 기반 블록체인 플레이를 생태계에 도입하여 유틸리티와 커뮤니티를 확대합니다."
+        ]
+      ],
+      "action": {
+        "title": "공급은 희소성을 정의합니다. 유틸리티는 관련성을 정의합니다.",
+        "copy": "제품이 어떻게 고정 MS 공급을 하나의 연결된 생태계에서 이동으로 전환하는지 확인하세요.",
+        "primary": "유틸리티 루프를 따르세요",
+        "secondary": "보호 조치 검토"
+      }
+    },
+    "whitepaper": {
+      "hero": {
+        "eyebrow": "백서, 2026년 5월",
+        "title": "전체 시스템을 읽어보세요.",
+        "copy": "Mobius Strip 아키텍처, 애플리케이션, 경제, 로드맵 및 공개된 위험에 대한 18페이지 개요입니다.",
+        "button": "사용 가능한 파일 보기",
+        "edition": "영어판",
+        "pages": "18페이지",
+        "coverAlt": "뫼비우스 띠 영문 백서 표지"
+      },
+      "downloadHeading": {
+        "eyebrow": "사용 가능한 버전",
+        "title": "소스 문서를 가까이에 보관하세요.",
+        "copy": "제공된 영어 버전을 다운로드하거나 빠른 참조를 위해 새 브라우저 탭에서 엽니다."
+      },
+      "fileTitle": "뫼비우스 띠 백서",
+      "fileMeta": "영어 PDF / 2026년 5월 / 18페이지 / 589KB",
+      "open": "PDF 열기",
+      "download": "PDF 다운로드",
+      "index": {
+        "eyebrow": "종이 속",
+        "title": "전체 시스템이 하나의 문서에 담겨 있습니다.",
+        "copy": "이 논문은 발행 기관이 제안한 프로젝트를 제시합니다. 기술, 시장 및 규제 관련 주장을 독립적으로 검증할 자료로 취급합니다."
+      },
+      "topics": [
+        [
+          "아키텍처",
+          "체인 설계, 합의, 마스터노드 및 제안된 3계층 개인 정보 보호 프로토콜."
+        ],
+        [
+          "애플리케이션",
+          "MS 연결된 하나의 제품 표면에서 스왑, 카드 게임, 결제, 채팅 및 DAO를 제공합니다."
+        ],
+        [
+          "경제학",
+          "고정 공급, 할당, 생태계 수수료 및 게시된 소각 모델."
+        ],
+        [
+          "보안",
+          "암호화, 계약, 네트워크 및 자산 보안 고려 사항."
+        ],
+        [
+          "로드맵",
+          "테스트넷, 메인넷, 생태계 확장 및 계획된 글로벌 출시."
+        ],
+        [
+          "위험 및 규정 준수",
+          "발행 기관이 설명하는 기술적, 시장, 규제 및 경제적 위험."
+        ]
+      ],
+      "action": {
+        "title": "문서에서 작업 모델로.",
+        "copy": "계속해서 프로토콜 메커니즘을 살펴보거나 각 제품이 생태계 내에서 어디에 적합한지 확인하세요.",
+        "primary": "프로토콜 검토",
+        "secondary": "생태계 탐색"
+      }
+    }
+  },
+  "ms": {
+    "nav": {
+      "home": "Rumah",
+      "ecosystem": "Ekosistem",
+      "protocol": "Protokol",
+      "token": "Token",
+      "whitepaper": "Kertas Putih",
+      "staking": "Staking",
+      "community": "Komuniti"
+    },
+    "common": {
+      "scrollCue": "Tatal untuk memasuki kontinum",
+      "continueLoop": "Teruskan gelung",
+      "marquee": [
+        "Rangkaian awam",
+        "Tadbir urus dalam rantaian",
+        "Pembayaran global",
+        "Texas Hold'em",
+        "MS DAO",
+        "Sembang disulitkan"
+      ],
+      "footerTagline": "Satu permukaan. Tiada sempadan.",
+      "footerRisk": "Mobius Strip ialah ekosistem aset digital percubaan. Tiada apa-apa di laman web ini adalah nasihat kewangan atau jaminan pulangan.",
+      "notFoundEyebrow": "Di luar permukaan",
+      "notFoundTitle": "Laluan ini tidak diteruskan.",
+      "returnHome": "Pulang ke rumah"
+    },
+    "home": {
+      "hero": {
+        "eyebrow": "Ekonomi dalam rantaian yang berterusan",
+        "title": [
+          "Satu permukaan.",
+          "Tiada sempadan."
+        ],
+        "copy": "Mobius Strip menghubungkan infrastruktur, tadbir urus, pembayaran, GameFi dan komunikasi dalam satu ekosistem terbuka yang beredar sendiri.",
+        "primary": "Teroka ekosistem",
+        "secondary": "Lihat bagaimana ia berlaku"
+      },
+      "overview": {
+        "eyebrow": "Semuanya kekal berhubung",
+        "title": "Ekonomi yang direka bentuk sebagai satu permukaan tanpa gangguan.",
+        "copy": "Setiap produk Mobius mempunyai peranannya sendiri, tetapi tiada satu pun yang hidup secara berasingan. Tadbir urus, pemilikan, permainan dan penyelarasan bergerak melalui sistem yang sama.",
+        "cards": [
+          [
+            "Lima produk, satu negeri",
+            "Ekosistem penuh"
+          ],
+          [
+            "Peraturan yang bertindak balas",
+            "Mekanik protokol"
+          ],
+          [
+            "Peruntukan telus",
+            "Satu bilion MS"
+          ]
+        ]
+      },
+      "statement": [
+        "Nilai masuk melalui rangkaian terbuka, bergerak melalui kehidupan",
+        "ekonomi dan kembali dengan utiliti baharu."
+      ],
+      "journey": {
+        "eyebrow": "Dibina untuk terus bergerak",
+        "title": [
+          "Satu laluan.",
+          "Tiga lapisan."
+        ],
+        "copy": "Tatal melalui sistem daripada infrastruktur kepada kegunaan manusia. Tajuk itu dipegang sementara permukaan terus bergerak.",
+        "link": "Masuk ekosistem",
+        "chapters": [
+          [
+            "Rangkaian awam",
+            "Lapisan penyelesaian berasaskan BSC direka untuk memastikan setiap produk pada satu permukaan yang terbuka dan boleh diperhatikan."
+          ],
+          [
+            "Tadbir urus dan penyelarasan",
+            "Cadangan, perwakilan dan pengundian telus yang direka sebagai bahagian asli sistem."
+          ],
+          [
+            "Dompet dan pembayaran global",
+            "Satu antara muka tunggal untuk pemilikan, pemindahan dan penyertaan merentas ekonomi Mobius yang lebih luas."
+          ]
+        ]
+      },
+      "action": {
+        "title": "Sistem ini lebih besar daripada token.",
+        "copy": "Ikuti gelung produk penuh, kemudian periksa mekanik yang memastikan peredaran bergerak.",
+        "primary": "Teroka setiap lapisan",
+        "secondary": "Lihat model token"
+      }
+    },
+    "ecosystem": {
+      "hero": {
+        "eyebrow": "Lima produk. Satu negeri kongsi.",
+        "title": "Rangkaian yang menjadi ekonomi.",
+        "copy": "Mobius menghubungkan landasan, tadbir urus, antara muka, pengalaman dan perbualan yang diperlukan untuk ekosistem dalam rantaian berasa utuh.",
+        "primary": "Fahami protokol",
+        "secondary": "Lihat ekonomi MS"
+      },
+      "productsHeading": {
+        "eyebrow": "Dari rel kepada penggunaan sebenar",
+        "title": "Kembangkan sistem.",
+        "copy": "Setiap kepingan menegak ialah produk Mobius yang berbeza. Klik atau ketik lapisan untuk membukanya dan melihat cara ia bersambung."
+      },
+      "products": [
+        [
+          "MS Rantaian",
+          "Infrastruktur awam",
+          "Lapisan asas menghubungkan staking, tadbir urus, pembayaran dan kontrak interaktif melalui satu keadaan dikongsi."
+        ],
+        [
+          "MS DAO",
+          "Platform tadbir urus",
+          "Platform tadbir urus rantaian untuk cadangan, delegasi dan membuat keputusan kolektif yang telus."
+        ],
+        [
+          "Dompet MS",
+          "Pemilikan dan pembayaran",
+          "Penjagaan diri dan pergerakan nilai global, dengan ekosistem yang lebih luas hanya dengan satu isyarat sahaja."
+        ],
+        [
+          "MS GameFi",
+          "Texas Hold'em",
+          "Lapisan Texas Hold’em langsung yang menukarkan pemilikan digital kepada permainan, perkembangan dan komuniti."
+        ],
+        [
+          "MS Chat",
+          "Pengutus mod gelap",
+          "Pengirim mesej yang disulitkan yang menutup gelung antara identiti, penyelarasan dan tindakan dalam rantaian."
+        ]
+      ],
+      "journeyHeading": {
+        "eyebrow": "Perjalanan yang berterusan",
+        "title": "Kompaun utiliti apabila produk bersambung.",
+        "copy": "Antara muka berubah. Pemilikan asas tidak. Bab-bab ini disusun dalam satu perjalanan peserta."
+      },
+      "journey": [
+        [
+          "Masuk",
+          "Akses Mobius melalui dompet dan pindahkan nilai ke rangkaian kongsi."
+        ],
+        [
+          "Menyertai",
+          "Mentadbir, mempertaruhkan, bermain dan menyelaras tanpa meninggalkan permukaan ekosistem."
+        ],
+        [
+          "Edar",
+          "Kecairan dan utiliti kembali ke rangkaian dan bukannya berakhir pada sempadan produk."
+        ]
+      ],
+      "action": {
+        "title": "Utiliti hanya tahan lama apabila peraturan dapat dilihat.",
+        "copy": "Lihat ambang, keluarkan logik dan mod edaran yang diterangkan oleh protokol Mobius.",
+        "primary": "Mekanik protokol terbuka",
+        "secondary": "Periksa peruntukan"
+      }
+    },
+    "protocol": {
+      "hero": {
+        "eyebrow": "Sistem yang bertindak balas",
+        "title": "Perlindungan ialah tingkah laku, bukan janji.",
+        "copy": "Mobius menerangkan urutan tindak balas dalam rantaian yang direka untuk memperlahankan jualan tertumpu, mengukuhkan kecairan dan memulakan semula peredaran.",
+        "primary": "Lihat ambang",
+        "secondary": "Lihat model token"
+      },
+      "bandsHeading": {
+        "eyebrow": "Logik respons yang diterbitkan",
+        "title": "Satu kitaran pasaran. Tiga jalur tindak balas.",
+        "copy": "Carta kitaran yang dibekalkan menunjukkan pertumbuhan berulang, pembetulan dan pemulihan. Jalur tindak balas di sebelahnya menerangkan mekanik yang dimaksudkan, bukan hasil pasaran yang dijamin."
+      },
+      "cycleCaption": "Kitaran pertumbuhan pasaran / visual protokol yang dibekalkan",
+      "bands": [
+        [
+          "15% penurunan terkumpul",
+          "Jalur penstabilan pertama",
+          "Protokol sumber menggunakan 35% kegelinciran transaksi, mengarahkannya untuk membeli semula MS dan menghantarnya ke alamat terbakar.",
+          "−15%",
+          "35% respons"
+        ],
+        [
+          "30% penurunan terkumpul",
+          "Jalur penstabilan dalam",
+          "Parameter gelinciran meningkat kepada 50%, mengekalkan laluan beli balik dan bakar yang sama yang diterangkan dalam dek protokol.",
+          "−30%",
+          "50% respons"
+        ],
+        [
+          "50% penurunan terkumpul",
+          "Mod edaran",
+          "Jadual keluaran untung sedia ada dijeda sementara akaun baharu dan ganjaran peringkat dinamik diteruskan. Operasi normal disambung semula selepas tempoh pemulihan 48 jam.",
+          "−50%",
+          "48j pemulihan"
+        ]
+      ],
+      "circulation": {
+        "eyebrow": "Mod edaran",
+        "title": "Jeda. Lindungi. Pulih. Sambung semula.",
+        "copy": "Pada penurunan terkumpul 50%, model sumber menjeda jadual keluaran sedia ada. Akaun baharu dan ganjaran perbezaan dinamik kekal aktif. Setelah pemulihan harga bertahan selama 48 jam, operasi biasa disambung semula.",
+        "label": "Pampasan diterangkan dalam sumber",
+        "detail": "kuota dijeda semasa mod edaran, tertakluk kepada syarat kontrak yang dilaksanakan."
+      },
+      "stakingHeading": {
+        "eyebrow": "Model staking",
+        "title": "Kosongkan input. Keluaran berjadual.",
+        "copy": "Dek yang dibekalkan mempersembahkan model staking dengan parameter yang diterbitkan berikut. Sebarang pelaksanaan langsung hendaklah disahkan dalam rantaian sebelum penyertaan."
+      },
+      "parameters": [
+        [
+          "Pesanan minimum",
+          "200 USDT",
+          "Ambang kemasukan dinyatakan dalam model sumber."
+        ],
+        [
+          "Sasaran agregat yang diterbitkan",
+          "300%",
+          "Parameter model, bukan pulangan yang dijamin."
+        ],
+        [
+          "Tempoh keluaran linear",
+          "365 hari",
+          "Jadual keluaran dinyatakan dalam dek yang dibekalkan."
+        ]
+      ],
+      "risk": "Aset digital dan protokol DeFi melibatkan risiko yang besar. Mekanik perlindungan boleh mempengaruhi insentif, tetapi tidak boleh menghapuskan risiko kecairan, kontrak pintar, pasaran atau kerugian.",
+      "action": {
+        "title": "Mekanik penting. Pengesahan lebih penting.",
+        "copy": "Teruskan ke dalam pembekalan, peruntukan dan pelancaran produk berperingkat di belakang MS.",
+        "primary": "Teroka ekonomi token",
+        "secondary": "Kembali ke produk"
+      }
+    },
+    "token": {
+      "hero": {
+        "eyebrow": "Model ekonomi MS",
+        "title": "Bekalan tetap dengan kerja yang perlu dilakukan.",
+        "copy": "Model yang dibekalkan membahagikan satu bilion MS antara sistem penyelesaian pertaruhan dan kecairan awam untuk ekosistem yang lebih luas.",
+        "primary": "Periksa peruntukan",
+        "secondary": "Lihat utiliti produk"
+      },
+      "allocationAria": "Peruntukan token: 30 peratus rizab penyelesaian dan 70 peratus kecairan ekosistem",
+      "total": "jumlah MS",
+      "eyebrow": "Dua kolam bersambung",
+      "title": "Setiap token memasuki model dengan peranan yang ditentukan.",
+      "allocations": [
+        [
+          "300M MS",
+          "Diperuntukkan dalam model sumber untuk menyokong sistem penyelesaian ekosistem staking."
+        ],
+        [
+          "700M MS",
+          "Diperuntukkan kepada kecairan awam dan ekonomi GameFi berasaskan kad."
+        ]
+      ],
+      "roadmapEyebrow": "Pelancaran berperingkat",
+      "roadmapTitle": "Bina asas, buka pasaran, luaskan utiliti.",
+      "roadmap": [
+        [
+          "Yayasan",
+          "Pelancaran staking",
+          "Tubuhkan model penyertaan dan lapisan pertama peredaran ekosistem."
+        ],
+        [
+          "Edaran",
+          "MS pelancaran pasaran",
+          "Dayakan dagangan terbuka, kecairan pasaran dan penemuan harga awam."
+        ],
+        [
+          "Peluasan",
+          "Pelancaran GameFi Kad",
+          "Bawa mainan blockchain berasaskan kad ke dalam ekosistem untuk meluaskan utiliti dan komuniti."
+        ]
+      ],
+      "action": {
+        "title": "Bekalan mentakrifkan kekurangan. Utiliti mentakrifkan perkaitan.",
+        "copy": "Lihat cara produk menukar bekalan MS tetap kepada pergerakan merentas satu ekosistem yang bersambung.",
+        "primary": "Ikuti gelung utiliti",
+        "secondary": "Semak perlindungan"
+      }
+    },
+    "whitepaper": {
+      "hero": {
+        "eyebrow": "Kertas Putih, Mei 2026",
+        "title": "Baca sistem penuh.",
+        "copy": "Tinjauan keseluruhan 18 halaman tentang seni bina Mobius Strip, aplikasi, ekonomi, peta jalan dan risiko yang didedahkan.",
+        "button": "Lihat fail yang tersedia",
+        "edition": "Edisi Bahasa Inggeris",
+        "pages": "18 muka surat",
+        "coverAlt": "Kulit kertas putih Bahasa Inggeris Mobius Strip"
+      },
+      "downloadHeading": {
+        "eyebrow": "Edisi yang tersedia",
+        "title": "Simpan dokumen sumber rapat.",
+        "copy": "Muat turun edisi Bahasa Inggeris yang dibekalkan atau bukanya dalam tab penyemak imbas baharu untuk rujukan pantas."
+      },
+      "fileTitle": "Kertas putih Jalur Mobius",
+      "fileMeta": "Bahasa Inggeris PDF / Mei 2026 / 18 halaman / 589 KB",
+      "open": "Buka PDF",
+      "download": "Muat turun PDF",
+      "index": {
+        "eyebrow": "Di dalam kertas",
+        "title": "Sistem lengkap, dalam satu dokumen.",
+        "copy": "Kertas kerja membentangkan projek seperti yang dicadangkan oleh entiti pengeluarnya. Anggap tuntutan teknikal, pasaran dan kawal selia sebagai bahan untuk mengesahkan secara bebas."
+      },
+      "topics": [
+        [
+          "Seni bina",
+          "Reka bentuk rantai, konsensus, masternod dan protokol privasi tiga lapisan yang dicadangkan."
+        ],
+        [
+          "Aplikasi",
+          "MS Swap, Permainan Kad, Bayar, Sembang dan DAO merentasi satu permukaan produk yang disambungkan."
+        ],
+        [
+          "Ekonomi",
+          "Bekalan tetap, peruntukan, yuran ekosistem dan model pembakaran yang diterbitkan."
+        ],
+        [
+          "Keselamatan",
+          "Kriptografi, kontrak, rangkaian dan pertimbangan keselamatan aset."
+        ],
+        [
+          "Peta Jalan",
+          "Testnet, mainnet, pengembangan ekosistem dan pelancaran global yang dirancang."
+        ],
+        [
+          "Risiko dan pematuhan",
+          "Risiko teknikal, pasaran, kawal selia dan ekonomi yang diterangkan oleh entiti yang mengeluarkan."
+        ]
+      ],
+      "action": {
+        "title": "Daripada dokumen kepada model yang berfungsi.",
+        "copy": "Teruskan melalui mekanik protokol atau lihat di mana setiap produk sesuai di dalam ekosistem.",
+        "primary": "Semak protokol",
+        "secondary": "Teroka ekosistem"
+      }
+    }
+  },
+  "ru": {
+    "nav": {
+      "home": "Главная",
+      "ecosystem": "Экосистема",
+      "protocol": "Протокол",
+      "token": "Токен",
+      "whitepaper": "Информационный документ",
+      "staking": "Стейкинг",
+      "community": "Сообщество"
+    },
+    "common": {
+      "scrollCue": "Прокрутите, чтобы войти в континуум",
+      "continueLoop": "Продолжить цикл",
+      "marquee": [
+        "Публичная сеть",
+        "Управление в сети",
+        "Глобальные платежи",
+        "Техасский Холдем",
+        "МС ДАО",
+        "Зашифрованный чат"
+      ],
+      "footerTagline": "Одна поверхность. Никаких границ.",
+      "footerRisk": "Mobius Strip — это экспериментальная экосистема цифровых активов. Ничто на этом сайте не является финансовым советом или гарантией возврата.",
+      "notFoundEyebrow": "За пределами поверхности",
+      "notFoundTitle": "Этот путь не продолжается.",
+      "returnHome": "Возвращение домой"
+    },
+    "home": {
+      "hero": {
+        "eyebrow": "Непрерывная ончейн-экономика",
+        "title": [
+          "Одна поверхность.",
+          "Нет границ."
+        ],
+        "copy": "Mobius Strip объединяет инфраструктуру, управление, платежи, GameFi и связь в одну открытую, самоциркулирующую экосистему.",
+        "primary": "Исследуйте экосистему",
+        "secondary": "Посмотрите, как оно держится"
+      },
+      "overview": {
+        "eyebrow": "Все остается на связи",
+        "title": "Экономика, спроектированная как единая непрерывная поверхность.",
+        "copy": "Каждый продукт Mobius выполняет свою роль, но ни один из них не существует изолированно. Управление, собственность, игра и координация проходят через одну и ту же систему.",
+        "cards": [
+          [
+            "Пять продуктов, одно состояние",
+            "Полная экосистема"
+          ],
+          [
+            "Правила, которые реагируют",
+            "Механика протокола"
+          ],
+          [
+            "Прозрачное распределение",
+            "Один миллиард Мс"
+          ]
+        ]
+      },
+      "statement": [
+        "Ценность поступает через открытую сеть, перемещается по жизни",
+        "экономия и возврат с новой утилитой."
+      ],
+      "journey": {
+        "eyebrow": "Создан, чтобы продолжать движение",
+        "title": [
+          "Один путь.",
+          "Три слоя."
+        ],
+        "copy": "Прокрутите систему от инфраструктуры до использования человеком. Название сохраняется, пока поверхность продолжает двигаться.",
+        "link": "Войдите в экосистему",
+        "chapters": [
+          [
+            "Публичная сеть",
+            "Осадочный слой на основе BSC, предназначенный для удержания каждого продукта на одной открытой, наблюдаемой поверхности."
+          ],
+          [
+            "Управление и координация",
+            "Предложения, делегирование и прозрачное голосование разработаны как встроенная часть системы."
+          ],
+          [
+            "Кошелёк и глобальные платежи",
+            "Единый интерфейс для владения, передачи и участия в более широкой экономике Mobius."
+          ]
+        ]
+      },
+      "action": {
+        "title": "Система больше, чем токен.",
+        "copy": "Проследите весь цикл продукта, а затем изучите механизмы, поддерживающие циркуляцию.",
+        "primary": "Исследуйте каждый слой",
+        "secondary": "Просмотреть модель токена"
+      }
+    },
+    "ecosystem": {
+      "hero": {
+        "eyebrow": "Пять продуктов. Одно общее состояние.",
+        "title": "Сеть, которая становится экономикой.",
+        "copy": "Mobius соединяет рельсы, управление, интерфейсы, опыт и диалоги, необходимые для того, чтобы ончейн-экосистема чувствовала себя целостной.",
+        "primary": "Понимать протокол",
+        "secondary": "Просмотреть экономику MS"
+      },
+      "productsHeading": {
+        "eyebrow": "От рельсов к реальному использованию",
+        "title": "Разверните систему.",
+        "copy": "Каждый вертикальный срез представляет собой отдельный продукт Mobius. Щелкните или коснитесь слоя, чтобы открыть его и посмотреть, как он соединяется."
+      },
+      "products": [
+        [
+          "Цепочка MS",
+          "Общественная инфраструктура",
+          "Базовый уровень соединяет ставки, управление, платежи и интерактивные контракты через одно общее состояние."
+        ],
+        [
+          "МС ДАО",
+          "Платформа управления",
+          "Ончейн-платформа управления для предложений, делегирования и прозрачного коллективного принятия решений."
+        ],
+        [
+          "MS-кошелек",
+          "Право собственности и платежи",
+          "Самоопека и глобальное движение за ценности, а более широкая экосистема находится всего в одном жесте."
+        ],
+        [
+          "MS GameFi",
+          "Техасский Холдем",
+          "Живой уровень Техасского Холдема, который превращает цифровое владение в игру, прогресс и сообщество."
+        ],
+        [
+          "MS Чат",
+          "Мессенджер в темном режиме",
+          "Зашифрованный мессенджер, который замыкает цикл между идентификацией, координацией и действиями в цепочке."
+        ]
+      ],
+      "journeyHeading": {
+        "eyebrow": "Непрерывное путешествие",
+        "title": "Комплектующие соединяются при подключении продуктов.",
+        "copy": "Интерфейс меняется. Базовая собственность этого не делает. Эти главы составляют одно путешествие для одного участника."
+      },
+      "journey": [
+        [
+          "Ввод",
+          "Доступ к Mobius через кошелек и переводить средства в общую сеть."
+        ],
+        [
+          "Принять участие",
+          "Управляйте, делайте ставки, играйте и координируйте действия, не покидая поверхности экосистемы."
+        ],
+        [
+          "Распространение",
+          "Ликвидность и полезность возвращаются в сеть, а не заканчиваются на границе продукта."
+        ]
+      ],
+      "action": {
+        "title": "Утилита долговечна только тогда, когда правила видны.",
+        "copy": "Просмотрите пороговые значения, логику срабатывания и режим циркуляции, описанные протоколом Mobius.",
+        "primary": "Механика открытого протокола",
+        "secondary": "Проверить распределение"
+      }
+    },
+    "protocol": {
+      "hero": {
+        "eyebrow": "Система, которая реагирует",
+        "title": "Защита — это поведение, а не обещание.",
+        "copy": "Mobius описывает последовательность ончейн-реакций, предназначенных для замедления концентрированных продаж, повышения ликвидности и возобновления обращения.",
+        "primary": "Просмотреть пороговые значения",
+        "secondary": "Просмотр модели токена"
+      },
+      "bandsHeading": {
+        "eyebrow": "Опубликованная логика ответа",
+        "title": "Один рыночный цикл. Три полосы ответа.",
+        "copy": "Прилагаемая диаграмма цикла показывает повторяющийся рост, коррекцию и восстановление. Полосы отклика рядом с ним описывают предполагаемую механику, а не гарантированные рыночные результаты."
+      },
+      "cycleCaption": "Цикл роста рынка / прилагаемый визуальный протокол",
+      "bands": [
+        [
+          "15% совокупное снижение",
+          "Первая полоса стабилизации",
+          "Исходный протокол применяет проскальзывание транзакции на 35%, предписывая выкупить MS и отправить его на адрес записи.",
+          "−15%",
+          "35% ответ"
+        ],
+        [
+          "30 % совокупное снижение",
+          "Полоса глубокой стабилизации",
+          "Параметр проскальзывания увеличивается до 50 %, сохраняя тот же путь выкупа и сжигания, описанный в колоде протокола.",
+          "−30%",
+          "50% ответ"
+        ],
+        [
+          "Совокупное снижение на 50%",
+          "Режим циркуляции",
+          "Существующие графики распределения прибыли приостанавливаются, а новые учетные записи и вознаграждения динамических уровней продолжают действовать. Нормальная работа возобновляется после 48-часового периода восстановления.",
+          "−50%",
+          "48ч восстановление"
+        ]
+      ],
+      "circulation": {
+        "eyebrow": "Режим циркуляции",
+        "title": "Пауза. Защищать. Восстанавливаться. Резюме.",
+        "copy": "При совокупном снижении на 50 % исходная модель приостанавливает существующие графики выпуска. Новые учетные записи и динамические дифференциальные вознаграждения остаются активными. Как только восстановление цен продлится 48 часов, нормальная работа возобновится.",
+        "label": "Компенсация описана в источнике",
+        "detail": "приостановленной квоты в режиме обращения в соответствии с условиями реализованного контракта."
+      },
+      "stakingHeading": {
+        "eyebrow": "Модель ставок",
+        "title": "Очистить ввод. Плановый выпуск.",
+        "copy": "Прилагаемая колода представляет модель ставок со следующими опубликованными параметрами. Любая живая реализация должна быть проверена в сети перед участием."
+      },
+      "parameters": [
+        [
+          "Минимальный заказ",
+          "200 долларов США",
+          "Порог входа указан в исходной модели."
+        ],
+        [
+          "Опубликованная совокупная цель",
+          "300%",
+          "Параметр модели, а не гарантированный доход."
+        ],
+        [
+          "Линейный период выпуска",
+          "365 дней",
+          "График выпуска указан в прилагаемой колоде."
+        ]
+      ],
+      "risk": "Цифровые активы и протоколы DeFi сопряжены с существенным риском. Механика защиты может влиять на стимулы, но не может устранить риск ликвидности, смарт-контракта, рыночного риска или риска потерь.",
+      "action": {
+        "title": "Механика имеет значение. Проверка важнее.",
+        "copy": "Продолжайте поставку, распределение и поэтапное внедрение продуктов MS.",
+        "primary": "Изучите экономику токенов",
+        "secondary": "Вернуться к продуктам"
+      }
+    },
+    "token": {
+      "hero": {
+        "eyebrow": "Экономическая модель MS",
+        "title": "Фиксированный запас с заданием.",
+        "copy": "Предлагаемая модель делит один миллиард MS между системой расчета ставок и публичной ликвидностью для более широкой экосистемы.",
+        "primary": "Проверить распределение",
+        "secondary": "Ознакомьтесь с утилитами продукта"
+      },
+      "allocationAria": "Распределение токенов: 30 процентов расчетного резерва и 70 процентов ликвидности экосистемы.",
+      "total": "всего МС",
+      "eyebrow": "Два соединенных пула",
+      "title": "Каждый токен входит в модель с определенной ролью.",
+      "allocations": [
+        [
+          "300М МС",
+          "Выделено в исходной модели для поддержки системы расчетов экосистемы ставок."
+        ],
+        [
+          "700М МС",
+          "Отправлено на государственную ликвидность и карточную экономику GameFi."
+        ]
+      ],
+      "roadmapEyebrow": "Поэтапный запуск",
+      "roadmapTitle": "Создавайте фундамент, открывайте рынок, расширяйте возможности.",
+      "roadmap": [
+        [
+          "Фундамент",
+          "Запуск стейкинга",
+          "Создать модель участия и первый уровень циркуляции экосистемы."
+        ],
+        [
+          "Обращение",
+          "Выход на рынок MS",
+          "Включить открытую торговлю, рыночную ликвидность и публичное обнаружение цен."
+        ],
+        [
+          "Расширение",
+          "Запуск Card GameFi",
+          "Внесите в экосистему игру на основе карточных блокчейнов, чтобы расширить полезность и сообщество."
+        ]
+      ],
+      "action": {
+        "title": "Предложение определяет дефицит. Полезность определяет актуальность.",
+        "copy": "Узнайте, как продукты превращают фиксированную поставку MS в движение по одной подключенной экосистеме.",
+        "primary": "Следуйте циклу утилиты",
+        "secondary": "Проверьте меры безопасности"
+      }
+    },
+    "whitepaper": {
+      "hero": {
+        "eyebrow": "Информационный документ, май 2026 г.",
+        "title": "Читать всю систему.",
+        "copy": "18-страничный обзор архитектуры, приложений, экономики, дорожной карты и выявленных рисков ленты Мебиуса.",
+        "button": "Просмотреть доступный файл",
+        "edition": "Английское издание",
+        "pages": "18 страниц",
+        "coverAlt": "Обложка английского документа «Лента Мебиуса»"
+      },
+      "downloadHeading": {
+        "eyebrow": "Доступная версия",
+        "title": "Держите исходный документ под рукой.",
+        "copy": "Загрузите прилагаемое издание на английском языке или откройте его в новой вкладке браузера для быстрого ознакомления."
+      },
+      "fileTitle": "Информационный документ о полосе Мебиуса",
+      "fileMeta": "Английский PDF / Май 2026 г. / 18 страниц / 589 КБ",
+      "open": "Открыть PDF",
+      "download": "Скачать PDF",
+      "index": {
+        "eyebrow": "Внутри бумаги",
+        "title": "Полная система в одном документе.",
+        "copy": "В документе представлен проект, предложенный организацией-эмитентом. Относитесь к техническим, рыночным и нормативным заявлениям как к материалам, подлежащим независимой проверке."
+      },
+      "topics": [
+        [
+          "Архитектура",
+          "Дизайн цепочки, консенсус, мастерноды и предлагаемый трехуровневый протокол конфиденциальности."
+        ],
+        [
+          "Приложения",
+          "MS Swap, карточная игра, оплата, чат и DAO в одном подключенном продукте."
+        ],
+        [
+          "Экономика",
+          "Фиксированные поставки, распределение, экосистемные сборы и опубликованная модель сжигания."
+        ],
+        [
+          "Безопасность",
+          "Аспекты криптографии, контрактов, сети и безопасности активов."
+        ],
+        [
+          "Дорожная карта",
+          "Тестнет, основная сеть, расширение экосистемы и запланированное глобальное внедрение."
+        ],
+        [
+          "Риски и соответствие требованиям",
+          "Технические, рыночные, нормативные и экономические риски, описанные эмитентом."
+        ]
+      ],
+      "action": {
+        "title": "От документа к рабочей модели.",
+        "copy": "Продолжите изучать механику протокола или посмотрите, какое место каждый продукт занимает в экосистеме.",
+        "primary": "Просмотрите протокол",
+        "secondary": "Исследуйте экосистему"
+      }
+    }
+  },
+  "th": {
+    "nav": {
+      "home": "บ้าน",
+      "ecosystem": "ระบบนิเวศ",
+      "protocol": "โปรโตคอล",
+      "token": "โทเค็น",
+      "whitepaper": "เอกสารไวท์เปเปอร์",
+      "staking": "การปักหลัก",
+      "community": "ชุมชน"
+    },
+    "common": {
+      "scrollCue": "เลื่อนเพื่อเข้าสู่ความต่อเนื่อง",
+      "continueLoop": "วนซ้ำต่อไป",
+      "marquee": [
+        "เครือข่ายสาธารณะ",
+        "การกำกับดูแลแบบออนไลน์",
+        "การชำระเงินทั่วโลก",
+        "เท็กซัส โฮลเอ็ม",
+        "MS ดีเอโอ",
+        "แชทที่เข้ารหัส"
+      ],
+      "footerTagline": "หนึ่งพื้นผิว ไม่มีขอบเขต",
+      "footerRisk": "Mobius Strip คือระบบนิเวศของสินทรัพย์ดิจิทัลแบบทดลอง ไม่มีสิ่งใดในเว็บไซต์นี้ที่เป็นคำแนะนำทางการเงินหรือการรับประกันผลตอบแทน",
+      "notFoundEyebrow": "ภายนอกพื้นผิว",
+      "notFoundTitle": "เส้นทางนี้ไม่ดำเนินต่อไป",
+      "returnHome": "กลับบ้าน"
+    },
+    "home": {
+      "hero": {
+        "eyebrow": "เศรษฐกิจออนไลน์ที่ต่อเนื่อง",
+        "title": [
+          "หนึ่งพื้นผิว",
+          "ไม่มีขอบเขต"
+        ],
+        "copy": "Mobius Strip เชื่อมต่อโครงสร้างพื้นฐาน การกำกับดูแล การชำระเงิน GameFi และการสื่อสารในระบบนิเวศแบบเปิดและหมุนเวียนในตัวเอง",
+        "primary": "สำรวจระบบนิเวศ",
+        "secondary": "ดูว่ามันทำงานอย่างไร"
+      },
+      "overview": {
+        "eyebrow": "ทุกสิ่งเชื่อมต่อถึงกัน",
+        "title": "เศรษฐกิจที่ออกแบบมาให้เป็นพื้นผิวเดียวที่ไม่ขาดตอน",
+        "copy": "ผลิตภัณฑ์ Mobius ทุกชิ้นมีบทบาทเป็นของตัวเอง แต่ไม่มีผลิตภัณฑ์ใดที่แยกออกจากกัน การกำกับดูแล ความเป็นเจ้าของ การเล่น และการประสานงานเคลื่อนผ่านระบบเดียวกัน",
+        "cards": [
+          [
+            "ห้าผลิตภัณฑ์ หนึ่งรัฐ",
+            "ระบบนิเวศที่สมบูรณ์"
+          ],
+          [
+            "กฎที่ตอบสนอง",
+            "กลไกของโปรโตคอล"
+          ],
+          [
+            "การจัดสรรที่โปร่งใส",
+            "หนึ่งพันล้าน MS"
+          ]
+        ]
+      },
+      "statement": [
+        "มูลค่าเข้ามาผ่านเครือข่ายแบบเปิด เคลื่อนตัวผ่านการใช้ชีวิต",
+        "การประหยัดและการกลับมาพร้อมอรรถประโยชน์ใหม่"
+      ],
+      "journey": {
+        "eyebrow": "สร้างมาเพื่อการเคลื่อนไหวอย่างต่อเนื่อง",
+        "title": [
+          "เส้นทางเดียว",
+          "สามชั้น"
+        ],
+        "copy": "เลื่อนดูระบบตั้งแต่โครงสร้างพื้นฐานไปจนถึงการใช้งานของมนุษย์ ชื่อเรื่องยังคงอยู่ในขณะที่พื้นผิวเคลื่อนไหวต่อไป",
+        "link": "เข้าสู่ระบบนิเวศ",
+        "chapters": [
+          [
+            "เครือข่ายสาธารณะ",
+            "ชั้นการชำระหนี้แบบ BSC ออกแบบมาเพื่อให้แต่ละผลิตภัณฑ์อยู่บนพื้นผิวที่เปิดกว้างและสังเกตได้เพียงจุดเดียว"
+          ],
+          [
+            "การกำกับดูแลและการประสานงาน",
+            "ข้อเสนอ การมอบหมาย และการลงคะแนนที่โปร่งใสซึ่งออกแบบให้เป็นส่วนหนึ่งของระบบ"
+          ],
+          [
+            "กระเป๋าเงินและการชำระเงินทั่วโลก",
+            "อินเทอร์เฟซเดียวสำหรับการเป็นเจ้าของ การโอน และการมีส่วนร่วมทั่วทั้งระบบเศรษฐกิจ Mobius ในวงกว้าง"
+          ]
+        ]
+      },
+      "action": {
+        "title": "ระบบมีขนาดใหญ่กว่าโทเค็น",
+        "copy": "ทำตามขั้นตอนผลิตภัณฑ์ทั้งหมด จากนั้นตรวจสอบกลไกที่ทำให้การไหลเวียนเคลื่อนไหว",
+        "primary": "สำรวจทุกเลเยอร์",
+        "secondary": "ดูโมเดลโทเค็น"
+      }
+    },
+    "ecosystem": {
+      "hero": {
+        "eyebrow": "ห้าสินค้า รัฐหนึ่งที่ใช้ร่วมกัน",
+        "title": "เครือข่ายที่กลายเป็นเศรษฐกิจ",
+        "copy": "Mobius เชื่อมโยงระบบราง การกำกับดูแล อินเทอร์เฟซ ประสบการณ์ และการสนทนาที่จำเป็นสำหรับระบบนิเวศออนไลน์เพื่อให้รู้สึกสมบูรณ์",
+        "primary": "ทำความเข้าใจโปรโตคอล",
+        "secondary": "ดู MS เศรษฐศาสตร์"
+      },
+      "productsHeading": {
+        "eyebrow": "จากรางสู่การใช้งานจริง",
+        "title": "ขยายระบบ",
+        "copy": "ชิ้นแนวตั้งแต่ละชิ้นเป็นผลิตภัณฑ์ Mobius ที่แตกต่างกัน คลิกหรือแตะเลเยอร์เพื่อเปิดและดูว่ามันเชื่อมโยงกันอย่างไร"
+      },
+      "products": [
+        [
+          "MS เชน",
+          "โครงสร้างพื้นฐานสาธารณะ",
+          "ชั้นฐานเชื่อมโยงการเดิมพัน การกำกับดูแล การชำระเงิน และสัญญาเชิงโต้ตอบผ่านสถานะที่ใช้ร่วมกันเพียงสถานะเดียว"
+        ],
+        [
+          "MS เดา",
+          "แพลตฟอร์มการกำกับดูแล",
+          "แพลตฟอร์มการกำกับดูแลแบบออนไลน์สำหรับข้อเสนอ การมอบหมาย และการตัดสินใจโดยรวมที่โปร่งใส"
+        ],
+        [
+          "MS กระเป๋าเงิน",
+          "ความเป็นเจ้าของและการชำระเงิน",
+          "การควบคุมตนเองและความเคลื่อนไหวของมูลค่าทั่วโลก โดยที่ระบบนิเวศที่กว้างขึ้นอยู่ห่างออกไปเพียงท่าทางเดียวเท่านั้น"
+        ],
+        [
+          "MS เกมไฟ",
+          "เท็กซัส โฮลเอ็ม",
+          "เลเยอร์ Texas Hold'em แบบสดที่เปลี่ยนการเป็นเจ้าของดิจิทัลเป็นการเล่น ความก้าวหน้า และชุมชน"
+        ],
+        [
+          "MS แชท",
+          "ผู้ส่งสารโหมดมืด",
+          "ผู้ส่งสารที่เข้ารหัสซึ่งปิดการวนซ้ำระหว่างข้อมูลประจำตัว การประสานงาน และการดำเนินการแบบออนไลน์"
+        ]
+      ],
+      "journeyHeading": {
+        "eyebrow": "การเดินทางที่ต่อเนื่อง",
+        "title": "สารประกอบยูทิลิตี้เมื่อผลิตภัณฑ์เชื่อมต่อ",
+        "copy": "อินเทอร์เฟซเปลี่ยนไป ความเป็นเจ้าของพื้นฐานไม่ได้ บทเหล่านี้จะรวมอยู่ในการเดินทางของผู้เข้าร่วมเพียงคนเดียว"
+      },
+      "journey": [
+        [
+          "เข้าไป",
+          "เข้าถึง Mobius ผ่านกระเป๋าเงินและย้ายมูลค่าไปยังเครือข่ายที่ใช้ร่วมกัน"
+        ],
+        [
+          "เข้าร่วม",
+          "ควบคุม เดิมพัน เล่น และประสานงานโดยไม่ละทิ้งระบบนิเวศ"
+        ],
+        [
+          "หมุนเวียน",
+          "สภาพคล่องและอรรถประโยชน์กลับสู่เครือข่าย แทนที่จะสิ้นสุดที่ขอบเขตผลิตภัณฑ์"
+        ]
+      ],
+      "action": {
+        "title": "ยูทิลิตี้จะคงทนเมื่อมองเห็นกฎเท่านั้น",
+        "copy": "ดูเกณฑ์ ตรรกะการเผยแพร่ และโหมดการหมุนเวียนที่อธิบายโดยโปรโตคอล Mobius",
+        "primary": "กลไกโปรโตคอลแบบเปิด",
+        "secondary": "ตรวจสอบการจัดสรร"
+      }
+    },
+    "protocol": {
+      "hero": {
+        "eyebrow": "ระบบที่ตอบสนอง",
+        "title": "การป้องกันเป็นพฤติกรรม ไม่ใช่คำมั่นสัญญา",
+        "copy": "Mobius อธิบายลำดับของการตอบสนองออนไลน์ที่ออกแบบมาเพื่อชะลอการขายแบบกระจุกตัว เสริมสภาพคล่อง และเริ่มต้นการหมุนเวียนอีกครั้ง",
+        "primary": "ดูเกณฑ์",
+        "secondary": "ดูโมเดลโทเค็น"
+      },
+      "bandsHeading": {
+        "eyebrow": "เผยแพร่ตรรกะการตอบสนองแล้ว",
+        "title": "หนึ่งรอบตลาด วงดนตรีตอบรับสามวง",
+        "copy": "แผนภูมิวงจรที่ให้มาแสดงการเติบโต การแก้ไข และการฟื้นตัวซ้ำๆ แถบตอบรับข้างๆ อธิบายกลไกที่ตั้งใจไว้ ไม่รับประกันผลลัพธ์ของตลาด"
+      },
+      "cycleCaption": "วงจรการเติบโตของตลาด / ภาพโปรโตคอลที่ให้มา",
+      "bands": [
+        [
+          "15% การลดลงสะสม",
+          "แถบป้องกันการสั่นไหวแรก",
+          "โปรโตคอลต้นทางใช้การเลื่อนไหลของธุรกรรม 35% โดยกำหนดให้ซื้อ MS คืนและส่งไปยังที่อยู่ที่ถูกเบิร์น",
+          "−15%",
+          "35% การตอบสนอง"
+        ],
+        [
+          "30% การลดลงสะสม",
+          "แถบป้องกันภาพสั่นไหวลึก",
+          "พารามิเตอร์การเลื่อนไหลเพิ่มขึ้นเป็น 50% โดยคงเส้นทางการซื้อคืนและการเผาไหม้แบบเดิมที่อธิบายไว้ในสำรับโปรโตคอล",
+          "−30%",
+          "50% การตอบสนอง"
+        ],
+        [
+          "50% การลดลงสะสม",
+          "โหมดการไหลเวียน",
+          "กำหนดการเผยแพร่ผลกำไรที่มีอยู่หยุดชั่วคราวในขณะที่บัญชีใหม่และรางวัลระดับไดนามิกยังคงดำเนินต่อไป การทำงานตามปกติจะกลับมาทำงานอีกครั้งหลังจากช่วงพักฟื้น 48 ชั่วโมง",
+          "−50%",
+          "48 ชม. ฟื้นตัว"
+        ]
+      ],
+      "circulation": {
+        "eyebrow": "โหมดการไหลเวียน",
+        "title": "หยุดชั่วคราว ปกป้อง. ฟื้นตัว. ประวัติย่อ.",
+        "copy": "ที่การลดลงสะสม 50% โมเดลแหล่งที่มาจะหยุดกำหนดการเผยแพร่ที่มีอยู่ชั่วคราว บัญชีใหม่และรางวัลส่วนต่างแบบไดนามิกยังคงใช้งานได้ เมื่อราคาฟื้นตัวเป็นเวลา 48 ชั่วโมง การดำเนินการตามปกติจะดำเนินต่อไป",
+        "label": "ค่าตอบแทนที่อธิบายไว้ในแหล่งที่มา",
+        "detail": "ของโควต้าที่หยุดชั่วคราวระหว่างโหมดการหมุนเวียน ขึ้นอยู่กับข้อกำหนดของสัญญาที่บังคับใช้"
+      },
+      "stakingHeading": {
+        "eyebrow": "โมเดลการปักหลัก",
+        "title": "ล้างอินพุต กำหนดการวางจำหน่าย",
+        "copy": "สำรับที่ให้มานำเสนอโมเดลการเดิมพันพร้อมพารามิเตอร์ที่เผยแพร่ต่อไปนี้ การใช้งานจริงใดๆ ควรได้รับการตรวจสอบออนไลน์ก่อนเข้าร่วม"
+      },
+      "parameters": [
+        [
+          "สั่งซื้อขั้นต่ำ",
+          "200 ดอลลาร์สหรัฐ",
+          "เกณฑ์รายการที่ระบุไว้ในโมเดลต้นทาง"
+        ],
+        [
+          "เผยแพร่เป้าหมายรวมแล้ว",
+          "300%",
+          "พารามิเตอร์โมเดล ไม่รับประกันผลตอบแทน"
+        ],
+        [
+          "ระยะเวลาเผยแพร่เชิงเส้น",
+          "365 วัน",
+          "กำหนดการวางจำหน่ายระบุไว้ในชุดที่ให้มา"
+        ]
+      ],
+      "risk": "สินทรัพย์ดิจิทัลและโปรโตคอล DeFi มีความเสี่ยงสูง กลไกการป้องกันสามารถมีอิทธิพลต่อสิ่งจูงใจ แต่ไม่สามารถขจัดสภาพคล่อง สัญญาอัจฉริยะ ตลาด หรือความเสี่ยงในการสูญเสียได้",
+      "action": {
+        "title": "กลไกมีความสำคัญ การยืนยันมีความสำคัญมากกว่า",
+        "copy": "ดำเนินการจัดหา การจัดสรร และการเปิดตัวผลิตภัณฑ์แบบเป็นขั้นเบื้องหลัง MS",
+        "primary": "สำรวจเศรษฐศาสตร์โทเค็น",
+        "secondary": "กลับสู่ผลิตภัณฑ์"
+      }
+    },
+    "token": {
+      "hero": {
+        "eyebrow": "MS แบบจำลองทางเศรษฐกิจ",
+        "title": "อุปทานคงที่พร้อมงานที่ต้องทำ",
+        "copy": "แบบจำลองที่ให้มาแบ่งหนึ่งพันล้าน MS ระหว่างระบบการชำระเงินแบบ Stake และสภาพคล่องสาธารณะสำหรับระบบนิเวศที่กว้างขึ้น",
+        "primary": "ตรวจสอบการจัดสรร",
+        "secondary": "ดูอรรถประโยชน์ผลิตภัณฑ์"
+      },
+      "allocationAria": "การจัดสรรโทเค็น: สำรองการชำระหนี้ 30 เปอร์เซ็นต์ และสภาพคล่องของระบบนิเวศ 70 เปอร์เซ็นต์",
+      "total": "รวม MS",
+      "eyebrow": "สองพูลที่เชื่อมต่อกัน",
+      "title": "ทุกโทเค็นจะเข้าสู่โมเดลโดยมีบทบาทที่กำหนดไว้",
+      "allocations": [
+        [
+          "300M MS",
+          "ได้รับการจัดสรรในโมเดลต้นทางเพื่อสนับสนุนระบบการชำระหนี้ของระบบนิเวศแบบปักหลัก"
+        ],
+        [
+          "700M MS",
+          "จัดสรรให้กับสภาพคล่องสาธารณะและเศรษฐกิจ GameFi ที่ใช้การ์ด"
+        ]
+      ],
+      "roadmapEyebrow": "การเปิดตัวแบบเป็นฉาก",
+      "roadmapTitle": "สร้างรากฐาน เปิดตลาด ขยายยูทิลิตี้",
+      "roadmap": [
+        [
+          "รองพื้น",
+          "การวางเดิมพันเริ่มต้น",
+          "สร้างแบบจำลองการมีส่วนร่วมและชั้นแรกของการหมุนเวียนของระบบนิเวศ"
+        ],
+        [
+          "การหมุนเวียน",
+          "MS เปิดตัวตลาด",
+          "เปิดใช้งานการซื้อขายแบบเปิด สภาพคล่องของตลาด และการค้นพบราคาสาธารณะ"
+        ],
+        [
+          "ส่วนขยาย",
+          "การเปิดตัวการ์ด GameFi",
+          "นำการเล่นบล็อกเชนที่ใช้การ์ดมาสู่ระบบนิเวศเพื่อขยายยูทิลิตี้และชุมชน"
+        ]
+      ],
+      "action": {
+        "title": "อุปทานกำหนดความขาดแคลน ยูทิลิตี้จะกำหนดความเกี่ยวข้อง",
+        "copy": "ดูว่าผลิตภัณฑ์เปลี่ยนอุปทาน MS แบบคงที่ไปสู่การเคลื่อนย้ายข้ามระบบนิเวศที่เชื่อมต่อกันได้อย่างไร",
+        "primary": "ติดตามลูปยูทิลิตี้",
+        "secondary": "ตรวจสอบการป้องกัน"
+      }
+    },
+    "whitepaper": {
+      "hero": {
+        "eyebrow": "เอกสารไวท์เปเปอร์ พฤษภาคม 2026",
+        "title": "อ่านเต็มระบบ",
+        "copy": "ภาพรวม 18 หน้าของสถาปัตยกรรม Mobius Strip แอปพลิเคชัน เศรษฐศาสตร์ แผนงาน และความเสี่ยงที่เปิดเผย",
+        "button": "ดูไฟล์ที่มีอยู่",
+        "edition": "ฉบับภาษาอังกฤษ",
+        "pages": "18 หน้า",
+        "coverAlt": "ปกสมุดปกขาวของ Mobius Strip ภาษาอังกฤษ"
+      },
+      "downloadHeading": {
+        "eyebrow": "รุ่นที่มีจำหน่าย",
+        "title": "เก็บเอกสารต้นฉบับไว้ใกล้ตัว",
+        "copy": "ดาวน์โหลดฉบับภาษาอังกฤษที่ให้มา หรือเปิดในแท็บเบราว์เซอร์ใหม่เพื่อใช้อ้างอิงอย่างรวดเร็ว"
+      },
+      "fileTitle": "เอกสารไวท์เปเปอร์ Mobius Strip",
+      "fileMeta": "ภาษาอังกฤษ PDF / พฤษภาคม 2569 / 18 หน้า / 589 KB",
+      "open": "เปิด PDF",
+      "download": "ดาวน์โหลดไฟล์ PDF",
+      "index": {
+        "eyebrow": "ข้างในกระดาษ",
+        "title": "ระบบที่สมบูรณ์ในเอกสารเดียว",
+        "copy": "บทความนี้นำเสนอโครงการตามที่เสนอโดยหน่วยงานที่ออกเอกสาร ถือว่าคำกล่าวอ้างด้านเทคนิค การตลาด และกฎระเบียบเป็นวัสดุในการตรวจสอบอย่างเป็นอิสระ"
+      },
+      "topics": [
+        [
+          "สถาปัตยกรรม",
+          "การออกแบบห่วงโซ่ ฉันทามติ โหนดหลัก และโปรโตคอลความเป็นส่วนตัวสามชั้นที่เสนอ"
+        ],
+        [
+          "แอปพลิเคชัน",
+          "MS สลับ เกมไพ่ จ่าย แชท และ DAO ผ่านแพลตฟอร์มผลิตภัณฑ์ที่เชื่อมต่อกันแห่งเดียว"
+        ],
+        [
+          "เศรษฐศาสตร์",
+          "อุปทานคงที่ การจัดสรร ค่าธรรมเนียมระบบนิเวศ และแบบจำลองการเบิร์นที่เผยแพร่"
+        ],
+        [
+          "ความปลอดภัย",
+          "ข้อพิจารณาด้านการเข้ารหัส สัญญา เครือข่าย และความปลอดภัยของทรัพย์สิน"
+        ],
+        [
+          "แผนการทำงาน",
+          "Testnet, mainnet, การขยายระบบนิเวศ และการเปิดตัวทั่วโลกตามแผน"
+        ],
+        [
+          "ความเสี่ยงและการปฏิบัติตามข้อกำหนด",
+          "ความเสี่ยงด้านเทคนิค การตลาด กฎระเบียบ และเศรษฐกิจที่อธิบายโดยหน่วยงานที่ออก"
+        ]
+      ],
+      "action": {
+        "title": "จากเอกสารสู่รูปแบบการทำงาน",
+        "copy": "ดำเนินการต่อผ่านกลไกของโปรโตคอล หรือดูว่าแต่ละผลิตภัณฑ์เหมาะสมกับระบบนิเวศตรงไหน",
+        "primary": "ตรวจสอบโปรโตคอล",
+        "secondary": "สำรวจระบบนิเวศ"
+      }
+    }
+  },
+  "ur": {
+    "nav": {
+      "home": "گھر",
+      "ecosystem": "ماحولیاتی نظام",
+      "protocol": "پروٹوکول",
+      "token": "ٹوکن",
+      "whitepaper": "وائٹ پیپر",
+      "staking": "اسٹیکنگ",
+      "community": "کمیونٹی"
+    },
+    "common": {
+      "scrollCue": "تسلسل میں داخل ہونے کے لیے اسکرول کریں۔",
+      "continueLoop": "لوپ جاری رکھیں",
+      "marquee": [
+        "عوامی سلسلہ",
+        "آن چین گورننس",
+        "عالمی ادائیگیاں",
+        "Texas Hold'em",
+        "MS DAO",
+        "مرموز کردہ چیٹ"
+      ],
+      "footerTagline": "ایک سطح۔ کوئی حدود نہیں۔",
+      "footerRisk": "Mobius Strip ایک تجرباتی ڈیجیٹل اثاثہ ماحولیاتی نظام ہے۔ اس سائٹ پر کوئی بھی چیز مالی مشورہ یا واپسی کی ضمانت نہیں ہے۔",
+      "notFoundEyebrow": "سطح سے باہر",
+      "notFoundTitle": "یہ راستہ جاری نہیں رہتا۔",
+      "returnHome": "گھر واپسی"
+    },
+    "home": {
+      "hero": {
+        "eyebrow": "مسلسل آن چین اکانومی",
+        "title": [
+          "ایک سطح۔",
+          "کوئی حدود نہیں۔"
+        ],
+        "copy": "Mobius Strip انفراسٹرکچر، گورننس، ادائیگیوں، گیم فائی اور مواصلات کو ایک کھلے، خود گردش کرنے والے ماحولیاتی نظام میں جوڑتا ہے۔",
+        "primary": "ایکو سسٹم کو دریافت کریں۔",
+        "secondary": "دیکھیں کہ یہ کیسے رکھتا ہے۔"
+      },
+      "overview": {
+        "eyebrow": "سب کچھ منسلک رہتا ہے۔",
+        "title": "ایک ایسی معیشت جسے ایک بلاتعطل سطح کے طور پر ڈیزائن کیا گیا ہے۔",
+        "copy": "ہر موبیئس پروڈکٹ کا اپنا کردار ہوتا ہے، لیکن کوئی بھی تنہائی میں نہیں رہتا۔ حکمرانی، ملکیت، کھیل اور ہم آہنگی اسی نظام کے ذریعے چلتی ہے۔",
+        "cards": [
+          [
+            "پانچ مصنوعات، ایک ریاست",
+            "مکمل ماحولیاتی نظام"
+          ],
+          [
+            "قواعد جو رد عمل ظاہر کرتے ہیں۔",
+            "پروٹوکول میکینکس"
+          ],
+          [
+            "شفاف مختص",
+            "ایک ارب ایم ایس"
+          ]
+        ]
+      },
+      "statement": [
+        "Value ایک کھلے نیٹ ورک کے ذریعے داخل ہوتی ہے، زندگی گزارتی ہے۔",
+        "معیشت اور نئی افادیت کے ساتھ واپسی۔"
+      ],
+      "journey": {
+        "eyebrow": "چلتے رہنے کے لیے بنایا گیا ہے۔",
+        "title": [
+          "ایک راستہ۔",
+          "تین پرتیں۔"
+        ],
+        "copy": "بنیادی ڈھانچے سے انسانی استعمال تک سسٹم کے ذریعے سکرول کریں۔ جب سطح حرکت کرتی رہتی ہے تو عنوان برقرار رہتا ہے۔",
+        "link": "ایکو سسٹم میں داخل ہوں۔",
+        "chapters": [
+          [
+            "عوامی سلسلہ",
+            "BSC پر مبنی تصفیہ پرت ہر ایک پروڈکٹ کو ایک کھلی، قابل مشاہدہ سطح پر رکھنے کے لیے ڈیزائن کیا گیا ہے۔"
+          ],
+          [
+            "گورننس اور کوآرڈینیشن",
+            "تجاویز، وفد اور شفاف ووٹنگ جو نظام کے مقامی حصے کے طور پر ڈیزائن کیا گیا ہے۔"
+          ],
+          [
+            "Wallet اور عالمی ادائیگیاں",
+            "وسیع تر موبیئس معیشت میں ملکیت، منتقلی اور شرکت کے لیے ایک واحد انٹرفیس۔"
+          ]
+        ]
+      },
+      "action": {
+        "title": "سسٹم ٹوکن سے بڑا ہے۔",
+        "copy": "مکمل پروڈکٹ لوپ کی پیروی کریں، پھر ان میکانکس کا جائزہ لیں جو گردش کو متحرک رکھتے ہیں۔",
+        "primary": "ہر پرت کو دریافت کریں۔",
+        "secondary": "ٹوکن ماڈل دیکھیں"
+      }
+    },
+    "ecosystem": {
+      "hero": {
+        "eyebrow": "پانچ مصنوعات۔ ایک مشترکہ ریاست۔",
+        "title": "ایک نیٹ ورک جو معیشت بن جاتا ہے۔",
+        "copy": "Mobius ریل، گورننس، انٹرفیس، تجربات اور بات چیت کو مربوط کرتا ہے جو آن چین ایکو سسٹم کو مکمل محسوس کرنے کے لیے درکار ہے۔",
+        "primary": "پروٹوکول کو سمجھیں۔",
+        "secondary": "ایم ایس معاشیات دیکھیں"
+      },
+      "productsHeading": {
+        "eyebrow": "ریلوں سے حقیقی استعمال تک",
+        "title": "سسٹم کو وسعت دیں۔",
+        "copy": "ہر عمودی ٹکڑا ایک الگ موبیئس پروڈکٹ ہے۔ کسی پرت کو کھولنے کے لیے اس پر کلک کریں یا ٹیپ کریں اور دیکھیں کہ یہ کیسے جڑتی ہے۔"
+      },
+      "products": [
+        [
+          "MS سلسلہ",
+          "عوامی انفراسٹرکچر",
+          "بیس لیئر ایک مشترکہ ریاست کے ذریعے اسٹیکنگ، گورننس، ادائیگیوں اور انٹرایکٹو معاہدوں کو جوڑتی ہے۔"
+        ],
+        [
+          "MS DAO",
+          "گورننس پلیٹ فارم",
+          "تجاویز، وفد اور شفاف اجتماعی فیصلہ سازی کے لیے ایک آن چین گورننس پلیٹ فارم۔"
+        ],
+        [
+          "MS والیٹ",
+          "ملکیت اور ادائیگیاں",
+          "خود کی تحویل اور عالمی قدر کی نقل و حرکت، وسیع تر ماحولیاتی نظام کے ساتھ صرف ایک اشارہ دور۔"
+        ],
+        [
+          "MS گیم فائی۔",
+          "Texas Hold'em",
+          "ایک لائیو ٹیکساس ہولڈم پرت جو ڈیجیٹل ملکیت کو کھیل، ترقی اور کمیونٹی میں بدل دیتی ہے۔"
+        ],
+        [
+          "MS چیٹ",
+          "ڈارک موڈ میسنجر",
+          "ایک انکرپٹڈ میسنجر جو شناخت، کوآرڈینیشن اور آن چین ایکشن کے درمیان لوپ کو بند کرتا ہے۔"
+        ]
+      ],
+      "journeyHeading": {
+        "eyebrow": "مسلسل سفر",
+        "title": "Utility مرکبات جب پروڈکٹس آپس میں جڑ جاتے ہیں۔",
+        "copy": "انٹرفیس بدل جاتا ہے۔ بنیادی ملکیت نہیں ہے. یہ ابواب ایک ہی شریک سفر میں ڈھیر ہوتے ہیں۔"
+      },
+      "journey": [
+        [
+          "درج کریں۔",
+          "ایک والیٹ کے ذریعے موبیئس تک رسائی حاصل کریں اور قدر کو مشترکہ نیٹ ورک پر منتقل کریں۔"
+        ],
+        [
+          "شرکت کریں۔",
+          "ماحولیاتی نظام کی سطح کو چھوڑے بغیر حکومت کریں، داؤ پر لگائیں، کھیلیں اور کوآرڈینیٹ کریں۔"
+        ],
+        [
+          "Circulate",
+          "لیکویڈیٹی اور افادیت پروڈکٹ کی حد پر ختم ہونے کے بجائے نیٹ ورک پر واپس آجاتی ہے۔"
+        ]
+      ],
+      "action": {
+        "title": "Utility صرف اس وقت پائیدار ہوتی ہے جب قواعد نظر آتے ہوں۔",
+        "copy": "موبیئس پروٹوکول کی طرف سے بیان کردہ حد، ریلیز منطق اور سرکولیشن موڈ دیکھیں۔",
+        "primary": "اوپن پروٹوکول میکینکس",
+        "secondary": "مختص کا معائنہ کریں۔"
+      }
+    },
+    "protocol": {
+      "hero": {
+        "eyebrow": "ایک ایسا نظام جو جواب دیتا ہے۔",
+        "title": "تحفظ ایک طرز عمل ہے، وعدہ نہیں۔",
+        "copy": "Mobius آن چین ردعمل کی ایک ترتیب کو بیان کرتا ہے جو توجہ مرکوز فروخت کو سست کرنے، لیکویڈیٹی کو تقویت دینے اور گردش کو دوبارہ شروع کرنے کے لیے ڈیزائن کیا گیا ہے۔",
+        "primary": "دہلیز دیکھیں",
+        "secondary": "ٹوکن ماڈل دیکھیں"
+      },
+      "bandsHeading": {
+        "eyebrow": "شائع شدہ جوابی منطق",
+        "title": "ایک مارکیٹ سائیکل۔ تین رسپانس بینڈ۔",
+        "copy": "فراہم کردہ سائیکل چارٹ بار بار ترقی، اصلاح اور بحالی کو ظاہر کرتا ہے۔ اس کے ساتھ والے رسپانس بینڈ مطلوبہ میکانکس کی وضاحت کرتے ہیں، مارکیٹ کے نتائج کی ضمانت نہیں۔"
+      },
+      "cycleCaption": "مارکیٹ گروتھ سائیکل / فراہم کردہ پروٹوکول بصری",
+      "bands": [
+        [
+          "15% مجموعی کمی",
+          "پہلا اسٹیبلائزیشن بینڈ",
+          "ذریعہ پروٹوکول 35% ٹرانزیکشن سلپیج کا اطلاق کرتا ہے، اسے MS کو دوبارہ خریدنے اور اسے برن ایڈریس پر بھیجنے کی ہدایت کرتا ہے۔",
+          "−15%",
+          "35% جواب"
+        ],
+        [
+          "30% مجموعی کمی",
+          "ڈیپ اسٹیبلائزیشن بینڈ",
+          "Slippage پیرامیٹر 50% تک بڑھ جاتا ہے، وہی دوبارہ خریداری اور جلانے کے راستے کو برقرار رکھتا ہے جو پروٹوکول ڈیک میں بیان کیا گیا ہے۔",
+          "−30%",
+          "50% جواب"
+        ],
+        [
+          "50% مجموعی کمی",
+          "سرکولیشن موڈ",
+          "موجودہ منافع کے اجراء کے نظام الاوقات موقوف ہیں جبکہ نئے اکاؤنٹس اور متحرک درجے کے انعامات جاری ہیں۔ 48 گھنٹے کی بحالی کی مدت کے بعد معمول کا آپریشن دوبارہ شروع ہو جاتا ہے۔",
+          "−50%",
+          "48h ریکوری"
+        ]
+      ],
+      "circulation": {
+        "eyebrow": "سرکولیشن موڈ",
+        "title": "توقف حفاظت کرنا۔ بازیافت کریں۔ دوبارہ شروع کریں۔",
+        "copy": "%50 مجموعی کمی پر، سورس ماڈل موجودہ ریلیز کے شیڈول کو روکتا ہے۔ نئے اکاؤنٹس اور متحرک امتیازی انعامات فعال رہتے ہیں۔ ایک بار جب قیمت کی وصولی 48 گھنٹے تک برقرار رہتی ہے، معمول کی کارروائیاں دوبارہ شروع ہوجاتی ہیں۔",
+        "label": "ذریعہ میں بیان کردہ معاوضہ",
+        "detail": "سرکولیشن موڈ کے دوران موقوف شدہ کوٹے کی شرح، نافذ شدہ معاہدے کی شرائط کے تابع ہے۔"
+      },
+      "stakingHeading": {
+        "eyebrow": "اسٹیکنگ ماڈل",
+        "title": "ان پٹ صاف کریں۔ شیڈول شدہ ریلیز۔",
+        "copy": "فراہم کردہ ڈیک مندرجہ ذیل شائع شدہ پیرامیٹرز کے ساتھ اسٹیکنگ ماڈل پیش کرتا ہے۔ شرکت سے پہلے کسی بھی لائیو نفاذ کی تصدیق آن چین ہونی چاہیے۔"
+      },
+      "parameters": [
+        [
+          "کم سے کم آرڈر",
+          "200 USDT",
+          "انٹری کی حد ماخذ ماڈل میں بیان کی گئی ہے۔"
+        ],
+        [
+          "شائع شدہ مجموعی ہدف",
+          "300%",
+          "ایک ماڈل پیرامیٹر، واپسی کی ضمانت نہیں۔"
+        ],
+        [
+          "لکیری رہائی کی مدت",
+          "365 دن",
+          "فراہم کردہ دستاویز میں بیان کردہ ریلیز شیڈول۔"
+        ]
+      ],
+      "risk": "ڈیجیٹل اثاثوں اور ڈی فائی پروٹوکول میں کافی خطرہ شامل ہے۔ پروٹیکشن میکینکس ترغیبات کو متاثر کر سکتے ہیں، لیکن لیکویڈیٹی، سمارٹ کنٹریکٹ، مارکیٹ یا نقصان کے خطرے کو ختم نہیں کر سکتے۔",
+      "action": {
+        "title": "مکینکس اہمیت رکھتا ہے۔ تصدیق زیادہ اہمیت رکھتی ہے۔",
+        "copy": "MS کے پیچھے سپلائی، مختص اور مرحلہ وار پروڈکٹ رول آؤٹ میں جاری رکھیں۔",
+        "primary": "ٹوکن اکنامکس کو دریافت کریں۔",
+        "secondary": "پروڈکٹس پر واپس جائیں۔"
+      }
+    },
+    "token": {
+      "hero": {
+        "eyebrow": "MS معاشی ماڈل",
+        "title": "ایک کام کے ساتھ ایک مقررہ فراہمی۔",
+        "copy": "سپلائی شدہ ماڈل وسیع تر ماحولیاتی نظام کے لیے ایک بلین MS کو اسٹیکنگ سیٹلمنٹ سسٹم اور عوامی لیکویڈیٹی کے درمیان تقسیم کرتا ہے۔",
+        "primary": "مختص کا معائنہ کریں۔",
+        "secondary": "پروڈکٹ کی افادیت دیکھیں"
+      },
+      "allocationAria": "ٹوکن ایلوکیشن: 30 فیصد سیٹلمنٹ ریزرو اور 70 فیصد ایکو سسٹم لیکویڈیٹی",
+      "total": "کل MS",
+      "eyebrow": "دو جڑے ہوئے تالاب",
+      "title": "ہر ٹوکن ایک متعین کردار کے ساتھ ماڈل میں داخل ہوتا ہے۔",
+      "allocations": [
+        [
+          "300M MS",
+          "اسٹیکنگ ایکو سسٹم سیٹلمنٹ سسٹم کو سپورٹ کرنے کے لیے سورس ماڈل میں مختص کیا گیا ہے۔"
+        ],
+        [
+          "700M MS",
+          "عوامی لیکویڈیٹی اور کارڈ پر مبنی گیم فائی اکانومی کے لیے مختص۔"
+        ]
+      ],
+      "roadmapEyebrow": "A مرحلہ وار لانچ",
+      "roadmapTitle": "فاؤنڈیشن بنائیں، مارکیٹ کھولیں، افادیت کو وسعت دیں۔",
+      "roadmap": [
+        [
+          "فاؤنڈیشن",
+          "Staking لانچ",
+          "شرکت کا ماڈل اور ماحولیاتی نظام کی گردش کی پہلی پرت قائم کریں۔"
+        ],
+        [
+          "سرکولیشن",
+          "MS مارکیٹ کا آغاز",
+          "اوپن ٹریڈنگ، مارکیٹ لیکویڈیٹی اور عوامی قیمت کی دریافت کو فعال کریں۔"
+        ],
+        [
+          "توسیع",
+          "Card GameFi لانچ",
+          "افادیت اور کمیونٹی کو وسیع کرنے کے لیے ایکو سسٹم میں کارڈ پر مبنی بلاکچین پلے لائیں"
+        ]
+      ],
+      "action": {
+        "title": "سپلائی کمی کی وضاحت کرتی ہے۔ افادیت مطابقت کی وضاحت کرتی ہے۔",
+        "copy": "دیکھیں کہ کس طرح مصنوعات ایک متعین MS سپلائی کو ایک مربوط ماحولیاتی نظام میں حرکت میں بدلتی ہیں۔",
+        "primary": "یوٹیلٹی لوپ کو فالو کریں۔",
+        "secondary": "حفاظتی اقدامات کا جائزہ لیں۔"
+      }
+    },
+    "whitepaper": {
+      "hero": {
+        "eyebrow": "وائٹ پیپر، مئی 2026",
+        "title": "پورا سسٹم پڑھیں۔",
+        "copy": "Mobius Strip کے فن تعمیر، ایپلی کیشنز، اکنامکس، روڈ میپ اور انکشاف شدہ خطرات کا 18 صفحات کا جائزہ۔",
+        "button": "دستیاب فائل دیکھیں",
+        "edition": "انگریزی ایڈیشن",
+        "pages": "18 صفحات",
+        "coverAlt": "Mobius Strip انگریزی وائٹ پیپر کا کور"
+      },
+      "downloadHeading": {
+        "eyebrow": "دستیاب ایڈیشن",
+        "title": "ذریعہ دستاویز کو قریب رکھیں۔",
+        "copy": "فراہم کردہ انگریزی ایڈیشن کو ڈاؤن لوڈ کریں یا فوری حوالہ کے لیے اسے ایک نئے براؤزر ٹیب میں کھولیں۔"
+      },
+      "fileTitle": "Mobius Strip White پیپر",
+      "fileMeta": "انگریزی PDF / مئی 2026 / 18 صفحات / 589 KB",
+      "open": "PDF کھولیں۔",
+      "download": "PDF ڈاؤن لوڈ کریں۔",
+      "index": {
+        "eyebrow": "کاغذ کے اندر",
+        "title": "ایک دستاویز میں مکمل نظام۔",
+        "copy": "کاغذ اس منصوبے کو پیش کرتا ہے جیسا کہ اس کے جاری کرنے والے ادارے نے تجویز کیا ہے۔ آزادانہ طور پر تصدیق کرنے کے لیے تکنیکی، مارکیٹ اور ریگولیٹری دعووں کو مواد کے طور پر سمجھیں۔"
+      },
+      "topics": [
+        [
+          "فن تعمیر",
+          "چین ڈیزائن، اتفاق رائے، ماسٹر نوڈس اور مجوزہ تھری لیئر پرائیویسی پروٹوکول۔"
+        ],
+        [
+          "درخواستیں",
+          "MS سویپ، کارڈ گیم، پے، چیٹ اور DAO ایک منسلک پروڈکٹ کی سطح پر۔"
+        ],
+        [
+          "معاشیات",
+          "مقرر سپلائی، مختص، ایکو سسٹم فیس اور شائع شدہ برن ماڈل۔"
+        ],
+        [
+          "سیکیورٹی",
+          "کرپٹوگرافی، معاہدہ، نیٹ ورک اور اثاثہ کی حفاظت کے تحفظات۔"
+        ],
+        [
+          "روڈ میپ",
+          "Testnet، mainnet، ایکو سسٹم کی توسیع اور منصوبہ بند عالمی رول آؤٹ۔"
+        ],
+        [
+          "خطرہ اور تعمیل",
+          "جاری کرنے والے ادارے کے ذریعہ بیان کردہ تکنیکی، مارکیٹ، ریگولیٹری اور اقتصادی خطرات۔"
+        ]
+      ],
+      "action": {
+        "title": "دستاویز سے لے کر ورکنگ ماڈل تک۔",
+        "copy": "پروٹوکول میکینکس کے ذریعے جاری رکھیں یا دیکھیں کہ ہر ایک پروڈکٹ ماحولیاتی نظام کے اندر کہاں فٹ بیٹھتا ہے۔",
+        "primary": "پروٹوکول کا جائزہ لیں۔",
+        "secondary": "ایکو سسٹم کو دریافت کریں۔"
+      }
+    }
+  }
+}

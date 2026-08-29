@@ -1,9 +1,9 @@
 import React, {useState, useEffect, useRef} from 'react'
 import CommunityBanner from '@images/m/community-banner.png'
 import { Contract, ETH } from '@tools/contract'
-import { Input, Button, Dialog, Toast, InfiniteScroll } from 'antd-mobile'
+import { Input, Button, Toast, InfiniteScroll } from 'antd-mobile'
 import { X } from 'lucide-react'
-import { showJoinTeamDialog } from '@components/JoinTeamDialog'
+import { JoinTeamDialog } from '@components/JoinTeamDialog'
 import './styles/community.less'
 
 const Community = (props) => {
@@ -22,6 +22,7 @@ const Community = (props) => {
   const [baseStakedAmount, setBaseStakedAmount] = useState('0')
   const [isRegistered, setIsRegistered] = useState(false)
   const [parent, setParent] = useState('')
+  const [joinTeamVisible, setJoinTeamVisible] = useState(false)
   // 仅用于 handleClaimTeam，独立 loading 状态
   const [claimLoading, setClaimLoading] = useState(false)
 
@@ -73,7 +74,12 @@ const Community = (props) => {
         await ETH.getAccount()
       }
       
-      console.log('📡 正在调用 ETH.children()...', { page, pageSize, isLoadMore })
+      console.log('📡 正在调用 ETH.children()...', {
+        address: ETH.account,
+        page,
+        pageSize,
+        isLoadMore
+      })
       // 合约方法参数: (address, off, lim)，off 是条目偏移量
       const result = await ETH.children(ETH.account, (page - 1) * pageSize, pageSize)
       console.log('✅ 获取到 children 数据:', result)
@@ -259,15 +265,15 @@ const Community = (props) => {
   }
 
   const handleJoinTeam = () => {
-    showJoinTeamDialog({
-      t,
-      onSuccess: (address) => {
-        setParent(address)
-        setIsRegistered(true)
-        // 刷新用户数据
-        getUserView()
-      }
-    })
+    setJoinTeamVisible(true)
+  }
+
+  const handleJoinTeamSuccess = (address) => {
+    setParent(address)
+    setIsRegistered(true)
+    setJoinTeamVisible(false)
+    // 刷新用户数据
+    getUserView()
   }
 
   return (
@@ -277,6 +283,12 @@ const Community = (props) => {
         {
           !isRegistered && <button className="join-team-btn" onClick={() => handleJoinTeam()}>{t('Join Team')}</button>
         }
+        <JoinTeamDialog
+          visible={joinTeamVisible}
+          t={t}
+          onClose={() => setJoinTeamVisible(false)}
+          onSuccess={handleJoinTeamSuccess}
+        />
         <div className="community-info full-width">
           {/* {
             isRegistered && (

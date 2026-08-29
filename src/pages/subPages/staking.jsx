@@ -1,43 +1,17 @@
 import React, {useState, useEffect, useRef} from 'react'
 import { useLocation } from 'react-router-dom'
 import { ClockCircleOutlined, InfoCircleOutlined } from '@ant-design/icons'
-import { Button, Input, Dialog, Toast, Tag, InfiniteScroll } from 'antd-mobile'
+import { Button, Toast, Tag, InfiniteScroll } from 'antd-mobile'
 import classnames from 'classnames'
 import dayjs from 'dayjs'
 import { Contract, ETH } from '@tools/contract'
 import Big from 'big.js';
 import FireVideo from '@components/FireVideo'
-import { showJoinTeamDialog } from '@components/JoinTeamDialog'
+import { JoinTeamDialog } from '@components/JoinTeamDialog'
 import './styles/staking.less'
 
 // const USDT = new Contract(import.meta.env.VITE_USDT, "ERC20"); // TODO: ABI 未定义
 // const BUY = new Contract(import.meta.env.VITE_ZYSQ, "BUY"); // TODO: ABI 未定义
-
-const AddressForm = (props) => {
-  const [parentAddress, setParentAddress] = useState('')
-  const { t } = props
-
-  return (
-    <>
-      <div className="address-form">
-        <p className="address-title">{t('Input Team Address')}</p>
-        <Input className="address-input" placeholder={t('Enter team address')} onChange={(value) => {
-          setParentAddress(value)
-        }} />
-        <p><Button className="address-btn" onClick={() => {
-          if (!parentAddress) {
-            Toast.show({
-              content: t('Please enter the invitation address')
-            })
-            return
-          }
-
-          props.onChange && props.onChange(parentAddress)
-        }}>{t('Confirm')}</Button></p>
-      </div>
-    </>
-  )
-}
 
 const Staking = (props) => {
   const location = useLocation()
@@ -65,6 +39,7 @@ const Staking = (props) => {
   const [capLeftTotal, setCapLeftTotal] = useState(0) // 剩余额度
   const [lineClaimableTotal, setLineClaimableTotal] = useState(0) // 可领取奖励
   const [orderCount, setOrderCount] = useState(0) // 订单数量（用于 claimLineAll）
+  const [joinTeamVisible, setJoinTeamVisible] = useState(false)
 
   const { t } = props
   
@@ -376,37 +351,11 @@ const Staking = (props) => {
   //   // 暂时禁用
   // }
 
-  const handleRegistered = async (status) => {
-    if (!amount) return Toast.show(t('Please enter an amount'))
-    if (new Big(amount).lt(minAmount) || new Big(amount).gt('1000')) return Toast.show(`${t('Staking amount per order')}${minAmount}～1000USDT`)
-    if (!isRegistered) {
-      let dialog = Dialog.show({
-        header: null,
-        title: null,
-        content: <AddressForm t={t} onChange={value => {
-          dialog.close()
-          handleStaking(status, value)
-        }} />,
-        actions: [],
-        className: 'no-footer-dialog'
-      })
-    } else {
-      handleStaking(status)
-    }
-  }
-
   // 新的理财方法：调用合约 stake(amount, plan)
   const handleStake = async () => {
     // 检查是否已绑定上级
     if (!isRegistered) {
-      showJoinTeamDialog({
-        t,
-        onSuccess: (address) => {
-          console.log('绑定成功，上级地址:', address)
-          setIsRegistered(true)
-          Toast.show(t('Binding successful! You can now start staking'))
-        }
-      })
+      setJoinTeamVisible(true)
       return
     }
 
@@ -462,11 +411,6 @@ const Staking = (props) => {
     }
   }
 
-  // 旧的理财方法已弃用，使用新的 handleStake
-  const handleStaking = () => {
-    Toast.show(t('Please use the new staking button'))
-  }
-
   const handleSelectMax = () => {
     let maxAmount = new Big(maxStakeAmountNow).toString()
 
@@ -479,12 +423,25 @@ const Staking = (props) => {
     }
   }
 
+  const handleJoinTeamSuccess = (address) => {
+    console.log('绑定成功，上级地址:', address)
+    setIsRegistered(true)
+    setJoinTeamVisible(false)
+    Toast.show(t('Binding successful! You can now start staking'))
+  }
+
   const calcInterest = (orderCount, amount, rate = 1.012, days = 30) => {
     return orderCount * amount * (rate ** days)
   }
 
   return (
     <>
+      <JoinTeamDialog
+        visible={joinTeamVisible}
+        t={t}
+        onClose={() => setJoinTeamVisible(false)}
+        onSuccess={handleJoinTeamSuccess}
+      />
       <div className="staking-page">
         {/* <div className="staking-join-team">
           加入团队

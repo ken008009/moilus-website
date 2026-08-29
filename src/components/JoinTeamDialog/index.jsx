@@ -6,6 +6,7 @@ import './index.less'
 
 const JoinTeamForm = (props) => {
   const [address, setAddress] = useState('')
+  const [submitting, setSubmitting] = useState(false)
   const { t, onClose, onSuccess } = props
 
   const handleSubmit = async () => {
@@ -26,6 +27,7 @@ const JoinTeamForm = (props) => {
 
     let toast
     try {
+      setSubmitting(true)
       toast = Toast.show({
         icon: 'loading',
         maskClickable: false,
@@ -58,6 +60,8 @@ const JoinTeamForm = (props) => {
         icon: 'fail',
         content: error.message || t('Operation Failed'),
       })
+    } finally {
+      setSubmitting(false)
     }
   }
 
@@ -68,42 +72,28 @@ const JoinTeamForm = (props) => {
       <Input 
         className="form-input" 
         placeholder={t('Enter team address')}
+        value={address}
         onChange={(value) => setAddress(value)} 
       />
-      <Button className="form-btn" onClick={handleSubmit}>
+      <Button className="form-btn" loading={submitting} disabled={submitting} onClick={handleSubmit}>
         {t('Confirm')}
       </Button>
     </div>
   )
 }
 
-/**
- * 显示绑定上级弹窗
- * @param {Object} options - 配置选项
- * @param {Function} options.t - 国际化翻译函数
- * @param {Function} options.onSuccess - 绑定成功回调，参数为绑定的地址
- */
-export const showJoinTeamDialog = (options = {}) => {
-  const { t, onSuccess } = options
+export const JoinTeamDialog = ({ visible, t, onClose, onSuccess }) => (
+  <Dialog
+    visible={visible}
+    header={null}
+    title={null}
+    content={<JoinTeamForm t={t} onClose={onClose} onSuccess={onSuccess} />}
+    actions={[]}
+    className="join-team-dialog"
+    closeOnMaskClick
+    destroyOnClose
+    onClose={onClose}
+  />
+)
 
-  const dialog = Dialog.show({
-    header: null,
-    title: null,
-    content: (
-      <JoinTeamForm 
-        t={t}
-        onClose={() => dialog.close()}
-        onSuccess={(address) => {
-          onSuccess && onSuccess(address)
-          dialog.close()
-        }}
-      />
-    ),
-    actions: [],
-    className: 'join-team-dialog'
-  })
-
-  return dialog
-}
-
-export default JoinTeamForm
+export default JoinTeamDialog

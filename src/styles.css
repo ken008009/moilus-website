@@ -138,7 +138,7 @@ img {
   margin-inline: auto;
   padding: 128px 0 72px;
   color: #ccc;
-  background: #000;
+  /* background: #000; */
   font-family: 'Proxima Nova:Regular', -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif;
   font-variant: tabular-nums;
 }
@@ -502,6 +502,7 @@ body.nav-open {
   transition: transform 0.25s ease;
 }
 
+.mobile-nav-controls,
 .menu-toggle {
   display: none;
 }
@@ -2135,7 +2136,7 @@ body.nav-open {
   }
 
   .brand-link,
-  .menu-toggle {
+  .mobile-nav-controls {
     position: relative;
     z-index: 2;
     touch-action: manipulation;
@@ -2179,9 +2180,39 @@ body.nav-open {
     margin-top: 10px;
   }
 
-  .menu-toggle {
+  .mobile-nav-controls {
     justify-self: end;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .mobile-header-address {
+    display: inline-flex;
+    min-width: 0;
+    max-width: 118px;
+    min-height: 36px;
+    align-items: center;
+    gap: 7px;
+    padding: 0 11px;
+    overflow: hidden;
+    border: 1px solid rgba(20, 250, 162, 0.2);
+    border-radius: 999px;
+    color: #e8fff6;
+    background: rgba(20, 250, 162, 0.075);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.055);
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: -0.025em;
+    line-height: 1;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .menu-toggle {
     display: grid;
+    flex: 0 0 44px;
     width: 44px;
     height: 44px;
     place-content: center;
@@ -2432,6 +2463,17 @@ body.nav-open {
   .nav-shell {
     min-height: 58px;
     padding-left: 13px;
+  }
+
+  .mobile-nav-controls {
+    gap: 6px;
+  }
+
+  .mobile-header-address {
+    max-width: 108px;
+    min-height: 34px;
+    padding-inline: 9px;
+    font-size: 0.66rem;
   }
 
   .nav-links {
