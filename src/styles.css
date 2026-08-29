@@ -1,5 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700;800&display=swap');
 
+@font-face {
+  font-family: 'Proxima Nova:Extrabold';
+  font-style: normal;
+  font-display: swap;
+  src: url('./assets/fonts/d4b4f1a0ebe406ad40dabd18cfed0e7fc6f9c437.ttf');
+}
+
+@font-face {
+  font-family: 'Proxima Nova:Regular';
+  font-style: normal;
+  font-display: swap;
+  src: url('./assets/fonts/de8feaa7563eeddb2882c645054d79077ace66e7.ttf');
+}
+
+@font-face {
+  font-family: 'Proxima Nova:Bold';
+  font-style: normal;
+  font-display: swap;
+  src: url('./assets/fonts/2acd4dfea92d30ba4082d5d83fd4b5a0b9120894.ttf');
+}
+
 :root {
   color-scheme: dark;
   font-family: 'Noto Sans', 'Avenir Next', sans-serif;
@@ -108,6 +129,89 @@ img {
 .chapter {
   padding-top: var(--section);
   padding-bottom: var(--section);
+}
+
+.business-page-shell {
+  --adm-color-background: #13131a;
+  width: min(100%, 720px);
+  min-height: 100vh;
+  margin-inline: auto;
+  padding: 128px 0 72px;
+  color: #ccc;
+  background: #000;
+  font-family: 'Proxima Nova:Regular', -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  font-variant: tabular-nums;
+}
+
+.business-page-shell,
+.business-page-shell * {
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+.business-page-shell :where(h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, figure) {
+  margin: 0;
+  padding: 0;
+}
+
+.business-page-shell :where(ul, ol, li) {
+  list-style: none;
+}
+
+.business-page-shell button,
+.business-page-shell input {
+  font: inherit;
+  outline: none;
+}
+
+.business-page-shell button {
+  border: 0;
+  cursor: pointer;
+  user-select: none;
+}
+
+.business-page-shell .community-banner img {
+  width: 100%;
+}
+
+.business-wallet-gate {
+  display: grid;
+  min-height: calc(100vh - 200px);
+  place-items: center;
+  padding: 32px 24px;
+}
+
+.business-wallet-gate-card {
+  width: min(100%, 430px);
+  padding: 42px 30px;
+  border: 1px solid var(--border-mint);
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.045);
+  box-shadow: 0 28px 90px rgba(2, 0, 12, 0.4);
+  text-align: center;
+}
+
+.business-wallet-gate-mark {
+  display: grid;
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 24px;
+  place-items: center;
+  border-radius: 50%;
+  color: var(--ink);
+  background: var(--mint);
+  font-weight: 800;
+}
+
+.business-wallet-gate-card h1 {
+  margin: 0 0 12px;
+  font-size: clamp(1.7rem, 5vw, 2.4rem);
+}
+
+.business-wallet-gate-card p {
+  margin: 0 auto 24px;
+  color: var(--secondary);
+  line-height: 1.7;
 }
 
 .sr-only {
@@ -246,12 +350,142 @@ body.nav-open {
   background: var(--mint);
   font-size: 0.84rem;
   font-weight: 600;
+  border: 0;
+  cursor: pointer;
   transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.wallet-cta:disabled {
+  cursor: wait;
+  opacity: 0.68;
+}
+
+.wallet-address {
+  max-width: 154px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  cursor: default;
+}
+
+.wallet-cta-mobile {
+  display: none;
 }
 
 .nav-cta:hover {
   background: var(--mint-hover);
   transform: translateY(-1px);
+}
+
+.nav-actions {
+  justify-self: end;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.language-switcher {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.language-switcher-button {
+  display: inline-flex;
+  max-width: 154px;
+  min-height: 42px;
+  align-items: center;
+  gap: 8px;
+  padding: 0 13px;
+  border: 1px solid rgba(184, 217, 255, 0.16);
+  border-radius: 999px;
+  color: #e2ebff;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.075), rgba(255, 255, 255, 0.035));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  font: inherit;
+  font-size: 0.78rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease, transform 0.2s ease;
+}
+
+.language-switcher-button:hover {
+  color: var(--white);
+  border-color: rgba(20, 250, 162, 0.34);
+  background: rgba(20, 250, 162, 0.08);
+  transform: translateY(-1px);
+}
+
+.language-switcher-button > span:nth-child(2) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.language-chevron {
+  width: 14px;
+  height: 14px;
+  flex: 0 0 auto;
+  color: var(--muted);
+  transition: transform 0.2s ease;
+}
+
+.language-globe {
+  width: 16px;
+  height: 16px;
+  flex: 0 0 auto;
+  color: var(--mint);
+  stroke-width: 1.8;
+}
+
+.language-switcher.is-open .language-chevron {
+  transform: rotate(180deg);
+}
+
+.language-menu {
+  position: absolute;
+  z-index: 120;
+  top: calc(100% + 10px);
+  right: 0;
+  display: grid;
+  width: 230px;
+  max-height: min(70vh, 480px);
+  padding: 8px;
+  overflow-y: auto;
+  border: 1px solid rgba(184, 217, 255, 0.16);
+  border-radius: 18px;
+  background: rgba(8, 0, 24, 0.98);
+  box-shadow: 0 24px 70px rgba(2, 0, 12, 0.5);
+  backdrop-filter: blur(20px);
+}
+
+.language-menu button {
+  display: flex;
+  min-height: 42px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 12px;
+  border: 0;
+  border-radius: 10px;
+  color: var(--secondary);
+  background: transparent;
+  font-size: 0.84rem;
+  text-align: left;
+  cursor: pointer;
+}
+
+.language-menu button:hover,
+.language-menu button.is-active {
+  color: var(--white);
+  background: rgba(20, 250, 162, 0.1);
+}
+
+.language-menu button.is-active {
+  color: var(--mint);
+}
+
+.language-switcher-mobile {
+  display: none;
 }
 
 .nav-cta:hover svg,
@@ -1908,8 +2142,41 @@ body.nav-open {
     -webkit-tap-highlight-color: transparent;
   }
 
-  .nav-cta {
+  .nav-actions {
     display: none;
+  }
+
+  .language-switcher-mobile {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    padding-top: 24px;
+  }
+
+  .nav-links .wallet-cta-mobile {
+    display: inline-flex;
+    width: 100%;
+    min-height: 52px;
+    margin-top: 24px;
+    font-size: 1rem;
+  }
+
+  .language-switcher-mobile .language-switcher-button {
+    width: 100%;
+    max-width: none;
+    min-height: 52px;
+    justify-content: space-between;
+    padding-inline: 18px;
+    color: var(--white);
+    font-size: 1rem;
+  }
+
+  .language-switcher-mobile .language-menu {
+    position: static;
+    width: 100%;
+    max-height: 280px;
+    margin-top: 10px;
   }
 
   .menu-toggle {

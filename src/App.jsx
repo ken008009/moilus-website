@@ -2,15 +2,41 @@ import React, { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
+import { useLocation, useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+import { Toast } from 'antd-mobile';
+import { ChevronDown, Globe2 } from 'lucide-react';
+import { useWallet } from './wallet/WalletContext.jsx';
+import BusinessWalletGate from './components/BusinessWalletGate.jsx';
+import StakingPage from './pages/subPages/staking.jsx';
+import CommunityOperationsPage from './pages/subPages/community.jsx';
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
 const navItems = [
-  { href: '/', label: 'Home' },
-  { href: '/ecosystem', label: 'Ecosystem' },
-  { href: '/protocol', label: 'Protocol' },
-  { href: '/token', label: 'Token' },
-  { href: '/whitepaper', label: 'Whitepaper' },
+  { href: '/', label: 'Home', translationKey: 'HOME' },
+  { href: '/ecosystem', label: 'Ecosystem', translationKey: 'Ecosystem' },
+  { href: '/protocol', label: 'Protocol', translationKey: 'Protocol' },
+  { href: '/token', label: 'Token', translationKey: 'Token' },
+  { href: '/whitepaper', label: 'Whitepaper', translationKey: 'Whitepaper' },
+  { href: '/staking', label: 'Staking', translationKey: 'STAKING' },
+  { href: '/community', label: 'Community', translationKey: 'COMMUNITY' },
+];
+
+const languageOptions = [
+  ['en', 'English'],
+  ['ar', 'العربية'],
+  ['en-IN', 'English (India)'],
+  ['en-SG', 'English (Singapore)'],
+  ['en-US', 'English (US)'],
+  ['ja', '日本語'],
+  ['ko', '한국어'],
+  ['ms', 'Bahasa Melayu'],
+  ['ru', 'Русский'],
+  ['th', 'ไทย'],
+  ['ur', 'اردو'],
+  ['zh-CN', '简体中文'],
+  ['zh-HK', '繁體中文'],
 ];
 
 const usesFileRouter = window.location.protocol === 'file:';
@@ -109,35 +135,24 @@ const protocolBands = [
 ];
 
 function usePathname() {
-  const getCurrentPath = () => {
-    if (!usesFileRouter) return window.location.pathname;
-    const hashPath = window.location.hash.replace(/^#/, '');
-    return hashPath.startsWith('/') ? hashPath : '/';
+  const location = useLocation();
+  const routerNavigate = useNavigate();
+
+  const navigate = (href, options = {}) => {
+    if (href === location.pathname && !options.replace) return;
+    routerNavigate(href, options);
   };
 
-  const [path, setPath] = useState(getCurrentPath);
+  return [location.pathname, navigate];
+}
 
-  useEffect(() => {
-    const handleLocationChange = () => setPath(getCurrentPath());
-    const eventName = usesFileRouter ? 'hashchange' : 'popstate';
-    window.addEventListener(eventName, handleLocationChange);
-    return () => window.removeEventListener(eventName, handleLocationChange);
-  }, []);
+function formatAddress(value = '') {
+  if (value.length <= 12) return value;
+  return `${value.slice(0, 6)}...${value.slice(-4)}`;
+}
 
-  const navigate = (href) => {
-    if (usesFileRouter) {
-      if (href === getCurrentPath()) return;
-      window.location.hash = href;
-      setPath(href);
-      return;
-    }
-
-    if (href === getCurrentPath()) return;
-    window.history.pushState({}, '', href);
-    setPath(href);
-  };
-
-  return [path, navigate];
+function OperationsPage({ children }) {
+  return <section className="business-page-shell">{children}</section>;
 }
 
 function AppLink({ href, navigate, className = '', children, onClick, ...rest }) {
@@ -174,8 +189,98 @@ function ArrowIcon() {
   );
 }
 
+function LanguageSwitcher({ className = '' }) {
+  const [open, setOpen] = useState(false);
+  const switcherRef = useRef(null);
+  const { i18n } = useTranslation();
+  const currentLanguage = i18n.resolvedLanguage || i18n.language || 'en';
+  const currentLabel = languageOptions.find(([value]) => value === currentLanguage)?.[1] || 'English';
+
+  useEffect(() => {
+    if (!open) return undefined;
+
+    const closeOnOutsideClick = (event) => {
+      if (!switcherRef.current?.contains(event.target)) setOpen(false);
+    };
+    const closeOnEscape = (event) => {
+      if (event.key === 'Escape') setOpen(false);
+    };
+
+    document.addEventListener('pointerdown', closeOnOutsideClick);
+    document.addEventListener('keydown', closeOnEscape);
+    return () => {
+      document.removeEventListener('pointerdown', closeOnOutsideClick);
+      document.removeEventListener('keydown', closeOnEscape);
+    };
+  }, [open]);
+
+  return (
+    <div className={`language-switcher ${className} ${open ? 'is-open' : ''}`} ref={switcherRef}>
+      <button
+        className="language-switcher-button"
+        type="button"
+        aria-label="Switch language"
+        aria-haspopup="listbox"
+        aria-expanded={open}
+        onClick={() => setOpen((current) => !current)}
+      >
+        <Globe2 className="language-globe" aria-hidden="true" />
+        <span>{currentLabel}</span>
+        <ChevronDown className="language-chevron" aria-hidden="true" />
+      </button>
+
+      {open && (
+        <div className="language-menu" role="listbox" aria-label="Choose language">
+          {languageOptions.map(([value, label]) => (
+            <button
+              key={value}
+              type="button"
+              role="option"
+              aria-selected={currentLanguage === value}
+              className={currentLanguage === value ? 'is-active' : ''}
+              onClick={() => {
+                i18n.changeLanguage(value);
+                setOpen(false);
+              }}
+            >
+              <span>{label}</span>
+              {currentLanguage === value && <span aria-hidden="true">✓</span>}
+            </button>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
+
 function Nav({ path, navigate }) {
   const [open, setOpen] = useState(false);
+  const { address, status: walletStatus, connect } = useWallet();
+  const { t } = useTranslation();
+
+  const handleCreateLink = async () => {
+    if (walletStatus === 'connecting') return;
+
+    try {
+      Toast.show({
+        icon: 'loading',
+        content: t('Connecting wallet...'),
+        duration: 0,
+        maskClickable: false,
+      });
+
+      await connect();
+      Toast.clear();
+    } catch (error) {
+      Toast.clear();
+      Toast.show({
+        icon: 'fail',
+        content: error?.code === 4001
+          ? t('User rejected the request')
+          : error?.message || t('Failed to connect wallet'),
+      });
+    }
+  };
 
   useEffect(() => {
     const handleKeyDown = (event) => {
@@ -195,6 +300,26 @@ function Nav({ path, navigate }) {
       window.removeEventListener('resize', handleResize);
     };
   }, [open]);
+
+  const walletControl = (mobile = false) => (
+    !address ? (
+      <button
+        type="button"
+        className={`nav-cta wallet-cta ${mobile ? 'wallet-cta-mobile' : ''}`}
+        onClick={handleCreateLink}
+        disabled={walletStatus === 'connecting'}
+      >
+        {walletStatus === 'connecting' ? t('Connecting wallet') : t('JOIN')}
+      </button>
+    ) : (
+      <span
+        className={`nav-cta wallet-cta wallet-address ${mobile ? 'wallet-cta-mobile' : ''}`}
+        title={address}
+      >
+        {formatAddress(address)}
+      </span>
+    )
+  );
 
   return (
     <header className={`site-header ${open ? 'menu-is-open' : ''}`}>
@@ -217,14 +342,17 @@ function Nav({ path, navigate }) {
                 setOpen(false);
               }}
             >
-              {item.label}
+              {t(item.translationKey, { defaultValue: item.label })}
             </AppLink>
           ))}
+          {walletControl(true)}
+          <LanguageSwitcher className="language-switcher-mobile" />
         </div>
 
-        <AppLink href="/protocol" navigate={navigate} className="nav-cta">
-          Read protocol <ArrowIcon />
-        </AppLink>
+        <div className="nav-actions">
+          <LanguageSwitcher className="language-switcher-desktop" />
+          {walletControl()}
+        </div>
 
         <button
           className="menu-toggle"
@@ -803,6 +931,8 @@ function ActionChapter({ title, copy, primary, secondary, navigate }) {
 }
 
 function Footer({ navigate }) {
+  const { t } = useTranslation();
+
   return (
     <footer className="site-footer">
       <div className="footer-top shell">
@@ -810,7 +940,9 @@ function Footer({ navigate }) {
         <p>One surface. No boundaries.</p>
         <div className="footer-nav">
           {navItems.map((item) => (
-            <AppLink key={item.href} href={item.href} navigate={navigate}>{item.label}</AppLink>
+            <AppLink key={item.href} href={item.href} navigate={navigate}>
+              {t(item.translationKey, { defaultValue: item.label })}
+            </AppLink>
           ))}
         </div>
       </div>
@@ -835,6 +967,20 @@ function NotFound({ navigate }) {
 export default function App() {
   const [path, navigate] = usePathname();
   const mainRef = useRef(null);
+  const { t, i18n } = useTranslation();
+
+  useEffect(() => {
+    const syncLanguage = (language) => {
+      const normalizedLanguage = language || 'en';
+      localStorage.setItem('language', normalizedLanguage);
+      document.documentElement.lang = normalizedLanguage;
+      document.documentElement.dir = ['ar', 'ur'].includes(normalizedLanguage) ? 'rtl' : 'ltr';
+    };
+
+    syncLanguage(i18n.resolvedLanguage || i18n.language);
+    i18n.on('languageChanged', syncLanguage);
+    return () => i18n.off('languageChanged', syncLanguage);
+  }, [i18n]);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -847,6 +993,8 @@ export default function App() {
       '/protocol': 'Protocol',
       '/token': 'Token',
       '/whitepaper': 'Whitepaper',
+      '/staking': 'Staking',
+      '/community': 'Community',
     }[path];
 
     document.title = pageName
@@ -966,6 +1114,27 @@ export default function App() {
     '/protocol': <ProtocolPage navigate={navigate} />,
     '/token': <TokenPage navigate={navigate} />,
     '/whitepaper': <WhitepaperPage navigate={navigate} />,
+    '/staking': (
+      <OperationsPage>
+        <BusinessWalletGate>
+          <StakingPage
+            navigate={navigate}
+            t={t}
+          />
+        </BusinessWalletGate>
+      </OperationsPage>
+    ),
+    '/community': (
+      <OperationsPage>
+        <BusinessWalletGate>
+          <CommunityOperationsPage
+            navigate={navigate}
+            formatAddress={formatAddress}
+            t={t}
+          />
+        </BusinessWalletGate>
+      </OperationsPage>
+    ),
   }[path] ?? <NotFound navigate={navigate} />;
 
   return (
