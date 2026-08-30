@@ -2,11 +2,11 @@
   "ar": {
     "nav": {
       "home": "الصفحة الرئيسية",
-      "community": "المجتمع",
       "staking": "التوقيع المساحي",
+      "community": "المجتمع",
       "ecosystem": "النظام البيئي",
       "protocol": "البروتوكول",
-      "token": "الرمز المميز",
+      "token": "التداول",
       "whitepaper": "ورقة بيضاء"
     },
     "common": {
@@ -339,11 +339,11 @@
   "ja": {
     "nav": {
       "home": "ホーム",
-      "community": "コミュニティ",
       "staking": "ステーキング",
+      "community": "コミュニティ",
       "ecosystem": "エコシステム",
       "protocol": "プロトコル",
-      "token": "トークン",
+      "token": "取引",
       "whitepaper": "ホワイトペーパー"
     },
     "common": {
@@ -676,11 +676,11 @@
   "ko": {
     "nav": {
       "home": "홈",
-      "community": "커뮤니티",
       "staking": "스테이킹",
+      "community": "커뮤니티",
       "ecosystem": "생태계",
       "protocol": "프로토콜",
-      "token": "토큰",
+      "token": "거래",
       "whitepaper": "백서"
     },
     "common": {
@@ -1013,11 +1013,11 @@
   "ms": {
     "nav": {
       "home": "Rumah",
-      "community": "Komuniti",
       "staking": "Staking",
+      "community": "Komuniti",
       "ecosystem": "Ekosistem",
       "protocol": "Protokol",
-      "token": "Token",
+      "token": "Dagangan",
       "whitepaper": "Kertas Putih"
     },
     "common": {
@@ -1350,11 +1350,11 @@
   "ru": {
     "nav": {
       "home": "Главная",
-      "community": "Сообщество",
       "staking": "Стейкинг",
+      "community": "Сообщество",
       "ecosystem": "Экосистема",
       "protocol": "Протокол",
-      "token": "Токен",
+      "token": "Торговля",
       "whitepaper": "Информационный документ"
     },
     "common": {
@@ -1687,11 +1687,11 @@
   "th": {
     "nav": {
       "home": "บ้าน",
-      "community": "ชุมชน",
       "staking": "การปักหลัก",
+      "community": "ชุมชน",
       "ecosystem": "ระบบนิเวศ",
       "protocol": "โปรโตคอล",
-      "token": "โทเค็น",
+      "token": "เทรด",
       "whitepaper": "เอกสารไวท์เปเปอร์"
     },
     "common": {
@@ -2024,11 +2024,11 @@
   "ur": {
     "nav": {
       "home": "گھر",
-      "community": "کمیونٹی",
       "staking": "اسٹیکنگ",
+      "community": "کمیونٹی",
       "ecosystem": "ماحولیاتی نظام",
       "protocol": "پروٹوکول",
-      "token": "ٹوکن",
+      "token": "ٹریڈنگ",
       "whitepaper": "وائٹ پیپر"
     },
     "common": {

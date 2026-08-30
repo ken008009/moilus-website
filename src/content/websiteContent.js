@@ -5,11 +5,11 @@ import websiteTranslations from './websiteTranslations.generated.json';
 const en = {
   nav: orderNav({
     home: 'Home',
-    community: 'Community',
     staking: 'Staking',
+    community: 'Community',
     ecosystem: 'Ecosystem',
     protocol: 'Protocol',
-    token: 'Token',
+    token: 'Trade',
     whitepaper: 'Whitepaper',
   }),
   common: {
@@ -181,11 +181,11 @@ const en = {
 const zhCN = {
   nav: orderNav({
     home: '首页',
-    community: '社区',
     staking: '理财',
+    community: '社区',
     ecosystem: '生态',
     protocol: '协议',
-    token: '代币',
+    token: '交易',
     whitepaper: '白皮书',
   }),
   common: {

@@ -1,5 +1,5 @@
 import React, {useState, useEffect, useRef} from 'react'
-import CommunityBanner from '@images/m/community-banner.png'
+import CommunityBanner from '@images/m/community-banner.jpg'
 import { Contract, ETH } from '@tools/contract'
 import { Input, Button, Toast, InfiniteScroll } from 'antd-mobile'
 import { X } from 'lucide-react'

@@ -1,7 +1,7 @@
 export const NAV_ITEMS = [
   { href: '/', key: 'home' },
-  { href: '/community', key: 'community' },
   { href: '/staking', key: 'staking' },
+  { href: '/community', key: 'community' },
   { href: '/ecosystem', key: 'ecosystem' },
   { href: '/protocol', key: 'protocol' },
   { href: '/token', key: 'token' },

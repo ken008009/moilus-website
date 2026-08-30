@@ -450,7 +450,7 @@ const Staking = (props) => {
   
         <div className="staking-banner">
           <h3>{t('STAKING')}</h3>
-          <FireVideo />
+          {/* <FireVideo />  */}
         </div>
         <div className="staking-amount">
           <div className="staking-amount-title">
