@@ -2,12 +2,12 @@
   "ar": {
     "nav": {
       "home": "الصفحة الرئيسية",
+      "community": "المجتمع",
+      "staking": "التوقيع المساحي",
       "ecosystem": "النظام البيئي",
       "protocol": "البروتوكول",
       "token": "الرمز المميز",
-      "whitepaper": "ورقة بيضاء",
-      "staking": "التوقيع المساحي",
-      "community": "المجتمع"
+      "whitepaper": "ورقة بيضاء"
     },
     "common": {
       "scrollCue": "قم بالتمرير للدخول إلى السلسلة",
@@ -339,12 +339,12 @@
   "ja": {
     "nav": {
       "home": "ホーム",
+      "community": "コミュニティ",
+      "staking": "ステーキング",
       "ecosystem": "エコシステム",
       "protocol": "プロトコル",
       "token": "トークン",
-      "whitepaper": "ホワイトペーパー",
-      "staking": "ステーキング",
-      "community": "コミュニティ"
+      "whitepaper": "ホワイトペーパー"
     },
     "common": {
       "scrollCue": "スクロールして連続体に入ります",
@@ -676,12 +676,12 @@
   "ko": {
     "nav": {
       "home": "홈",
+      "community": "커뮤니티",
+      "staking": "스테이킹",
       "ecosystem": "생태계",
       "protocol": "프로토콜",
       "token": "토큰",
-      "whitepaper": "백서",
-      "staking": "스테이킹",
-      "community": "커뮤니티"
+      "whitepaper": "백서"
     },
     "common": {
       "scrollCue": "연속체에 들어가려면 스크롤하세요.",
@@ -1013,12 +1013,12 @@
   "ms": {
     "nav": {
       "home": "Rumah",
+      "community": "Komuniti",
+      "staking": "Staking",
       "ecosystem": "Ekosistem",
       "protocol": "Protokol",
       "token": "Token",
-      "whitepaper": "Kertas Putih",
-      "staking": "Staking",
-      "community": "Komuniti"
+      "whitepaper": "Kertas Putih"
     },
     "common": {
       "scrollCue": "Tatal untuk memasuki kontinum",
@@ -1350,12 +1350,12 @@
   "ru": {
     "nav": {
       "home": "Главная",
+      "community": "Сообщество",
+      "staking": "Стейкинг",
       "ecosystem": "Экосистема",
       "protocol": "Протокол",
       "token": "Токен",
-      "whitepaper": "Информационный документ",
-      "staking": "Стейкинг",
-      "community": "Сообщество"
+      "whitepaper": "Информационный документ"
     },
     "common": {
       "scrollCue": "Прокрутите, чтобы войти в континуум",
@@ -1687,12 +1687,12 @@
   "th": {
     "nav": {
       "home": "บ้าน",
+      "community": "ชุมชน",
+      "staking": "การปักหลัก",
       "ecosystem": "ระบบนิเวศ",
       "protocol": "โปรโตคอล",
       "token": "โทเค็น",
-      "whitepaper": "เอกสารไวท์เปเปอร์",
-      "staking": "การปักหลัก",
-      "community": "ชุมชน"
+      "whitepaper": "เอกสารไวท์เปเปอร์"
     },
     "common": {
       "scrollCue": "เลื่อนเพื่อเข้าสู่ความต่อเนื่อง",
@@ -2024,12 +2024,12 @@
   "ur": {
     "nav": {
       "home": "گھر",
+      "community": "کمیونٹی",
+      "staking": "اسٹیکنگ",
       "ecosystem": "ماحولیاتی نظام",
       "protocol": "پروٹوکول",
       "token": "ٹوکن",
-      "whitepaper": "وائٹ پیپر",
-      "staking": "اسٹیکنگ",
-      "community": "کمیونٹی"
+      "whitepaper": "وائٹ پیپر"
     },
     "common": {
       "scrollCue": "تسلسل میں داخل ہونے کے لیے اسکرول کریں۔",

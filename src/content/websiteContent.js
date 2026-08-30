@@ -1,11 +1,17 @@
 import { useTranslation } from 'react-i18next';
+import { orderByLanguage, orderNav } from '../i18n/siteConfig.js';
 import websiteTranslations from './websiteTranslations.generated.json';
 
 const en = {
-  nav: {
-    home: 'Home', ecosystem: 'Ecosystem', protocol: 'Protocol', token: 'Token',
-    whitepaper: 'Whitepaper', staking: 'Staking', community: 'Community',
-  },
+  nav: orderNav({
+    home: 'Home',
+    community: 'Community',
+    staking: 'Staking',
+    ecosystem: 'Ecosystem',
+    protocol: 'Protocol',
+    token: 'Token',
+    whitepaper: 'Whitepaper',
+  }),
   common: {
     scrollCue: 'Scroll to enter the continuum',
     continueLoop: 'Continue the loop',
@@ -173,7 +179,15 @@ const en = {
 };
 
 const zhCN = {
-  nav: { home: '首页', ecosystem: '生态', protocol: '协议', token: '代币', whitepaper: '白皮书', staking: '理财', community: '社区' },
+  nav: orderNav({
+    home: '首页',
+    community: '社区',
+    staking: '理财',
+    ecosystem: '生态',
+    protocol: '协议',
+    token: '代币',
+    whitepaper: '白皮书',
+  }),
   common: {
     scrollCue: '向下滚动，进入无限生态', continueLoop: '继续探索',
     marquee: ['公链', '链上治理', '全球支付', '德州扑克', 'MS DAO', '加密通信'],
@@ -235,26 +249,27 @@ function convertToTraditional(value) {
   return value;
 }
 
-const contentByLanguage = {
+const contentByLanguage = orderByLanguage({
   en,
-  ar: websiteTranslations.ar,
-  'en-IN': en,
-  'en-SG': en,
   'en-US': en,
+  'en-SG': en,
+  'en-IN': en,
+  'zh-CN': zhCN,
+  'zh-HK': convertToTraditional(zhCN),
   ja: websiteTranslations.ja,
   ko: websiteTranslations.ko,
   ms: websiteTranslations.ms,
-  ru: websiteTranslations.ru,
   th: websiteTranslations.th,
+  ar: websiteTranslations.ar,
+  ru: websiteTranslations.ru,
   ur: websiteTranslations.ur,
-  'zh-CN': zhCN,
-  'zh-HK': convertToTraditional(zhCN),
-};
+});
 
 export function useWebsiteContent() {
   const { i18n } = useTranslation();
   const language = i18n.resolvedLanguage || i18n.language || 'en';
-  return contentByLanguage[language] || en;
+  const content = contentByLanguage[language] || en;
+  return { ...content, nav: orderNav(content.nav) };
 }
 
 export { en as englishWebsiteContent };

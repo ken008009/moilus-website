@@ -290,14 +290,12 @@ const Community = (props) => {
           onSuccess={handleJoinTeamSuccess}
         />
         <div className="community-info full-width">
-          {/* {
-            isRegistered && (
-              <div className="community-info-item full-width">
-                <h3>{t('My Top')}</h3>
-                <p>{props.formatAddress(parent)}</p>
-              </div>
-            )
-          } */}
+          {isRegistered && parent && parent !== '0x0000000000000000000000000000000000000000' && (
+            <div className="community-info-item full-width">
+              <h3>{t('My Top')}</h3>
+              <p title={parent}>{props.formatAddress(parent)}</p>
+            </div>
+          )}
           <div className="community-info-item full-width">
             <h3>{t('My Level')}</h3>
             <p>{level}</p>
