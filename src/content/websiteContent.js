@@ -133,7 +133,7 @@ const en = {
     roadmap: [
       ['Foundation', 'Staking launch', 'Establish the participation model and the first layer of ecosystem circulation.'],
       ['Circulation', 'MS market launch', 'Enable open trading, market liquidity and public price discovery.'],
-      ['Expansion', 'Card GameFi launch', 'Bring card-based blockchain play into the ecosystem to widen utility and community.'],
+      ['Expansion', 'Privacy ecosystem and public chain launch in stages', 'The privacy ecosystem and public chain will roll out progressively, expanding network capabilities and application boundaries.'],
     ],
     action: {
       title: 'Supply defines scarcity. Utility defines relevance.',
@@ -211,7 +211,7 @@ const zhCN = {
     hero: { eyebrow: 'MS 经济模型', title: '固定供应，每一枚都有用途。', copy: '模型将十亿枚 MS 分配给质押结算系统和整个生态的公共流动性。', primary: '查看分配', secondary: '查看产品效用' },
     allocationAria: '代币分配：30% 结算储备，70% 生态流动性', total: 'MS 总量', eyebrow: '两个相连的资金池', title: '每一枚代币进入模型时都有明确职责。',
     allocations: [['3 亿 MS', '用于支持质押生态结算系统。'], ['7 亿 MS', '用于公共流动性和卡牌 GameFi 经济。']],
-    roadmapEyebrow: '分阶段启动', roadmapTitle: '建立基础，开放市场，扩展效用。', roadmap: [['基础阶段', '启动质押', '建立参与模型和第一层生态循环。'], ['流通阶段', 'MS 市场启动', '开放交易、市场流动性和公开价格发现。'], ['扩展阶段', '卡牌 GameFi 启动', '把卡牌区块链游戏带入生态，扩大效用和社区。']],
+    roadmapEyebrow: '分阶段启动', roadmapTitle: '建立基础，开放市场，扩展效用。', roadmap: [['基础阶段', '启动质押', '建立参与模型和第一层生态循环。'], ['流通阶段', 'MS 市场启动', '开放交易、市场流动性和公开价格发现。'], ['扩展阶段', '隐私生态和公链陆续启动', '隐私生态与公链将分阶段上线，持续扩展网络能力与应用边界。']],
     action: { title: '供应决定稀缺性，效用决定价值。', copy: '了解各项产品如何让固定供应的 MS 在整个生态中持续流动。', primary: '查看效用闭环', secondary: '检查保护机制' },
   },
   whitepaper: {

@@ -1,6 +1,5 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
-import path from 'node:path';
 
 function inlineReleaseAssets() {
   let basePath = '/';
@@ -51,13 +50,6 @@ function inlineReleaseAssets() {
 export default defineConfig({
   base: '/',
   plugins: [react(), inlineReleaseAssets()],
-  resolve: {
-    alias: {
-      '@components': path.resolve(process.cwd(), 'src/components'),
-      '@images': path.resolve(process.cwd(), 'src/assets/images'),
-      '@tools': path.resolve(process.cwd(), 'src/tools'),
-    },
-  },
   build: {
     outDir: 'dist',
     emptyOutDir: true,

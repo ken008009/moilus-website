@@ -2,42 +2,15 @@ import React, { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
-import { useLocation, useNavigate } from 'react-router-dom';
-import { useTranslation } from 'react-i18next';
-import { Toast } from 'antd-mobile';
-import { ChevronDown, Globe2 } from 'lucide-react';
-import { useWallet } from './wallet/WalletContext.jsx';
-import BusinessWalletGate from './components/BusinessWalletGate.jsx';
-import StakingPage from './pages/subPages/staking.jsx';
-import CommunityOperationsPage from './pages/subPages/community.jsx';
-import { useWebsiteContent } from './content/websiteContent.js';
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
 const navItems = [
-  { href: '/', key: 'home' },
-  { href: '/ecosystem', key: 'ecosystem' },
-  { href: '/protocol', key: 'protocol' },
-  { href: '/token', key: 'token' },
-  { href: '/whitepaper', key: 'whitepaper' },
-  { href: '/staking', key: 'staking' },
-  { href: '/community', key: 'community' },
-];
-
-const languageOptions = [
-  ['en', 'English'],
-  ['ar', 'العربية'],
-  ['en-IN', 'English (India)'],
-  ['en-SG', 'English (Singapore)'],
-  ['en-US', 'English (US)'],
-  ['ja', '日本語'],
-  ['ko', '한국어'],
-  ['ms', 'Bahasa Melayu'],
-  ['ru', 'Русский'],
-  ['th', 'ไทย'],
-  ['ur', 'اردو'],
-  ['zh-CN', '简体中文'],
-  ['zh-HK', '繁體中文'],
+  { href: '/', label: 'Home' },
+  { href: '/ecosystem', label: 'Ecosystem' },
+  { href: '/protocol', label: 'Protocol' },
+  { href: '/token', label: 'Token' },
+  { href: '/whitepaper', label: 'Whitepaper' },
 ];
 
 const usesFileRouter = window.location.protocol === 'file:';
@@ -57,29 +30,114 @@ const imagery = {
   growthCycle: `${import.meta.env.BASE_URL}images/market-growth-cycle.jpg`,
 };
 
-const productChapterImages = [imagery.mining, imagery.dao, imagery.payments];
-const ecosystemImages = [imagery.mining, imagery.dao, imagery.custody, imagery.gameFi, imagery.chat];
-const journeyImages = [imagery.payments, imagery.gameFi, imagery.mining];
+const productChapters = [
+  {
+    title: 'Public chain',
+    copy: 'A BSC-based settlement layer designed to keep each product on one open, observable surface.',
+    image: imagery.mining,
+    alt: 'A real aisle of cryptocurrency mining hardware with green status lights',
+  },
+  {
+    title: 'Governance and coordination',
+    copy: 'Proposals, delegation and transparent voting designed as a native part of the system.',
+    image: imagery.dao,
+    alt: 'A person using the MS DAO governance platform on a mobile phone',
+  },
+  {
+    title: 'Wallet and global payments',
+    copy: 'A single interface for ownership, transfer and participation across the wider Mobius economy.',
+    image: imagery.payments,
+    alt: 'A contactless payment made with an unbranded metal card',
+  },
+];
+
+const ecosystemItems = [
+  {
+    name: 'MS Chain',
+    note: 'Public infrastructure',
+    image: imagery.mining,
+    copy: 'The base layer connects staking, governance, payments and interactive contracts through one shared state.',
+  },
+  {
+    name: 'MS DAO',
+    note: 'Governance platform',
+    image: imagery.dao,
+    copy: 'An on-chain governance platform for proposals, delegation and transparent collective decision-making.',
+  },
+  {
+    name: 'MS Wallet',
+    note: 'Ownership and payments',
+    image: imagery.custody,
+    copy: 'Self-custody and global value movement, with the wider ecosystem only one gesture away.',
+  },
+  {
+    name: 'MS GameFi',
+    note: 'Texas Hold’em',
+    image: imagery.gameFi,
+    copy: 'A live Texas Hold’em layer that turns digital ownership into play, progression and community.',
+  },
+  {
+    name: 'MS Chat',
+    note: 'Dark-mode messenger',
+    image: imagery.chat,
+    copy: 'An encrypted messenger that closes the loop between identity, coordination and on-chain action.',
+  },
+];
+
+const protocolBands = [
+  {
+    trigger: '15% cumulative decline',
+    title: 'First stabilisation band',
+    copy: 'The source protocol applies 35% transaction slippage, directing it to repurchase MS and send it to the burn address.',
+    metric: '−15%',
+    response: '35% response',
+  },
+  {
+    trigger: '30% cumulative decline',
+    title: 'Deep stabilisation band',
+    copy: 'The slippage parameter rises to 50%, maintaining the same repurchase-and-burn path described in the protocol deck.',
+    metric: '−30%',
+    response: '50% response',
+  },
+  {
+    trigger: '50% cumulative decline',
+    title: 'Circulation mode',
+    copy: 'Existing profit-release schedules pause while new accounts and dynamic tier rewards continue. Normal operation resumes after a 48-hour recovery period.',
+    metric: '−50%',
+    response: '48h recovery',
+  },
+];
 
 function usePathname() {
-  const location = useLocation();
-  const routerNavigate = useNavigate();
-
-  const navigate = (href, options = {}) => {
-    if (href === location.pathname && !options.replace) return;
-    routerNavigate(href, options);
+  const getCurrentPath = () => {
+    if (!usesFileRouter) return window.location.pathname;
+    const hashPath = window.location.hash.replace(/^#/, '');
+    return hashPath.startsWith('/') ? hashPath : '/';
   };
 
-  return [location.pathname, navigate];
-}
+  const [path, setPath] = useState(getCurrentPath);
 
-function formatAddress(value = '') {
-  if (value.length <= 12) return value;
-  return `${value.slice(0, 6)}...${value.slice(-4)}`;
-}
+  useEffect(() => {
+    const handleLocationChange = () => setPath(getCurrentPath());
+    const eventName = usesFileRouter ? 'hashchange' : 'popstate';
+    window.addEventListener(eventName, handleLocationChange);
+    return () => window.removeEventListener(eventName, handleLocationChange);
+  }, []);
 
-function OperationsPage({ children }) {
-  return <section className="business-page-shell">{children}</section>;
+  const navigate = (href) => {
+    if (usesFileRouter) {
+      if (href === getCurrentPath()) return;
+      window.location.hash = href;
+      setPath(href);
+      return;
+    }
+
+    if (href === getCurrentPath()) return;
+    window.history.pushState({}, '', href);
+    setPath(href);
+  };
+
+  return [path, navigate];
 }
 
 function AppLink({ href, navigate, className = '', children, onClick, ...rest }) {
@@ -116,99 +174,8 @@ function ArrowIcon() {
   );
 }
 
-function LanguageSwitcher({ className = '' }) {
-  const [open, setOpen] = useState(false);
-  const switcherRef = useRef(null);
-  const { i18n } = useTranslation();
-  const currentLanguage = i18n.resolvedLanguage || i18n.language || 'en';
-  const currentLabel = languageOptions.find(([value]) => value === currentLanguage)?.[1] || 'English';
-
-  useEffect(() => {
-    if (!open) return undefined;
-
-    const closeOnOutsideClick = (event) => {
-      if (!switcherRef.current?.contains(event.target)) setOpen(false);
-    };
-    const closeOnEscape = (event) => {
-      if (event.key === 'Escape') setOpen(false);
-    };
-
-    document.addEventListener('pointerdown', closeOnOutsideClick);
-    document.addEventListener('keydown', closeOnEscape);
-    return () => {
-      document.removeEventListener('pointerdown', closeOnOutsideClick);
-      document.removeEventListener('keydown', closeOnEscape);
-    };
-  }, [open]);
-
-  return (
-    <div className={`language-switcher ${className} ${open ? 'is-open' : ''}`} ref={switcherRef}>
-      <button
-        className="language-switcher-button"
-        type="button"
-        aria-label="Switch language"
-        aria-haspopup="listbox"
-        aria-expanded={open}
-        onClick={() => setOpen((current) => !current)}
-      >
-        <Globe2 className="language-globe" aria-hidden="true" />
-        <span>{currentLabel}</span>
-        <ChevronDown className="language-chevron" aria-hidden="true" />
-      </button>
-
-      {open && (
-        <div className="language-menu" role="listbox" aria-label="Choose language">
-          {languageOptions.map(([value, label]) => (
-            <button
-              key={value}
-              type="button"
-              role="option"
-              aria-selected={currentLanguage === value}
-              className={currentLanguage === value ? 'is-active' : ''}
-              onClick={() => {
-                i18n.changeLanguage(value);
-                setOpen(false);
-              }}
-            >
-              <span>{label}</span>
-              {currentLanguage === value && <span aria-hidden="true">✓</span>}
-            </button>
-          ))}
-        </div>
-      )}
-    </div>
-  );
-}
-
 function Nav({ path, navigate }) {
   const [open, setOpen] = useState(false);
-  const { address, status: walletStatus, connect } = useWallet();
-  const { t } = useTranslation();
-  const website = useWebsiteContent();
-
-  const handleCreateLink = async () => {
-    if (walletStatus === 'connecting') return;
-
-    try {
-      Toast.show({
-        icon: 'loading',
-        content: t('Connecting wallet...'),
-        duration: 0,
-        maskClickable: false,
-      });
-
-      await connect();
-      Toast.clear();
-    } catch (error) {
-      Toast.clear();
-      Toast.show({
-        icon: 'fail',
-        content: error?.code === 4001
-          ? t('User rejected the request')
-          : error?.message || t('Failed to connect wallet'),
-      });
-    }
-  };
 
   useEffect(() => {
     const handleKeyDown = (event) => {
@@ -228,26 +195,6 @@ function Nav({ path, navigate }) {
       window.removeEventListener('resize', handleResize);
     };
   }, [open]);
-
-  const walletControl = (mobile = false) => (
-    !address ? (
-      <button
-        type="button"
-        className={`nav-cta wallet-cta ${mobile ? 'wallet-cta-mobile' : ''}`}
-        onClick={handleCreateLink}
-        disabled={walletStatus === 'connecting'}
-      >
-        {walletStatus === 'connecting' ? t('Connecting wallet') : t('JOIN')}
-      </button>
-    ) : (
-      <span
-        className={`nav-cta wallet-cta wallet-address ${mobile ? 'wallet-cta-mobile' : ''}`}
-        title={address}
-      >
-        {formatAddress(address)}
-      </span>
-    )
-  );
 
   return (
     <header className={`site-header ${open ? 'menu-is-open' : ''}`}>
@@ -270,44 +217,32 @@ function Nav({ path, navigate }) {
                 setOpen(false);
               }}
             >
-              {website.nav[item.key]}
+              {item.label}
             </AppLink>
           ))}
-          {walletControl(true)}
-          <LanguageSwitcher className="language-switcher-mobile" />
         </div>
 
-        <div className="nav-actions">
-          <LanguageSwitcher className="language-switcher-desktop" />
-          {walletControl()}
-        </div>
+        <AppLink href="/protocol" navigate={navigate} className="nav-cta">
+          Read protocol <ArrowIcon />
+        </AppLink>
 
-        <div className="mobile-nav-controls">
-          {address && (
-            <span className="mobile-header-address" title={address}>
-              {formatAddress(address)}
-            </span>
-          )}
-          <button
-            className="menu-toggle"
-            type="button"
-            aria-label={open ? 'Close navigation' : 'Open navigation'}
-            aria-controls="primary-menu"
-            aria-expanded={open}
-            onClick={() => setOpen((current) => !current)}
-          >
-            <span />
-            <span />
-          </button>
-        </div>
+        <button
+          className="menu-toggle"
+          type="button"
+          aria-label={open ? 'Close navigation' : 'Open navigation'}
+          aria-controls="primary-menu"
+          aria-expanded={open}
+          onClick={() => setOpen((current) => !current)}
+        >
+          <span />
+          <span />
+        </button>
       </nav>
     </header>
   );
 }
 
 function Hero({ eyebrow, title, copy, image, alt, video, primary, secondary, navigate, compact = false }) {
-  const { common } = useWebsiteContent();
-
   return (
     <section className={`hero ${compact ? 'hero-compact' : ''} ${video ? 'hero-video' : ''}`}>
       <div className="hero-media" aria-hidden="true">
@@ -343,15 +278,14 @@ function Hero({ eyebrow, title, copy, image, alt, video, primary, secondary, nav
       </div>
       <div className="scroll-cue" aria-hidden="true">
         <span />
-        {common.scrollCue}
+        Scroll to enter the continuum
       </div>
     </section>
   );
 }
 
 function Marquee() {
-  const { common } = useWebsiteContent();
-  const items = common.marquee;
+  const items = ['Public chain', 'On-chain governance', 'Global payments', 'Texas Hold’em', 'MS DAO', 'Encrypted chat'];
   return (
     <div className="marquee" aria-label="Mobius ecosystem products">
       <div className="marquee-track">
@@ -376,19 +310,17 @@ function SectionHeading({ eyebrow, title, copy, align = 'left' }) {
 }
 
 function HomePage({ navigate }) {
-  const { home } = useWebsiteContent();
-
   return (
     <>
       <Hero
-        eyebrow={home.hero.eyebrow}
-        title={<>{home.hero.title[0]}<br />{home.hero.title[1]}</>}
-        copy={home.hero.copy}
+        eyebrow="The continuous on-chain economy"
+        title={<>One surface.<br />No boundaries.</>}
+        copy="Mobius Strip connects infrastructure, governance, payments, GameFi and communication in one open, self-circulating ecosystem."
         image={imagery.mining}
         video={homeHeroVideoSrc}
         alt="A real cryptocurrency mining facility photographed at night"
-        primary={{ href: '/ecosystem', label: home.hero.primary }}
-        secondary={{ href: '/protocol', label: home.hero.secondary }}
+        primary={{ href: '/ecosystem', label: 'Explore the ecosystem' }}
+        secondary={{ href: '/protocol', label: 'See how it holds' }}
         navigate={navigate}
       />
 
@@ -396,7 +328,9 @@ function HomePage({ navigate }) {
 
       <section className="chapter shell">
         <SectionHeading
-          {...home.overview}
+          eyebrow="Everything stays connected"
+          title="An economy designed as one uninterrupted surface."
+          copy="Every Mobius product has its own role, but none lives in isolation. Governance, ownership, play and coordination move through the same system."
         />
 
         <div className="bento-grid grid-flow-dense">
@@ -404,8 +338,8 @@ function HomePage({ navigate }) {
             <img src={imagery.custody} alt="Hands operating a physical hardware wallet beside a laptop" />
             <div className="card-wash" />
             <div className="bento-content">
-              <span>{home.overview.cards[0][0]}</span>
-              <h3>{home.overview.cards[0][1]}</h3>
+              <span>Five products, one state</span>
+              <h3>The full ecosystem</h3>
               <ArrowIcon />
             </div>
           </AppLink>
@@ -413,16 +347,16 @@ function HomePage({ navigate }) {
             <img src={imagery.hardware} alt="Liquid-cooled server hardware inside a compute rack" />
             <div className="card-wash" />
             <div className="bento-content">
-              <span>{home.overview.cards[1][0]}</span>
-              <h3>{home.overview.cards[1][1]}</h3>
+              <span>Rules that react</span>
+              <h3>Protocol mechanics</h3>
               <ArrowIcon />
             </div>
           </AppLink>
           <AppLink href="/token" navigate={navigate} className="bento-card bento-small bento-tone group reveal">
             <div className="token-orbit" aria-hidden="true"><span>MS</span></div>
             <div className="bento-content">
-              <span>{home.overview.cards[2][0]}</span>
-              <h3>{home.overview.cards[2][1]}</h3>
+              <span>Transparent allocation</span>
+              <h3>One billion MS</h3>
               <ArrowIcon />
             </div>
           </AppLink>
@@ -431,45 +365,45 @@ function HomePage({ navigate }) {
 
       <section className="statement chapter shell reveal">
         <p>
-          {home.statement[0]}
+          Value enters through an open network, moves through a living
           <span
             className="inline-image"
             role="img"
             aria-label="Luminous city detail"
             style={{ backgroundImage: `url(${imagery.payments})` }}
           />
-          {home.statement[1]}
+          economy and returns with new utility.
         </p>
       </section>
 
       <section className="pin-layout chapter shell">
         <div className="pin-copy">
-          <p className="eyebrow">{home.journey.eyebrow}</p>
-          <h2>{home.journey.title[0]}<br />{home.journey.title[1]}</h2>
-          <p>{home.journey.copy}</p>
+          <p className="eyebrow">Built to keep moving</p>
+          <h2>One path.<br />Three layers.</h2>
+          <p>Scroll through the system from infrastructure to human use. The title holds while the surface keeps moving.</p>
           <AppLink href="/ecosystem" navigate={navigate} className="text-link">
-            {home.journey.link} <ArrowIcon />
+            Enter the ecosystem <ArrowIcon />
           </AppLink>
         </div>
         <div className="pin-gallery">
-          {home.journey.chapters.map(([title, copy], index) => (
-            <article className="gallery-card reveal" key={title}>
+          {productChapters.map((item, index) => (
+            <article className="gallery-card reveal" key={item.title}>
               <div className="gallery-image">
-                <img src={productChapterImages[index]} alt="" loading="lazy" />
+                <img src={item.image} alt={item.alt} loading="lazy" />
                 <span>{String(index + 1).padStart(2, '0')}</span>
               </div>
-              <h3>{title}</h3>
-              <p>{copy}</p>
+              <h3>{item.title}</h3>
+              <p>{item.copy}</p>
             </article>
           ))}
         </div>
       </section>
 
       <ActionChapter
-        title={home.action.title}
-        copy={home.action.copy}
-        primary={{ href: '/ecosystem', label: home.action.primary }}
-        secondary={{ href: '/token', label: home.action.secondary }}
+        title="The system is bigger than a token."
+        copy="Follow the full product loop, then examine the mechanics that keep circulation moving."
+        primary={{ href: '/ecosystem', label: 'Explore every layer' }}
+        secondary={{ href: '/token', label: 'View token model' }}
         navigate={navigate}
       />
     </>
@@ -478,44 +412,45 @@ function HomePage({ navigate }) {
 
 function EcosystemPage({ navigate }) {
   const [active, setActive] = useState(0);
-  const { ecosystem } = useWebsiteContent();
 
   return (
     <>
       <Hero
-        eyebrow={ecosystem.hero.eyebrow}
-        title={ecosystem.hero.title}
-        copy={ecosystem.hero.copy}
+        eyebrow="Five products. One shared state."
+        title="A network that becomes an economy."
+        copy="Mobius connects the rails, governance, interfaces, experiences and conversations required for an on-chain ecosystem to feel whole."
         image={imagery.custody}
         alt="Hands using a physical crypto hardware wallet at a real desk"
-        primary={{ href: '/protocol', label: ecosystem.hero.primary }}
-        secondary={{ href: '/token', label: ecosystem.hero.secondary }}
+        primary={{ href: '/protocol', label: 'Understand the protocol' }}
+        secondary={{ href: '/token', label: 'View MS economics' }}
         navigate={navigate}
         compact
       />
 
       <section className="chapter shell">
         <SectionHeading
-          {...ecosystem.productsHeading}
+          eyebrow="From rails to real use"
+          title="Expand the system."
+          copy="Each vertical slice is a distinct Mobius product. Click or tap a layer to open it and see how it connects."
         />
         <div className="accordion" role="list">
-          {ecosystem.products.map(([name, note, copy], index) => (
+          {ecosystemItems.map((item, index) => (
             <button
               className={`accordion-item ${active === index ? 'is-active' : ''}`}
               type="button"
-              key={name}
+              key={item.name}
               onClick={() => setActive(index)}
               aria-pressed={active === index}
               aria-expanded={active === index}
-              aria-label={`${name}: ${note}`}
+              aria-label={`${item.name}: ${item.note}`}
             >
-              <img src={ecosystemImages[index]} alt="" loading="lazy" />
+              <img src={item.image} alt="" loading="lazy" />
               <div className="accordion-wash" />
               <span className="accordion-index">{String(index + 1).padStart(2, '0')}</span>
               <div className="accordion-title">
-                <small>{note}</small>
-                <h3>{name}</h3>
-                <p>{copy}</p>
+                <small>{item.note}</small>
+                <h3>{item.name}</h3>
+                <p>{item.copy}</p>
               </div>
             </button>
           ))}
@@ -524,12 +459,18 @@ function EcosystemPage({ navigate }) {
 
       <section className="stack-section chapter shell">
         <SectionHeading
-          {...ecosystem.journeyHeading}
+          eyebrow="The continuous journey"
+          title="Utility compounds when products connect."
+          copy="The interface changes. The underlying ownership does not. These chapters stack into a single participant journey."
         />
         <div className="stack-list">
-          {ecosystem.journey.map(([title, copy], index) => (
+          {[
+            ['Enter', 'Access Mobius through a wallet and move value onto the shared network.', imagery.payments],
+            ['Participate', 'Govern, stake, play and coordinate without leaving the ecosystem surface.', imagery.gameFi],
+            ['Circulate', 'Liquidity and utility return to the network rather than ending at a product boundary.', imagery.mining],
+          ].map(([title, copy, image], index) => (
             <article className="stack-card" key={title} style={{ '--stack-index': index }}>
-              <img src={journeyImages[index]} alt="" loading="lazy" />
+              <img src={image} alt="" loading="lazy" />
               <div className="stack-wash" />
               <span>{String(index + 1).padStart(2, '0')}</span>
               <div>
@@ -542,10 +483,10 @@ function EcosystemPage({ navigate }) {
       </section>
 
       <ActionChapter
-        title={ecosystem.action.title}
-        copy={ecosystem.action.copy}
-        primary={{ href: '/protocol', label: ecosystem.action.primary }}
-        secondary={{ href: '/token', label: ecosystem.action.secondary }}
+        title="Utility is only durable when the rules are visible."
+        copy="See the thresholds, release logic and circulation mode described by the Mobius protocol."
+        primary={{ href: '/protocol', label: 'Open protocol mechanics' }}
+        secondary={{ href: '/token', label: 'Inspect allocation' }}
         navigate={navigate}
       />
     </>
@@ -553,18 +494,16 @@ function EcosystemPage({ navigate }) {
 }
 
 function ProtocolPage({ navigate }) {
-  const { protocol } = useWebsiteContent();
-
   return (
     <>
       <Hero
-        eyebrow={protocol.hero.eyebrow}
-        title={protocol.hero.title}
-        copy={protocol.hero.copy}
+        eyebrow="A system that responds"
+        title="Protection is a behavior, not a promise."
+        copy="Mobius describes a sequence of on-chain responses designed to slow concentrated selling, reinforce liquidity and restart circulation."
         image={imagery.hardware}
         alt="Real liquid-cooled blockchain compute hardware"
-        primary={{ href: '#thresholds', label: protocol.hero.primary }}
-        secondary={{ href: '/token', label: protocol.hero.secondary }}
+        primary={{ href: '#thresholds', label: 'See the thresholds' }}
+        secondary={{ href: '/token', label: 'View token model' }}
         navigate={(href) => {
           if (href.startsWith('#')) document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' });
           else navigate(href);
@@ -574,7 +513,9 @@ function ProtocolPage({ navigate }) {
 
       <section className="chapter shell" id="thresholds">
         <SectionHeading
-          {...protocol.bandsHeading}
+          eyebrow="Published response logic"
+          title="One market cycle. Three response bands."
+          copy="The supplied cycle chart shows repeated growth, correction and recovery. The response bands beside it describe intended mechanics, not guaranteed market outcomes."
         />
         <div className="protocol-cycle">
           <figure className="protocol-cycle-figure reveal">
@@ -583,22 +524,22 @@ function ProtocolPage({ navigate }) {
               alt="Mobius Strip market growth cycle showing repeated rises, corrections and higher recovery floors"
               loading="lazy"
             />
-            <figcaption>{protocol.cycleCaption}</figcaption>
+            <figcaption>Market growth cycle / supplied protocol visual</figcaption>
           </figure>
 
           <div className="protocol-band-list">
-            {protocol.bands.map(([trigger, title, copy, metric, response], index) => (
-              <article className="protocol-band reveal" key={trigger}>
+            {protocolBands.map((item, index) => (
+              <article className="protocol-band reveal" key={item.trigger}>
                 <div className="protocol-band-topline">
-                  <span>{trigger}</span>
+                  <span>{item.trigger}</span>
                   <b>{String(index + 1).padStart(2, '0')}</b>
                 </div>
                 <div className="protocol-band-metric">
-                  <strong>{metric}</strong>
-                  <span>{response}</span>
+                  <strong>{item.metric}</strong>
+                  <span>{item.response}</span>
                 </div>
-                <h3>{title}</h3>
-                <p>{copy}</p>
+                <h3>{item.title}</h3>
+                <p>{item.copy}</p>
               </article>
             ))}
           </div>
@@ -610,40 +551,52 @@ function ProtocolPage({ navigate }) {
           <img src={imagery.mining} alt="Physical cryptocurrency mining machines in a real industrial facility" loading="lazy" />
         </div>
         <div className="protocol-copy reveal">
-          <p className="eyebrow">{protocol.circulation.eyebrow}</p>
-          <h2>{protocol.circulation.title}</h2>
-          <p>{protocol.circulation.copy}</p>
+          <p className="eyebrow">Circulation mode</p>
+          <h2>Pause. Protect. Recover. Resume.</h2>
+          <p>
+            At a 50% cumulative decline, the source model pauses existing release schedules. New accounts and dynamic differential rewards remain active. Once price recovery holds for 48 hours, normal operations resume.
+          </p>
           <div className="protocol-detail">
-            <span>{protocol.circulation.label}</span>
+            <span>Compensation described in source</span>
             <strong>0.02%</strong>
-            <p>{protocol.circulation.detail}</p>
+            <p>of paused quota during circulation mode, subject to the implemented contract terms.</p>
           </div>
         </div>
       </section>
 
       <section className="chapter shell">
         <SectionHeading
-          {...protocol.stakingHeading}
+          eyebrow="Staking model"
+          title="Clear inputs. Scheduled release."
+          copy="The supplied deck presents a staking model with the following published parameters. Any live implementation should be verified on-chain before participation."
         />
         <div className="parameter-row">
-          {protocol.parameters.map(([label, value, copy]) => (
-            <article className="parameter-card reveal" key={label}>
-              <span>{label}</span>
-              <strong>{value}</strong>
-              <p>{copy}</p>
-            </article>
-          ))}
+          <article className="parameter-card reveal">
+            <span>Minimum order</span>
+            <strong>200 USDT</strong>
+            <p>Entry threshold stated in the source model.</p>
+          </article>
+          <article className="parameter-card reveal">
+            <span>Published aggregate target</span>
+            <strong>300%</strong>
+            <p>A model parameter, not a guaranteed return.</p>
+          </article>
+          <article className="parameter-card reveal">
+            <span>Linear release period</span>
+            <strong>365 days</strong>
+            <p>Release schedule stated in the supplied deck.</p>
+          </article>
         </div>
         <p className="risk-note reveal">
-          {protocol.risk}
+          Digital assets and DeFi protocols involve substantial risk. Protection mechanics can influence incentives, but cannot eliminate liquidity, smart-contract, market or loss risk.
         </p>
       </section>
 
       <ActionChapter
-        title={protocol.action.title}
-        copy={protocol.action.copy}
-        primary={{ href: '/token', label: protocol.action.primary }}
-        secondary={{ href: '/ecosystem', label: protocol.action.secondary }}
+        title="Mechanics matter. Verification matters more."
+        copy="Continue into supply, allocation and the staged product rollout behind MS."
+        primary={{ href: '/token', label: 'Explore token economics' }}
+        secondary={{ href: '/ecosystem', label: 'Return to products' }}
         navigate={navigate}
       />
     </>
@@ -651,18 +604,16 @@ function ProtocolPage({ navigate }) {
 }
 
 function TokenPage({ navigate }) {
-  const { token } = useWebsiteContent();
-
   return (
     <>
       <Hero
-        eyebrow={token.hero.eyebrow}
-        title={token.hero.title}
-        copy={token.hero.copy}
+        eyebrow="MS economic model"
+        title="A fixed supply with a job to do."
+        copy="The supplied model divides one billion MS between the staking settlement system and public liquidity for the wider ecosystem."
         image={imagery.secureElement}
         alt="Macro photograph of the secure element inside a hardware wallet"
-        primary={{ href: '#allocation', label: token.hero.primary }}
-        secondary={{ href: '/ecosystem', label: token.hero.secondary }}
+        primary={{ href: '#allocation', label: 'Inspect allocation' }}
+        secondary={{ href: '/ecosystem', label: 'See product utility' }}
         navigate={(href) => {
           if (href.startsWith('#')) document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' });
           else navigate(href);
@@ -672,33 +623,40 @@ function TokenPage({ navigate }) {
 
       <section className="allocation chapter shell" id="allocation">
         <div className="allocation-figure reveal">
-          <div className="allocation-ring" aria-label={token.allocationAria}>
+          <div className="allocation-ring" aria-label="Token allocation: 30 percent settlement reserve and 70 percent ecosystem liquidity">
             <div>
               <strong>1B</strong>
-              <span>{token.total}</span>
+              <span>total MS</span>
             </div>
           </div>
         </div>
         <div className="allocation-copy reveal">
-          <p className="eyebrow">{token.eyebrow}</p>
-          <h2>{token.title}</h2>
-          {token.allocations.map(([value, copy], index) => (
-            <div className="allocation-item" key={value}>
-              <span className={`allocation-swatch ${index === 0 ? 'is-reserve' : 'is-liquidity'}`} />
-              <strong>{value}</strong>
-              <p>{copy}</p>
-            </div>
-          ))}
+          <p className="eyebrow">Two connected pools</p>
+          <h2>Every token enters the model with a defined role.</h2>
+          <div className="allocation-item">
+            <span className="allocation-swatch is-reserve" />
+            <strong>300M MS</strong>
+            <p>Allocated in the source model to support the staking ecosystem settlement system.</p>
+          </div>
+          <div className="allocation-item">
+            <span className="allocation-swatch is-liquidity" />
+            <strong>700M MS</strong>
+            <p>Allocated to public liquidity and the card-based GameFi economy.</p>
+          </div>
         </div>
       </section>
 
       <section className="chapter shell">
         <SectionHeading
-          eyebrow={token.roadmapEyebrow}
-          title={token.roadmapTitle}
+          eyebrow="A staged launch"
+          title="Build the foundation, open the market, expand the utility."
         />
         <div className="roadmap">
-          {token.roadmap.map(([phase, title, copy], index) => (
+          {[
+            ['Foundation', 'Staking launch', 'Establish the participation model and the first layer of ecosystem circulation.'],
+            ['Circulation', 'MS market launch', 'Enable open trading, market liquidity and public price discovery.'],
+            ['Expansion', 'Card GameFi launch', 'Bring card-based blockchain play into the ecosystem to widen utility and community.'],
+          ].map(([phase, title, copy], index) => (
             <article className="roadmap-item reveal" key={title}>
               <span>{String(index + 1).padStart(2, '0')}</span>
               <div>
@@ -712,10 +670,10 @@ function TokenPage({ navigate }) {
       </section>
 
       <ActionChapter
-        title={token.action.title}
-        copy={token.action.copy}
-        primary={{ href: '/ecosystem', label: token.action.primary }}
-        secondary={{ href: '/protocol', label: token.action.secondary }}
+        title="Supply defines scarcity. Utility defines relevance."
+        copy="See how the products turn a fixed MS supply into movement across one connected ecosystem."
+        primary={{ href: '/ecosystem', label: 'Follow the utility loop' }}
+        secondary={{ href: '/protocol', label: 'Review safeguards' }}
         navigate={navigate}
       />
     </>
@@ -723,19 +681,28 @@ function TokenPage({ navigate }) {
 }
 
 function WhitepaperPage({ navigate }) {
-  const { whitepaper } = useWebsiteContent();
+  const whitepaperTopics = [
+    ['Architecture', 'Chain design, consensus, masternodes and the proposed three-layer privacy protocol.'],
+    ['Applications', 'MS Swap, Card Game, Pay, Chat and DAO across one connected product surface.'],
+    ['Economics', 'Fixed supply, allocation, ecosystem fees and the published burn model.'],
+    ['Security', 'Cryptography, contract, network and asset-security considerations.'],
+    ['Roadmap', 'Testnet, mainnet, ecosystem expansion and the planned global rollout.'],
+    ['Risk and compliance', 'Technical, market, regulatory and economic risks described by the issuing entity.'],
+  ];
 
   return (
     <>
       <section className="whitepaper-hero">
         <div className="whitepaper-hero-grid shell">
           <div className="whitepaper-intro">
-            <p className="eyebrow hero-kicker">{whitepaper.hero.eyebrow}</p>
-            <h1>{whitepaper.hero.title}</h1>
-            <p className="hero-copy">{whitepaper.hero.copy}</p>
+            <p className="eyebrow hero-kicker">Whitepaper, May 2026</p>
+            <h1>Read the full system.</h1>
+            <p className="hero-copy">
+              An 18-page overview of the Mobius Strip architecture, applications, economics, roadmap and disclosed risks.
+            </p>
             <div className="hero-actions">
               <a href="#whitepaper-download" className="button button-primary">
-                {whitepaper.hero.button} <ArrowIcon />
+                View available file <ArrowIcon />
               </a>
             </div>
           </div>
@@ -744,13 +711,13 @@ function WhitepaperPage({ navigate }) {
             <div className="whitepaper-cover">
               <img
                 src={whitepaperCoverSrc}
-                alt={whitepaper.hero.coverAlt}
+                alt="Cover of the Mobius Strip English whitepaper"
                 fetchPriority="high"
               />
             </div>
             <figcaption>
-              <span>{whitepaper.hero.edition}</span>
-              <span>{whitepaper.hero.pages}</span>
+              <span>English edition</span>
+              <span>18 pages</span>
             </figcaption>
           </figure>
         </div>
@@ -758,15 +725,17 @@ function WhitepaperPage({ navigate }) {
 
       <section className="chapter shell" id="whitepaper-download">
         <SectionHeading
-          {...whitepaper.downloadHeading}
+          eyebrow="Available edition"
+          title="Keep the source document close."
+          copy="Download the supplied English edition or open it in a new browser tab for quick reference."
         />
 
         <article className="whitepaper-file reveal">
           <div className="whitepaper-file-copy">
             <span>PDF</span>
             <div>
-              <h3>{whitepaper.fileTitle}</h3>
-              <p>{whitepaper.fileMeta}</p>
+              <h3>Mobius Strip whitepaper</h3>
+              <p>English PDF / May 2026 / 18 pages / 589 KB</p>
             </div>
           </div>
           <div className="whitepaper-file-actions">
@@ -776,10 +745,10 @@ function WhitepaperPage({ navigate }) {
               target="_blank"
               rel="noreferrer"
             >
-              {whitepaper.open}
+              Open PDF
             </a>
             <a href={whitepaperPdfSrc} className="button button-primary" download>
-              {whitepaper.download} <ArrowIcon />
+              Download PDF <ArrowIcon />
             </a>
           </div>
         </article>
@@ -787,12 +756,14 @@ function WhitepaperPage({ navigate }) {
 
       <section className="whitepaper-index chapter shell">
         <div className="whitepaper-index-intro reveal">
-          <p className="eyebrow">{whitepaper.index.eyebrow}</p>
-          <h2>{whitepaper.index.title}</h2>
-          <p>{whitepaper.index.copy}</p>
+          <p className="eyebrow">Inside the paper</p>
+          <h2>The complete system, in one document.</h2>
+          <p>
+            The paper presents the project as proposed by its issuing entity. Treat technical, market and regulatory claims as material to verify independently.
+          </p>
         </div>
         <div className="whitepaper-topics">
-          {whitepaper.topics.map(([title, copy]) => (
+          {whitepaperTopics.map(([title, copy]) => (
             <article className="whitepaper-topic reveal" key={title}>
               <h3>{title}</h3>
               <p>{copy}</p>
@@ -802,10 +773,10 @@ function WhitepaperPage({ navigate }) {
       </section>
 
       <ActionChapter
-        title={whitepaper.action.title}
-        copy={whitepaper.action.copy}
-        primary={{ href: '/protocol', label: whitepaper.action.primary }}
-        secondary={{ href: '/ecosystem', label: whitepaper.action.secondary }}
+        title="From the document to the working model."
+        copy="Continue through the protocol mechanics or see where each product fits inside the ecosystem."
+        primary={{ href: '/protocol', label: 'Review the protocol' }}
+        secondary={{ href: '/ecosystem', label: 'Explore the ecosystem' }}
         navigate={navigate}
       />
     </>
@@ -813,12 +784,10 @@ function WhitepaperPage({ navigate }) {
 }
 
 function ActionChapter({ title, copy, primary, secondary, navigate }) {
-  const { common } = useWebsiteContent();
-
   return (
     <section className="action-chapter chapter shell reveal">
       <div className="action-glow" aria-hidden="true" />
-      <p className="eyebrow">{common.continueLoop}</p>
+      <p className="eyebrow">Continue the loop</p>
       <h2>{title}</h2>
       <p>{copy}</p>
       <div className="hero-actions">
@@ -834,23 +803,19 @@ function ActionChapter({ title, copy, primary, secondary, navigate }) {
 }
 
 function Footer({ navigate }) {
-  const website = useWebsiteContent();
-
   return (
     <footer className="site-footer">
       <div className="footer-top shell">
         <img src={logoSrc} alt="Mobius Strip" />
-        <p>{website.common.footerTagline}</p>
+        <p>One surface. No boundaries.</p>
         <div className="footer-nav">
           {navItems.map((item) => (
-            <AppLink key={item.href} href={item.href} navigate={navigate}>
-              {website.nav[item.key]}
-            </AppLink>
+            <AppLink key={item.href} href={item.href} navigate={navigate}>{item.label}</AppLink>
           ))}
         </div>
       </div>
       <div className="footer-bottom shell">
-        <p>{website.common.footerRisk}</p>
+        <p>Mobius Strip is an experimental digital-asset ecosystem. Nothing on this site is financial advice or a guarantee of returns.</p>
         <span>© 2026 Mobius Strip</span>
       </div>
     </footer>
@@ -858,13 +823,11 @@ function Footer({ navigate }) {
 }
 
 function NotFound({ navigate }) {
-  const { common } = useWebsiteContent();
-
   return (
     <section className="not-found shell">
-      <p className="eyebrow">{common.notFoundEyebrow}</p>
-      <h1>{common.notFoundTitle}</h1>
-      <AppLink href="/" navigate={navigate} className="button button-primary">{common.returnHome} <ArrowIcon /></AppLink>
+      <p className="eyebrow">Outside the surface</p>
+      <h1>This path does not continue.</h1>
+      <AppLink href="/" navigate={navigate} className="button button-primary">Return home <ArrowIcon /></AppLink>
     </section>
   );
 }
@@ -872,21 +835,6 @@ function NotFound({ navigate }) {
 export default function App() {
   const [path, navigate] = usePathname();
   const mainRef = useRef(null);
-  const { t, i18n } = useTranslation();
-  const website = useWebsiteContent();
-
-  useEffect(() => {
-    const syncLanguage = (language) => {
-      const normalizedLanguage = language || 'en';
-      localStorage.setItem('language', normalizedLanguage);
-      document.documentElement.lang = normalizedLanguage;
-      document.documentElement.dir = ['ar', 'ur'].includes(normalizedLanguage) ? 'rtl' : 'ltr';
-    };
-
-    syncLanguage(i18n.resolvedLanguage || i18n.language);
-    i18n.on('languageChanged', syncLanguage);
-    return () => i18n.off('languageChanged', syncLanguage);
-  }, [i18n]);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -894,19 +842,17 @@ export default function App() {
 
   useEffect(() => {
     const pageName = {
-      '/': website.nav.home,
-      '/ecosystem': website.nav.ecosystem,
-      '/protocol': website.nav.protocol,
-      '/token': website.nav.token,
-      '/whitepaper': website.nav.whitepaper,
-      '/staking': website.nav.staking,
-      '/community': website.nav.community,
+      '/': 'Home',
+      '/ecosystem': 'Ecosystem',
+      '/protocol': 'Protocol',
+      '/token': 'Token',
+      '/whitepaper': 'Whitepaper',
     }[path];
 
     document.title = pageName
       ? `${pageName} | Mobius Strip`
-      : `${website.common.notFoundTitle} | Mobius Strip`;
-  }, [path, website]);
+      : 'Page not found | Mobius Strip';
+  }, [path]);
 
   useEffect(() => {
     const heroVideo = mainRef.current?.querySelector('.hero-video video');
@@ -1020,27 +966,6 @@ export default function App() {
     '/protocol': <ProtocolPage navigate={navigate} />,
     '/token': <TokenPage navigate={navigate} />,
     '/whitepaper': <WhitepaperPage navigate={navigate} />,
-    '/staking': (
-      <OperationsPage>
-        <BusinessWalletGate>
-          <StakingPage
-            navigate={navigate}
-            t={t}
-          />
-        </BusinessWalletGate>
-      </OperationsPage>
-    ),
-    '/community': (
-      <OperationsPage>
-        <BusinessWalletGate>
-          <CommunityOperationsPage
-            navigate={navigate}
-            formatAddress={formatAddress}
-            t={t}
-          />
-        </BusinessWalletGate>
-      </OperationsPage>
-    ),
   }[path] ?? <NotFound navigate={navigate} />;
 
   return (
