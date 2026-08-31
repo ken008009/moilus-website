@@ -5,7 +5,10 @@ const WalletContext = createContext(null);
 
 export function WalletProvider({ children }) {
   const savedAccount = typeof localStorage !== 'undefined' ? localStorage.getItem('account') || '' : '';
-  const [address, setAddress] = useState(ETH.account || savedAccount);
+  // A cached account only means that this browser connected before. Do not
+  // expose it as the active address until the provider, account and signer
+  // have been restored successfully.
+  const [address, setAddress] = useState(ETH.signer && ETH.account ? ETH.account : '');
   const [status, setStatus] = useState(ETH.signer && ETH.account ? 'connected' : savedAccount ? 'connecting' : 'idle');
   const [error, setError] = useState(null);
   const connectPromiseRef = useRef(null);

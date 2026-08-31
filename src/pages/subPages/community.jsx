@@ -158,8 +158,10 @@ const Community = (props) => {
       
       console.log('📡 调用 claimTeam，参数:', { amount: teamU })
       
-      const result = await ETH.claimTeam(teamU)
-      console.log('✅ claimTeam 成功:', result)
+      const tx = await ETH.claimTeam(teamU)
+      const receipt = await tx.wait()
+      if (receipt.status !== 1) throw new Error(t('Transaction failed'))
+      console.log('✅ claimTeam 成功:', receipt)
       
       Toast.show(t('Claim successful'))
       

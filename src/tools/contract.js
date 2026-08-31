@@ -33,8 +33,20 @@ export class ETH {
         console.log('🔐 [ensureWallet] signer:', !!ETH.signer, 'connectingPromise:', !!ETH._connectingPromise)
         
         if (ETH.signer) {
-            console.log('🔐 [ensureWallet] 已有 signer，直接返回')
-            return ETH.account
+            const ethereum = await detectEthereumProvider()
+            const currentChainIdHex = await ethereum?.request?.({ method: 'eth_chainId' })
+            const accounts = await ethereum?.request?.({ method: 'eth_accounts' })
+            const currentAccount = accounts?.[0] ? ethers.utils.getAddress(accounts[0]) : ''
+
+            if (currentChainIdHex === '0x38' && currentAccount && currentAccount === ETH.account) {
+                console.log('🔐 [ensureWallet] signer 与 BSC 账户有效，直接返回')
+                return ETH.account
+            }
+
+            // Provider network/account changed since the signer was created.
+            ETH.provider = undefined
+            ETH.signer = undefined
+            ETH.account = ''
         }
         if (ETH._connectingPromise) {
             console.log('🔐 [ensureWallet] 正在连接中，等待已有 Promise')
@@ -94,7 +106,7 @@ export class ETH {
         
         ETH.provider = new ethers.providers.Web3Provider(ethereum)
         const chainId = Number(await ethereum.request({ method: 'eth_chainId' }))
-        if (!(chainId === Number(import.meta.env.VITE_CHAINID) || chainId === 1)) {
+        if (chainId !== Number(import.meta.env.VITE_CHAINID)) {
             Toast.show(t('Please connect to the BSC network'))
             throw t('Please connect to the BSC network')
         }
@@ -121,6 +133,9 @@ export class ETH {
 
         const accounts = await ethereum.request({ method: 'eth_accounts' })
         if (!accounts?.length) return ''
+
+        const chainId = Number(await ethereum.request({ method: 'eth_chainId' }))
+        if (chainId !== Number(import.meta.env.VITE_CHAINID)) return ''
 
         ETH.provider = new ethers.providers.Web3Provider(ethereum)
         ETH.account = ethers.utils.getAddress(accounts[0])

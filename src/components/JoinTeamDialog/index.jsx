@@ -40,7 +40,9 @@ const JoinTeamForm = (props) => {
       }
 
       // 调用 userContract 的 bind 方法绑定上级
-      await ETH.bind(address)
+      const tx = await ETH.bind(address)
+      const receipt = await tx.wait()
+      if (receipt.status !== 1) throw new Error(t('Transaction failed'))
       
       toast.close()
       Toast.show({

@@ -283,6 +283,12 @@
           transform: scale(0.98);
           box-shadow: rgba(21, 250, 163, 0.2) 0px 0px 15px;
         }
+
+        &:disabled {
+          cursor: not-allowed;
+          opacity: 0.45;
+          box-shadow: none;
+        }
       }
     }
   }
@@ -393,6 +399,12 @@
         &:active {
           transform: scale(0.96);
           opacity: 0.9;
+        }
+
+        &:disabled {
+          cursor: not-allowed;
+          opacity: 0.45;
+          transform: none;
         }
       }
     }

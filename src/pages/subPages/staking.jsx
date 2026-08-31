@@ -38,6 +38,7 @@ const Staking = (props) => {
   const [minAmount, setMinAmount] = useState(0) // 默认 0，从合约获取后更新
   const [capLeftTotal, setCapLeftTotal] = useState(0) // 剩余额度
   const [lineClaimableTotal, setLineClaimableTotal] = useState(0) // 可领取奖励
+  const [hasClaimableRewards, setHasClaimableRewards] = useState(false) // 使用未舍入金额判断能否领取
   const [orderCount, setOrderCount] = useState(0) // 订单数量（用于 claimLineAll）
   const [joinTeamVisible, setJoinTeamVisible] = useState(false)
 
@@ -188,9 +189,13 @@ const Staking = (props) => {
 
   // 一键领取所有奖励
   const handleClaimAll = async () => {
-    // 提前检查订单数量，避免不必要的 loading 状态
-    if (orderCount === 0) {
+    // 提前检查订单与奖励，避免发送必然回滚的交易
+    if (orderCount === 0 || !hasClaimableRewards) {
       Toast.show(t('No orders to claim'))
+      return
+    }
+    if (claimingLineIndex !== null) {
+      Toast.show(t('Please wait for the current claim to complete'))
       return
     }
     
@@ -202,8 +207,10 @@ const Staking = (props) => {
       
       console.log('📡 调用 claimLineAll，参数:', { orderCount })
       
-      const result = await ETH.claimLineAll(orderCount)
-      console.log('✅ claimLineAll 成功:', result)
+      const tx = await ETH.claimLineAll(orderCount)
+      const receipt = await tx.wait()
+      if (receipt.status !== 1) throw new Error(t('Transaction failed'))
+      console.log('✅ claimLineAll 成功:', receipt)
       
       Toast.show(t('Claim successful'))
       
@@ -223,21 +230,25 @@ const Staking = (props) => {
   // 领取单个订单奖励
   const handleClaimLine = async (index) => {
     // 检查是否已有领取在进行中
-    if (claimingLineIndex !== null) {
+    if (claimLoading || claimingLineIndex !== null) {
       Toast.show(t('Please wait for the current claim to complete'))
       return
     }
+
+    const claimIndex = index?.toString?.() ?? String(index)
     
     try {
-      setClaimingLineIndex(index)
+      setClaimingLineIndex(claimIndex)
       
       // ETH.getAccount() 有 Promise 锁，并发调用只触发一次
       if (!ETH.signer) await ETH.getAccount()
       
       console.log('📡 调用 claimLine，订单 index:', index)
       
-      const result = await ETH.claimLine(index)
-      console.log('✅ claimLine 成功:', result)
+      const tx = await ETH.claimLine(index)
+      const receipt = await tx.wait()
+      if (receipt.status !== 1) throw new Error(t('Transaction failed'))
+      console.log('✅ claimLine 成功:', receipt)
       
       Toast.show(t('Claim successful'))
       
@@ -276,6 +287,7 @@ const Staking = (props) => {
           const claimable = new Big(claimableRaw).toFixed(2)
           console.log('可领取奖励:', claimable, 'USDT')
           setLineClaimableTotal(Number(claimable))
+          setHasClaimableRewards(new Big(claimableRaw).gt(0))
         }
         if (userData.orderCount !== undefined) {
           const count = Number(userData.orderCount)
@@ -387,9 +399,11 @@ const Staking = (props) => {
       console.log('📡 调用 stake，参数：', { amount, plan: 0 })
       
       // 调用合约 stake 方法，plan 默认为 0
-      const result = await ETH.stake(amount, 0)
-      
-      console.log('✅ stake 成功:', result)
+      const tx = await ETH.stake(amount, 0)
+      const receipt = await tx.wait()
+      if (receipt.status !== 1) throw new Error(t('Transaction failed'))
+
+      console.log('✅ stake 成功:', receipt)
       Toast.show(t('Staking successful'))
       
       // 清空输入框
@@ -492,7 +506,14 @@ const Staking = (props) => {
               <div className="profit-treasure-label">{t('Claimable Reward')}</div>
               <div className="profit-treasure-value">{lineClaimableTotal} USDT</div>
             </div>
-            <Button className="profit-treasure-btn" onClick={handleClaimAll} loading={claimLoading}>{t('Claim All')}</Button>
+            <Button
+              className="profit-treasure-btn"
+              onClick={handleClaimAll}
+              loading={claimLoading}
+              disabled={claimLoading || claimingLineIndex !== null || orderCount === 0 || !hasClaimableRewards}
+            >
+              {t('Claim All')}
+            </Button>
           </div>
         </div>
        
@@ -520,6 +541,9 @@ const Staking = (props) => {
                     const capNow = item.capNow ? Number(ETH.formatUnits(item.capNow, 18)) : 0
                     const used = item.used ? Number(ETH.formatUnits(item.used, 18)) : 0
                     const lineClaimable = item.lineClaimable ? Number(ETH.formatUnits(item.lineClaimable, 18)) : 0
+                    const claimIndex = item.index?.toString?.() ?? String(item.index)
+                    const isClaimingThisOrder = claimingLineIndex === claimIndex
+                    const claimDisabled = claimLoading || claimingLineIndex !== null || lineClaimable <= 0
                     const remainingCap = Math.max(0, capNow - used)
                     const createdTime = item.created
                       ? dayjs(Number(item.created) * 1000).format('YYYY-MM-DD HH:mm:ss')
@@ -534,8 +558,10 @@ const Staking = (props) => {
                           <button
                             className="claim-btn-small"
                             onClick={() => handleClaimLine(item.index)}
+                            disabled={claimDisabled}
+                            aria-busy={isClaimingThisOrder}
                           >
-                            {t('Claim')}
+                            {isClaimingThisOrder ? t('Loading...') : t('Claim')}
                           </button>
                         </td>
                         <td className="col-created">{createdTime}</td>

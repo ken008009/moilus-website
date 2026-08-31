@@ -167,6 +167,7 @@ function Nav({ path, navigate }) {
   const { address, status: walletStatus, connect } = useWallet();
   const { t } = useTranslation();
   const website = useWebsiteContent();
+  const isWalletConnected = walletStatus === 'connected' && Boolean(address);
 
   const handleCreateLink = async () => {
     if (walletStatus === 'connecting') return;
@@ -212,8 +213,8 @@ function Nav({ path, navigate }) {
   }, [open]);
 
   useEffect(() => {
-    if (!address || !open) {
-      if (!address) setParent('');
+    if (!isWalletConnected || !open) {
+      if (!isWalletConnected) setParent('');
       return undefined;
     }
 
@@ -232,10 +233,10 @@ function Nav({ path, navigate }) {
     return () => {
       cancelled = true;
     };
-  }, [address, open]);
+  }, [address, isWalletConnected, open]);
 
   const walletControl = (mobile = false) => (
-    !address ? (
+    !isWalletConnected ? (
       <button
         type="button"
         className={`nav-cta wallet-cta ${mobile ? 'wallet-cta-mobile' : ''}`}
@@ -262,8 +263,8 @@ function Nav({ path, navigate }) {
         </AppLink>
 
         <div className={`mobile-menu-panel ${open ? 'is-open' : ''}`}>
-          <div className="mobile-menu-toolbar">
-            {!address ? (
+          {/* <div className="mobile-menu-toolbar">
+            {!isWalletConnected ? (
               walletControl(true)
             ) : (
               <div className="mobile-menu-account">
@@ -272,7 +273,7 @@ function Nav({ path, navigate }) {
                 </span>
               </div>
             )}
-          </div>
+          </div> */}
           <div id="primary-menu" className="nav-links">
             {navItems.map((item) => (
               <AppLink
@@ -308,7 +309,7 @@ function Nav({ path, navigate }) {
         </div>
 
         <div className="mobile-nav-controls">
-          {address && !open && (
+          {isWalletConnected && !open && (
             <span className="mobile-header-address" title={address}>
               {formatAddress(address)}
             </span>
