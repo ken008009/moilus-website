@@ -2103,6 +2103,12 @@ body.nav-open {
     transform: translateY(0);
   }
 
+  .mobile-menu-panel:not(.is-open) .nav-links,
+  .mobile-menu-panel:not(.is-open) .language-switcher-mobile {
+    visibility: hidden;
+    pointer-events: none;
+  }
+
   .mobile-menu-toolbar,
   .mobile-menu-panel .nav-links {
     width: min(100%, 420px);
