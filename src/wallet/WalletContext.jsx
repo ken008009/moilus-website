@@ -4,8 +4,9 @@ import { ETH } from '../tools/contract.js';
 const WalletContext = createContext(null);
 
 export function WalletProvider({ children }) {
-  const [address, setAddress] = useState(ETH.account || '');
-  const [status, setStatus] = useState(ETH.signer && ETH.account ? 'connected' : 'idle');
+  const savedAccount = typeof localStorage !== 'undefined' ? localStorage.getItem('account') || '' : '';
+  const [address, setAddress] = useState(ETH.account || savedAccount);
+  const [status, setStatus] = useState(ETH.signer && ETH.account ? 'connected' : savedAccount ? 'connecting' : 'idle');
   const [error, setError] = useState(null);
   const connectPromiseRef = useRef(null);
 
@@ -80,6 +81,23 @@ export function WalletProvider({ children }) {
     ethereum?.on?.('accountsChanged', handleAccountsChanged);
     ethereum?.on?.('chainChanged', handleChainChanged);
     window.addEventListener('mobius:wallet-connected', handleWalletConnected);
+
+    if (localStorage.getItem('account') && !ETH.signer) {
+      ETH.restoreSession()
+        .then((restoredAddress) => {
+          if (restoredAddress) applyAddress(restoredAddress);
+          else {
+            localStorage.removeItem('account');
+            setAddress('');
+            setStatus('idle');
+          }
+        })
+        .catch(() => {
+          localStorage.removeItem('account');
+          setAddress('');
+          setStatus('idle');
+        });
+    }
 
     return () => {
       ethereum?.removeListener?.('accountsChanged', handleAccountsChanged);

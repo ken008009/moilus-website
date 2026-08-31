@@ -24,7 +24,7 @@ const en = {
   },
   home: {
     hero: {
-      eyebrow: 'The continuous on-chain economy', title: ['One surface.', 'No boundaries.'],
+      eyebrow: 'The continuous on-chain economy', title: ['One surface', 'No boundaries'],
       copy: 'Mobius Strip connects infrastructure, governance, payments, GameFi and communication in one open, self-circulating ecosystem.',
       primary: 'Explore the ecosystem', secondary: 'See how it holds',
     },
@@ -196,7 +196,7 @@ const zhCN = {
     notFoundEyebrow: '超出生态边界', notFoundTitle: '这条路径无法继续。', returnHome: '返回首页',
   },
   home: {
-    hero: { eyebrow: '持续运转的链上经济', title: ['同一表面。', '没有边界。'], copy: 'Mobius Strip 将基础设施、治理、支付、GameFi 与通信连接成一个开放、自循环的生态系统。', primary: '探索生态系统', secondary: '了解运行机制' },
+    hero: { eyebrow: '持续运转的链上经济', title: ['同一表面', '没有边界'], copy: 'Mobius Strip 将基础设施、治理、支付、GameFi 与通信连接成一个开放、自循环的生态系统。', primary: '探索生态系统', secondary: '了解运行机制' },
     overview: { eyebrow: '一切始终相连', title: '一个不间断表面上的完整经济体。', copy: '每个 Mobius 产品都有自己的职责，但都不是孤立存在。治理、所有权、娱乐和协作在同一系统中流动。', cards: [['五个产品，一个状态', '完整生态系统'], ['能够响应的规则', '协议机制'], ['透明分配', '十亿枚 MS']] },
     statement: ['价值从开放网络进入，在持续运转的', '经济中流动，并带着新的效用回归。'],
     journey: { eyebrow: '持续向前构建', title: ['一条路径。', '三个层级。'], copy: '从基础设施一路探索到真实用户场景。标题保持不动，生态表面持续延展。', link: '进入生态系统', chapters: [['公链', '基于 BSC 的结算层，让每个产品都运行在同一个开放、可观察的表面上。'], ['治理与协作', '提案、委托和透明投票是系统的原生组成部分。'], ['钱包与全球支付', '通过一个界面完成所有权管理、转账并参与整个 Mobius 经济。']] },

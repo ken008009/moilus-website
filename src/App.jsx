@@ -12,6 +12,9 @@ import StakingPage from './pages/subPages/staking.jsx';
 import CommunityOperationsPage from './pages/subPages/community.jsx';
 import { useWebsiteContent } from './content/websiteContent.js';
 import { LANGUAGE_OPTIONS, NAV_ITEMS } from './i18n/siteConfig.js';
+import { ETH } from './tools/contract.js';
+
+const ZERO_ADDRESS = '0x0000000000000000000000000000000000000000';
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
@@ -160,6 +163,7 @@ function LanguageSwitcher({ className = '' }) {
 
 function Nav({ path, navigate }) {
   const [open, setOpen] = useState(false);
+  const [parent, setParent] = useState('');
   const { address, status: walletStatus, connect } = useWallet();
   const { t } = useTranslation();
   const website = useWebsiteContent();
@@ -206,6 +210,29 @@ function Nav({ path, navigate }) {
       window.removeEventListener('resize', handleResize);
     };
   }, [open]);
+
+  useEffect(() => {
+    if (!address || !open) {
+      if (!address) setParent('');
+      return undefined;
+    }
+
+    let cancelled = false;
+    ETH.userView(address)
+      .then((userData) => {
+        if (cancelled) return;
+        const nextParent = userData?.parent || '';
+        const hasParent = Boolean(nextParent) && nextParent.toLowerCase() !== ZERO_ADDRESS.toLowerCase();
+        setParent(hasParent ? nextParent : '');
+      })
+      .catch(() => {
+        if (!cancelled) setParent('');
+      });
+
+    return () => {
+      cancelled = true;
+    };
+  }, [address, open]);
 
   const walletControl = (mobile = false) => (
     !address ? (
@@ -264,6 +291,14 @@ function Nav({ path, navigate }) {
               </AppLink>
             ))}
             <LanguageSwitcher className="language-switcher-mobile" />
+            {parent && (
+              <div className="mobile-menu-parent">
+                <span className="mobile-menu-parent-label">{t('Referrer')}</span>
+                <span className="mobile-menu-parent-address" title={parent}>
+                  {formatAddress(parent)}
+                </span>
+              </div>
+            )}
           </div>
         </div>
 

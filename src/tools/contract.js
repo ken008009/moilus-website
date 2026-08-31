@@ -111,6 +111,26 @@ export class ETH {
         return ETH.ensureWallet()
     }
 
+    // 刷新后静默恢复：只读取已授权账户，不弹出钱包确认
+    static async restoreSession() {
+        const savedAccount = localStorage.getItem('account')
+        if (!savedAccount) return ''
+
+        const ethereum = await detectEthereumProvider()
+        if (!ethereum) return ''
+
+        const accounts = await ethereum.request({ method: 'eth_accounts' })
+        if (!accounts?.length) return ''
+
+        ETH.provider = new ethers.providers.Web3Provider(ethereum)
+        ETH.account = ethers.utils.getAddress(accounts[0])
+        ETH.signer = ETH.provider.getSigner()
+        window.dispatchEvent(new CustomEvent('mobius:wallet-connected', {
+            detail: { address: ETH.account }
+        }))
+        return ETH.account
+    }
+
     static formatToken(value, decimals = 18, fixed = 3) {
         if (!value) return '0';
 
