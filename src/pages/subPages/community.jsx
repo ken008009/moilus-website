@@ -81,7 +81,8 @@ const Community = (props) => {
         isLoadMore
       })
       // 合约方法参数: (address, off, lim)，off 是条目偏移量
-      const result = await ETH.children(ETH.account, (page - 1) * pageSize, pageSize)
+      const offset = (page - 1) * pageSize
+      const result = await ETH.children(ETH.account, offset, pageSize)
       console.log('✅ 获取到 children 数据:', result)
       
       // 组件卸载后放弃 setState
@@ -103,8 +104,13 @@ const Community = (props) => {
         perf: item.perf ? Number(ETH.formatUnits(item.perf, 18)).toFixed(2) : '0'
       }))
       
-      // 只有当返回条数等于 pageSize 时才可能有下一页
-      const hasMoreData = formattedChildren.length === pageSize
+      // 满页时再 peek 下一条，避免刚好 pageSize 人时误触发下一页空请求
+      let hasMoreData = formattedChildren.length === pageSize
+      if (hasMoreData) {
+        const peek = await ETH.children(ETH.account, offset + pageSize, 1)
+        if (cancelledRef.current) return
+        hasMoreData = Array.isArray(peek) && peek.length > 0
+      }
       
       if (isLoadMore) {
         // 触底加载：追加数据
