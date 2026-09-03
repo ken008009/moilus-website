@@ -233,6 +233,8 @@
   "Input Team Address": "팀 주소 입력",
   "Enter team address": "팀 주소를 입력하세요",
   "Invalid address format": "잘못된 주소 형식",
+  "Cannot bind to your own address": "자신의 주소는 등록할 수 없습니다",
+  "Referrer not activated": "이 주소는 아직 투자하지 않아 하위 회원을 추천할 수 없습니다",
   "No orders to claim": "수령할 주문이 없습니다",
   "Claim successful": "수령 성공!",
   "Claim failed, please try again": "수령 실패, 다시 시도해주세요",

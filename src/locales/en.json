@@ -204,6 +204,8 @@
   "Input Team Address": "Input Team Address",
   "Enter team address": "Enter team address",
   "Invalid address format": "Invalid address format",
+  "Cannot bind to your own address": "Cannot bind to your own address",
+  "Referrer not activated": "This address has not invested yet and cannot refer members",
   "Start Staking": "Start Staking",
   "Controlled Entry Protocol": "Controlled Entry Protocol",
   "Staking orders are released after 7 days": "Staking orders are released after 7 days",

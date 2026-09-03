@@ -233,6 +233,8 @@
   "Input Team Address": "ٹیم کا پتہ درج کریں",
   "Enter team address": "ٹیم کا پتہ درج کریں",
   "Invalid address format": "غیر درست پتہ فارمیٹ",
+  "Cannot bind to your own address": "اپنا پتہ منسلک نہیں کیا جا سکتا",
+  "Referrer not activated": "یہ پتہ ابھی سرمایہ کاری نہیں کی، اراکین کی سفارش نہیں کر سکتا",
   "No orders to claim": "دعویٰ کے لیے کوئی آرڈرز نہیں",
   "Claim successful": "دعویٰ کامیاب!",
   "Claim failed, please try again": "دعویٰ ناکام، براہ کرم دوبارہ کوشش کریں",

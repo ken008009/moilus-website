@@ -233,6 +233,8 @@
   "Input Team Address": "Masukkan Alamat Pasukan",
   "Enter team address": "Sila masukkan alamat pasukan",
   "Invalid address format": "Format alamat tidak sah",
+  "Cannot bind to your own address": "Tidak boleh mengikat alamat sendiri",
+  "Referrer not activated": "Alamat ini belum pernah melabur dan tidak boleh merujuk ahli",
   "No orders to claim": "Tiada pesanan untuk dituntut",
   "Claim successful": "Tuntutan berjaya!",
   "Claim failed, please try again": "Tuntutan gagal, sila cuba lagi",

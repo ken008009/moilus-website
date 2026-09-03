@@ -233,6 +233,8 @@
   "Input Team Address": "Ввести адрес команды",
   "Enter team address": "Введите адрес команды",
   "Invalid address format": "Недействительный формат адреса",
+  "Cannot bind to your own address": "Нельзя привязать собственный адрес",
+  "Referrer not activated": "Этот адрес ещё не инвестировал и не может приглашать участников",
   "No orders to claim": "Нет заказов для получения",
   "Claim successful": "Получение успешно!",
   "Claim failed, please try again": "Ошибка получения, попробуйте снова",

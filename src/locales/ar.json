@@ -233,6 +233,8 @@
   "Input Team Address": "إدخال عنوان الفريق",
   "Enter team address": "أدخل عنوان الفريق",
   "Invalid address format": "تنسيق العنوان غير صالح",
+  "Cannot bind to your own address": "لا يمكن ربط عنوانك الخاص",
+  "Referrer not activated": "هذا العنوان لم يستثمر بعد ولا يمكنه التوصية بأعضاء",
   "No orders to claim": "لا توجد طلبات للمطالبة",
   "Claim successful": "تمت المطالبة بنجاح!",
   "Claim failed, please try again": "فشلت المطالبة، يرجى المحاولة مرة أخرى",

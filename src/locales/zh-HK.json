@@ -233,6 +233,8 @@
   "Input Team Address": "输入团队地址",
   "Enter team address": "请输入团队地址",
   "Invalid address format": "地址格式无效",
+  "Cannot bind to your own address": "不能綁定自己的地址",
+  "Referrer not activated": "該地址尚未投資，無法推薦下級",
   "No orders to claim": "暫無訂單可領取",
   "Claim successful": "領取成功！",
   "Claim failed, please try again": "領取失敗，請重試",

@@ -4,13 +4,24 @@ import { X } from 'lucide-react'
 import { ETH } from '@tools/contract'
 import './index.less'
 
+const ZERO_ADDRESS = '0x0000000000000000000000000000000000000000'
+
+const hasInvestedOnce = async (address, userView) => {
+  if (!userView) return false
+  if (userView.sys) return true
+  if (Number(userView.orderCount || 0) > 0) return true
+  const orders = await ETH.orders(address, 0, 1)
+  return Array.isArray(orders) && orders.length > 0
+}
+
 const JoinTeamForm = (props) => {
   const [address, setAddress] = useState('')
   const [submitting, setSubmitting] = useState(false)
   const { t, onClose, onSuccess } = props
 
   const handleSubmit = async () => {
-    if (!address) {
+    const parentAddress = address.trim()
+    if (!parentAddress) {
       Toast.show({
         content: t('Please enter the Team address')
       })
@@ -18,7 +29,7 @@ const JoinTeamForm = (props) => {
     }
 
     // 验证地址格式
-    if (!await ETH.isAddress(address)) {
+    if (!await ETH.isAddress(parentAddress) || parentAddress.toLowerCase() === ZERO_ADDRESS) {
       Toast.show({
         content: t('Invalid address format')
       })
@@ -39,8 +50,25 @@ const JoinTeamForm = (props) => {
         await ETH.getAccount()
       }
 
+      if (ETH.account && parentAddress.toLowerCase() === ETH.account.toLowerCase()) {
+        toast.close()
+        Toast.show({
+          content: t('Cannot bind to your own address')
+        })
+        return
+      }
+
+      const parentView = await ETH.userView(parentAddress)
+      if (!await hasInvestedOnce(parentAddress, parentView)) {
+        toast.close()
+        Toast.show({
+          content: t('Referrer not activated')
+        })
+        return
+      }
+
       // 调用 userContract 的 bind 方法绑定上级
-      const tx = await ETH.bind(address)
+      const tx = await ETH.bind(parentAddress)
       const receipt = await tx.wait()
       if (receipt.status !== 1) throw new Error(t('Transaction failed'))
       
@@ -51,7 +79,7 @@ const JoinTeamForm = (props) => {
       })
 
       // 调用成功回调
-      onSuccess && onSuccess(address)
+      onSuccess && onSuccess(parentAddress)
       onClose && onClose()
     } catch (error) {
       console.error('绑定失败:', error)

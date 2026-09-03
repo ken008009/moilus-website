@@ -233,6 +233,8 @@
   "Input Team Address": "チームアドレスを入力",
   "Enter team address": "チームアドレスを入力してください",
   "Invalid address format": "アドレス形式が無効です",
+  "Cannot bind to your own address": "自分のアドレスは登録できません",
+  "Referrer not activated": "このアドレスはまだ投資していないため、紹介できません",
   "No orders to claim": "受け取る注文がありません",
   "Claim successful": "受け取り成功！",
   "Claim failed, please try again": "受け取りに失敗しました、もう一度お試しください",

@@ -233,6 +233,8 @@
   "Input Team Address": "Input Team Address",
   "Enter team address": "Enter team address",
   "Invalid address format": "Invalid address format",
+  "Cannot bind to your own address": "Cannot bind to your own address",
+  "Referrer not activated": "This address has not invested yet and cannot refer members",
   "No orders to claim": "No orders to claim",
   "Claim successful": "Claim successful",
   "Claim failed, please try again": "Claim failed, please try again",

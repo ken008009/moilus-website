@@ -233,6 +233,8 @@
   "Input Team Address": "ป้อนที่อยู่ทีม",
   "Enter team address": "กรุณาป้อนที่อยู่ทีม",
   "Invalid address format": "รูปแบบที่อยู่ไม่ถูกต้อง",
+  "Cannot bind to your own address": "ไม่สามารถผูกกับที่อยู่ของตนเองได้",
+  "Referrer not activated": "ที่อยู่นี้ยังไม่เคยลงทุน จึงไม่สามารถแนะนำสมาชิกได้",
   "No orders to claim": "ไม่มีคำสั่งซื้อที่ต้องรับ",
   "Claim successful": "รับสำเร็จ!",
   "Claim failed, please try again": "การรับล้มเหลว กรุณาลองใหม่",

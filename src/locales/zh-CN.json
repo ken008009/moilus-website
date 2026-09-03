@@ -224,6 +224,8 @@
   "Input Team Address": "输入团队地址",
   "Enter team address": "请输入团队地址",
   "Invalid address format": "地址格式无效",
+  "Cannot bind to your own address": "不能绑定自己的地址",
+  "Referrer not activated": "该地址尚未投资，无法推荐下级",
   "Start Staking": "开始理财",
   "Controlled Entry Protocol": "理财控进协议",
   "Staking orders are released after 7 days": "每天理财订单7天后释放",
